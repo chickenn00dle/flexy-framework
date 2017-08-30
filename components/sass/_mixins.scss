@@ -10,17 +10,29 @@
     }
 }
 
-@mixin flexBox($wrap, $direction, $justify) {
-    display: -webkit-flex;
-     display: -ms-flexbox;
-            display: flex;
-    -webkit-flex-wrap: $wrap;
-      -ms-flex-wrap: $wrap;
-          flex-wrap: $wrap;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
-                    -ms-flex-pack: justify;
+@mixin flexContainer($wrap, $dir, $cross, $main) {
+         -webkit-display: -webkit-flex;
+          -webkit-display: -webkit-box;
+                  display: -ms-flexbox;
+                         display: flex;
+              -webkit-flex-wrap: $wrap;
+                  -ms-flex-wrap: $wrap;
+                      flex-wrap: $wrap;
+          -webkit-flex-direction: $dir;
+              -ms-flex-direction: $dir;
+                  flex-direction: $dir;
+           -webkit-align-items: $cross;
+             -webkit-box-align: $cross;
+                -ms-flex-align: $cross;
+                   align-items: $cross;
+        -webkit-justify-content: $main;
+                justify-content: $main;
+                  -ms-flex-pack: $main;
+}
+
+@mixin flexItem($grow, $shrink, $basis) {
+-webkit-box-flex: $grow $shrink $basis;
+    -webkit-flex: $grow $shrink $basis;
+        -ms-flex: $grow $shrink $basis;
+            flex: $grow $shrink $basis;
 }
