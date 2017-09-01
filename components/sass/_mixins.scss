@@ -37,9 +37,9 @@
 
 // Optional: Set Flex container cross-line behavior
 @mixin flexAlignContent($cross){
-          -ms-flex-align-content: $cross;
-           -webkit-align-content: $cross;
-                   align-content: $cross;
+        -ms-flex-align-content: $cross;
+         -webkit-align-content: $cross;
+                 align-content: $cross;
 }
 
 // Set Flex item w/ flex properties (grow, shrink and basis)
