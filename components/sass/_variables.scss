@@ -1,20 +1,27 @@
 // Color List
 $white: #fff;
 $black: #000;
-$gray: #414141;
 $light-gray: #dbdbdb;
+$gray: #404040;
+$dark-gray: #2b2b2b;
 $red: #ff4444;
 $tan: #fff7f1;
 
 
-$color-background: $tan;
-$color-background-minor: $white;
+$bgPrimary: $tan;
+$bgSecondary: $white;
+$bgNotice: $dark-gray;
+$bgQuote: $red;
+$bgHeader: $white;
+$bgFooter: $dark-gray;
 
-$color-brand: $red;
-$color-brand-minor: $white;
+$textPrimary: $gray;
+$textLight: $light-gray;
+$textDark: $dark-gray;
 
-$color-link: $red;
-$color-link-minor: lighten($red, 15%);
+$linkPrimary: $red;
+$linkHover: darken($red, 15%);
+$linkVisited: $red;
 
-$color-shadow: $light-gray;
-$color-shadow-minor: $gray;
+$shadowLight: $gray;
+$shadowDark: $dark-gray;

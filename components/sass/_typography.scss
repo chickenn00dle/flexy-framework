@@ -10,4 +10,9 @@ body {
 
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
+    color: $textPrimary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $textPrimary;
 }

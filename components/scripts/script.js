@@ -1,8 +1,3 @@
-var $ = require('jquery');
+var $;
 
-function updateCopyYear(){
-    var date = new Date();
-    document.querySelector('#copyright').innerHTML = date.getFullYear();
-}
-
-updateCopyYear();
+$ = require('jquery');
