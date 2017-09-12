@@ -11,7 +11,7 @@
 }
 
 // Set a Flex container w/ wrap and direction.
-@mixin flexContainer($wrap, $dir, $cross, $main) {
+@mixin flexContainer($wrap, $dir) {
          -webkit-display: -webkit-flex;
           -webkit-display: -webkit-box;
                   display: -ms-flexbox;
