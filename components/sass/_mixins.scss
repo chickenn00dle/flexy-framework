@@ -10,19 +10,58 @@
     }
 }
 
-@mixin flexBox($wrap, $direction, $justify) {
-    display: -webkit-flex;
-     display: -ms-flexbox;
-            display: flex;
-    -webkit-flex-wrap: $wrap;
-      -ms-flex-wrap: $wrap;
-          flex-wrap: $wrap;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
-                    -ms-flex-pack: justify;
+// Set a Flex container w/ wrap and direction.
+@mixin flexContainer($wrap, $dir) {
+         -webkit-display: -webkit-flex;
+          -webkit-display: -webkit-box;
+                  display: -ms-flexbox;
+                         display: flex;
+              -webkit-flex-wrap: $wrap;
+                  -ms-flex-wrap: $wrap;
+                      flex-wrap: $wrap;
+          -webkit-flex-direction: $dir;
+              -ms-flex-direction: $dir;
+                  flex-direction: $dir;
+}
+
+// Optional: Set Flex container main and cross alignments
+@mixin flexProperties($cross, $main) {
+           -webkit-align-items: $cross;
+             -webkit-box-align: $cross;
+                -ms-flex-align: $cross;
+                   align-items: $cross;
+        -webkit-justify-content: $main;
+                justify-content: $main;
+                  -ms-flex-pack: $main;
+}
+
+// Optional: Set Flex container cross-line behavior
+@mixin flexAlignContent($cross){
+        -ms-flex-align-content: $cross;
+         -webkit-align-content: $cross;
+                 align-content: $cross;
+}
+
+// Set Flex item w/ flex properties (grow, shrink and basis)
+@mixin flexItem($grow, $shrink, $basis) {
+-webkit-box-flex: $grow $shrink $basis;
+    -webkit-flex: $grow $shrink $basis;
+        -ms-flex: $grow $shrink $basis;
+            flex: $grow $shrink $basis;
+}
+
+// Optional: Set Flex item order
+@mixin flexOrder($order){
+    -ms-flex-order: $order;
+     -webkit-order: $order;
+             order: $order;
+}
+
+// Optional: Set individual flex item cross alignment
+@mixin flexSelf($cross){
+    -ms-flex-align-self: $cross;
+     -webkit-align-self: $cross;
+             align-self: $cross;
 }
 
 @mixin boxShadow($horizontal, $vertical, $blur, $spread, $color) {

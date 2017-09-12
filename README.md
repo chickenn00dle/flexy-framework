@@ -45,7 +45,7 @@ $ npm install
 $ gulp
 ```
 
-2. Open a broswer and open localhost:8080. (You should see a red header and some Lorem ipsum text.)
+2. Open a broswer and open localhost:8080. (You should see a starter boiler page.)
 
 And just like that, you're ready to begin development :)
 
