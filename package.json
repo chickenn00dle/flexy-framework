@@ -1,10 +1,10 @@
 {
-  "name": "workflow",
-  "version": "0.0.1",
-  "description": "A general purpose workflow for web projects",
+  "name": "canvas",
+  "version": "1.0.0",
+  "description": "A blank slate from which to begin all of your design journeys.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chickenn00dle/workflow.git"
+    "url": "https://github.com/chickenn00dle/canvas.git"
   },
   "author": "Rasmy Nguyen",
   "devDependencies": {
