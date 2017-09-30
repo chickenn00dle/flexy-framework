@@ -1,6 +1,6 @@
-# Workflow Template
+# Canvas Template
 
-This project is a template for future web projects utilizing Sass, Compass & Coffeescript
+A blank slate from which to begin all of your design journeys (Sass, Compass & Coffeescript)
 
 
 ## Getting Started
@@ -9,7 +9,7 @@ Follow these instructions to get up and running :)
 
 ### Prerequisites
 
-You will need to have the latest versions of node/npm, compass and ruby installed before getting started.
+You will need the latest versions of node/npm, compass and ruby installed before getting started.
 
 Node/Npm -  https://www.npmjs.com/get-npm
 
@@ -19,13 +19,13 @@ Ruby - https://www.ruby-lang.org/en/documentation/installation/ (Make sure to ad
 
 ### Installation
 
-1. clone the repository: https://github.com/chickenn00dle/workflow.git
+1. clone the repository: https://github.com/chickenn00dle/canvas.git
 
 ```
-$ git clone https://github.com/chickenn00dle/workflow.git [project-folder]
+$ git clone https://github.com/chickenn00dle/canvas.git [project-folder]
 ```
 
-2. cd into new project folder
+2. cd into your new project folder
 
 ```
 $ cd [project-folder]
@@ -45,7 +45,7 @@ $ npm install
 $ gulp
 ```
 
-2. Open a broswer and open localhost:8080. (You should see a starter boiler page.)
+2. Open a broswer and point to localhost:8080. (You should see a very simple welcome page.)
 
 And just like that, you're ready to begin development :)
 
