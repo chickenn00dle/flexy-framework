@@ -1,18 +1,19 @@
 body {
-    font-size: 14px;
+    font-family: $globalFont;
+    font-size: $globalFontSize;
 }
 
 @include mediaQuery(800px){
     body {
-        font-size: 18px;
+        font-size: $mobileFontSize;
     }
 }
 
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
-    color: $textPrimary;
+    color: $colorTextPrimary;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $textPrimary;
+    color: $colorTextPrimary;
 }
