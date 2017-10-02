@@ -10,9 +10,7 @@
     <body>
         <header>
             <nav>
-                <div id="logo">
-                    <img src="http://placehold.it/150x150/ff4444/ffffff?text=Logo" alt="Brand Logo" />
-                </div>
+                <div id="logo"></div>
                 <ul>
                     <li>Link 1</li>
                     <li>Link 2</li>
@@ -21,25 +19,68 @@
                 </ul>
             </nav>
         </header>
-        <div class="shell">
-            <main>
-                <section class="module">
-                    <div class="unit">
+        <main class="shell">
+            <section class="module">
+                <div class="unit">
                     <h1>Framework</h1>
+                    <p>A FlexBox based framework.</p>
+                    <p>The "grid" system, or how the content is laid out, is essential in any framework. While the sytsem itself is not very different from how many others work, the mentality behind the naming conventions differs ever so slightly.</p>
+                    <p>There isn't too much explaining to do, so let's get right to it!</p>
+                </div>
+            </section>
+
+            <section class="module">
+                <div class="unit">
+                    <h2>The Shell</h2>
+                    <p>All page content is placed into a Flexy <b>Shell</b>. As the name implies, the shell serves as a sort of empty "shell" to place bits of content as you see fit. There need only be one shell per page and for semantics sake, class shell should be applied to the pages main tag.</p>
+                </div>
+            </section>
+
+            <section class="module">
+                <div class="unit">
+                    <h2>The Module</h2>
                     <p>
-                        A FlexBox based framework.
+                        A module is used to group more specific
                     </p>
-                    </div>
-                </section>
-            </main>
-            <footer>
-                <section class="module">
-                    <div class="unit">
-                        <p>Copyright &copy; <span id="copyright">2017</span> Rasmy Nguyen</p>
-                    </div>
-                </section>
-            </footer>
-        </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </section>
+
+            <section class="module">
+                <div class="unit">
+                    <h2>The Unit</h2>
+                    <p>The Unit is where you will place all of your content. All headings, paragraphs, anchor tags, and etc. belong in here.
+                </div>
+            </section>
+
+            <section class="module">
+                <div class="unit">
+                    <h3>Unit 1</h3>
+                    <p>By default, units will take up 1/3<sup>rd</sup> of the page's width before falling below.</p>
+                </div>
+                <div class="unit">
+                    <h3>Unit 2</h3>
+                    <p>Each unit will stretch evenly as the pages width increases.</p>
+                </div>
+                <div class="unit">
+                    <h2>Unit 3</h2>
+                    <p>Likewise, they will shrink evenly as the pages width decreases</p>
+                </div>
+                <div class="unit">
+                    <h1>Unit 4</h1>
+                    <p>If you'd like to imply an explicit ratio, just add the relevant numbers to the indivdual units within each module.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="module">
+                <div class="unit">
+                    <p>Copyright &copy; <span id="copyright">2017</span> Rasmy Nguyen</p>
+                </div>
+            </section>
+        </footer>
         <script src="js/script.js"></script>
     </body>
 </html>

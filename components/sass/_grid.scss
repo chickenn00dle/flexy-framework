@@ -1,0 +1,45 @@
+body {
+    width: 100vw;
+}
+
+.shell {
+    @include flexContainer(column, nowrap);
+    @include flexAxis(flex-start, center);
+    width: 100vw;
+    // height: 100vh;
+
+    .module {
+        @include flexContainer(row, wrap);
+        @include flexAxis(center, stretch);
+        width: 100vw;
+
+        .unit {
+            @include flexItem(1, 1, 100%);
+            padding: .5rem;
+            margin: 0 .5rem .5rem;
+            border: 1px solid $colorBorderPrimary;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@include mediaQuery(768px){
+    .shell {
+        .module {
+            @include flexContainer(row, nowrap);
+
+            .unit {
+                @include flexItem(1, 1, 33%);
+                margin: 0 .5rem .5rem .5rem;
+
+                &:first-child {
+                    margin: 0 0 .5rem .5rem;
+                }
+
+                &:last-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+        }
+    }
+}

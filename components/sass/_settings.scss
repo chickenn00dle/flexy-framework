@@ -15,15 +15,30 @@ $colorBgFooter: $dark-gray;
 
 $colorTextPrimary: $gray;
 $colorTextSecondary: $light-gray;
+$colorTextInverse: $white;
 
 $colorLinkPrimary: $red;
 $colorLinkSecondary: $red;
+
+$colorBorderPrimary: $light-gray;
 
 $colorShadowPrimary: $gray;
 $colorShadowSecondary: $dark-gray;
 
 // Fonts
-
 $globalFont: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $globalFontSize: 16px;
 $mobileFontSize: 18px;
+
+// Margins
+$globalMargin: 1rem;
+$unitMargin: $globalMargin / 2;
+
+// Widths
+$mobile: 375px;
+$tablet: 768px;
+$tablet-lg: 1024px;
+$laptop: 1280;
+$laptop-lg: 1440px;
+$retina: 2560px;
+$retina-lg: 2880px

@@ -1,0 +1,33 @@
+nav {
+    @include flexContainer(row, nowrap);
+    @include flexAxis(space-between, center);
+    width: 100vw;
+
+    #logo {
+        background-image: url("http://placehold.it/150x150/ff4444/ffffff?text=Logo");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 3rem;
+        width: 3rem;
+        padding: .5rem;
+        box-sizing: border-box;
+    }
+
+    ul {
+        @include flexContainer(row, nowrap);
+        @include flexAxis(flex-end, center);
+        @include flexItem(1, 0, auto);
+
+        li {
+            list-style: none;
+            margin: 0 1rem;
+        }
+    }
+}
+
+@include mediaQuery(768px) {
+    #logo {
+        height: 5rem;
+        width: 5rem;
+    }
+}
