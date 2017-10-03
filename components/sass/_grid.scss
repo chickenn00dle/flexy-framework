@@ -13,33 +13,141 @@ body {
         @include flexAxis(center, stretch);
         width: 100vw;
 
-        .unit {
-            @include flexItem(1, 1, 100%);
+        .unit, .unit-1, .unit-2, .unit-3, .unit-4, .unit-5, .unit-6, .unit-7, .unit-8, .unit-9 {
             padding: .5rem;
-            margin: 0 .5rem .5rem;
             border: 1px solid $colorBorderPrimary;
             box-sizing: border-box;
+            @include flexItem(1, 1, 100%);
+            margin: 0 .5rem .5rem;
         }
     }
 }
 
-@include mediaQuery(768px){
+@include mediaQuery($tablet){
     .shell {
         .module {
             @include flexContainer(row, nowrap);
 
             .unit {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
                 @include flexItem(1, 1, 33%);
-                margin: 0 .5rem .5rem .5rem;
 
                 &:first-child {
-                    margin: 0 0 .5rem .5rem;
-                }
-
-                &:last-child {
                     margin: 0 .5rem .5rem .5rem;
                 }
             }
+
+            .unit-1 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 10%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-2 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 20%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-3 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 30%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-4 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 40%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-5 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 50%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-6 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 60%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-7 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 70%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-8 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 80%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
+            .unit-9 {
+                padding: .5rem;
+                border: 1px solid $colorBorderPrimary;
+                box-sizing: border-box;
+                margin: 0 .5rem .5rem 0;
+                @include flexItem(0, 0, 90%);
+
+                &:first-child {
+                    margin: 0 .5rem .5rem .5rem;
+                }
+            }
+
         }
     }
 }

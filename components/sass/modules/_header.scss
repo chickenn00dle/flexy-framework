@@ -25,7 +25,7 @@ nav {
     }
 }
 
-@include mediaQuery(768px) {
+@include mediaQuery($tablet) {
     #logo {
         height: 5rem;
         width: 5rem;

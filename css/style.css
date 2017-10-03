@@ -434,45 +434,53 @@ template {
 
 body {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   body {
     font-size: 18px;
   }
 }
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
   font-size: 1rem;
+  line-height: 1.5rem;
   color: #404040;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #404040;
+  margin: .5rem 0;
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h5 {
   font-size: 1.25rem;
+  font-weight: 500;
 }
 
 h6 {
   font-size: 1rem;
+  font-weight: 500;
 }
 
 body {
@@ -519,15 +527,15 @@ body {
   -ms-flex-pack: center;
   width: 100vw;
 }
-.shell .module .unit {
+.shell .module .unit, .shell .module .unit-1, .shell .module .unit-2, .shell .module .unit-3, .shell .module .unit-4, .shell .module .unit-5, .shell .module .unit-6, .shell .module .unit-7, .shell .module .unit-8, .shell .module .unit-9 {
+  padding: .5rem;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
   -webkit-box-flex: 1 1 100%;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
-  padding: .5rem;
   margin: 0 .5rem .5rem;
-  border: 1px solid #dbdbdb;
-  box-sizing: border-box;
 }
 
 @media screen and (min-width: 768px) {
@@ -544,16 +552,133 @@ body {
     flex-direction: row;
   }
   .shell .module .unit {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 1 1 33%;
     -webkit-flex: 1 1 33%;
     -ms-flex: 1 1 33%;
     flex: 1 1 33%;
-    margin: 0 .5rem .5rem .5rem;
   }
   .shell .module .unit:first-child {
-    margin: 0 0 .5rem .5rem;
+    margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit:last-child {
+  .shell .module .unit-1 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 10%;
+    -webkit-flex: 0 0 10%;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+  }
+  .shell .module .unit-1:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-2 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 20%;
+    -webkit-flex: 0 0 20%;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  }
+  .shell .module .unit-2:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-3 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 30%;
+    -webkit-flex: 0 0 30%;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+  }
+  .shell .module .unit-3:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-4 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 40%;
+    -webkit-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+  }
+  .shell .module .unit-4:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-5 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+  }
+  .shell .module .unit-5:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-6 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 60%;
+    -webkit-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+  }
+  .shell .module .unit-6:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-7 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 70%;
+    -webkit-flex: 0 0 70%;
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+  }
+  .shell .module .unit-7:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-8 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 80%;
+    -webkit-flex: 0 0 80%;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+  }
+  .shell .module .unit-8:first-child {
+    margin: 0 .5rem .5rem .5rem;
+  }
+  .shell .module .unit-9 {
+    padding: .5rem;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    margin: 0 .5rem .5rem 0;
+    -webkit-box-flex: 0 0 90%;
+    -webkit-flex: 0 0 90%;
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+  }
+  .shell .module .unit-9:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
 }

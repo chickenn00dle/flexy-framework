@@ -22,55 +22,63 @@
         <main class="shell">
             <section class="module">
                 <div class="unit">
-                    <h1>Framework</h1>
-                    <p>A FlexBox based framework.</p>
-                    <p>The "grid" system, or how the content is laid out, is essential in any framework. While the sytsem itself is not very different from how many others work, the mentality behind the naming conventions differs ever so slightly.</p>
-                    <p>There isn't too much explaining to do, so let's get right to it!</p>
+                    <h1>Flexy</h1>
+                    <h2>A FlexBox based framework.</h2>
+                    <p>The "grid" system is essential to any framework. While the flexy sytsem is not very different from how many others work, its philosophy does, if only ever so slightly.</p>
                 </div>
             </section>
 
             <section class="module">
                 <div class="unit">
-                    <h2>The Shell</h2>
-                    <p>All page content is placed into a Flexy <b>Shell</b>. As the name implies, the shell serves as a sort of empty "shell" to place bits of content as you see fit. There need only be one shell per page and for semantics sake, class shell should be applied to the pages main tag.</p>
+                    <h3>The Shell</h3>
+                    <p>All page content is placed into a Flexy <b>Shell</b>. As the name implies, it serves as  an empty "shell" within which you will place all of your modules. You should only need one shell per page and for semantics sake, shells should be applied to your pages main tag.</p>
                 </div>
             </section>
 
             <section class="module">
                 <div class="unit">
-                    <h2>The Module</h2>
+                    <h3>The Module</h3>
                     <p>
-                        A module is used to group more specific
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Modules house groups of similar content. A module serves as a sort of internal structure to a pages shell. For this reason, it is best to place the module class within the section tags of your page.
                     </p>
                 </div>
             </section>
 
             <section class="module">
                 <div class="unit">
-                    <h2>The Unit</h2>
-                    <p>The Unit is where you will place all of your content. All headings, paragraphs, anchor tags, and etc. belong in here.
+                    <h3>The Unit</h3>
+                    <p>Units are where you place the actual content of your page. All headings, paragraphs, anchor tags, and etc.</p>
+                    <p>On smaller viewports, units will take up 100% of the width, while on larger screens the unit will behave as follows:</p>
                 </div>
             </section>
 
             <section class="module">
                 <div class="unit">
-                    <h3>Unit 1</h3>
-                    <p>By default, units will take up 1/3<sup>rd</sup> of the page's width before falling below.</p>
+                    <h4>Class: Unit</h4>
+                    <p>By default, units will take up even amounts of space across the width of the viewport.</p>
                 </div>
                 <div class="unit">
-                    <h3>Unit 2</h3>
-                    <p>Each unit will stretch evenly as the pages width increases.</p>
+                    <h4>Class: Unit</h4>
+                    <p>All units placed within a module will grow evenly as the page width increases.</p>
                 </div>
                 <div class="unit">
-                    <h2>Unit 3</h2>
-                    <p>Likewise, they will shrink evenly as the pages width decreases</p>
+                    <h4>Class: Unit</h4>
+                    <p>And will shrink evenly as the page width decreases.</p>
+                </div>
+            </section>
+
+            <section class="module">
+                <div class="unit-4">
+                    <h4>Class: Unit-4</h4>
+                    <p>If you'd like to specify the width of a unit, simply add 1-10 to the unit in question.</p>
+                </div>
+                <div class="unit-3">
+                    <h4>Class: Unit-3</h4>
+                    <p>Each number corresponds to the percentage of space a unit will take up across the width of the viewport.</p>
                 </div>
                 <div class="unit">
-                    <h1>Unit 4</h1>
-                    <p>If you'd like to imply an explicit ratio, just add the relevant numbers to the indivdual units within each module.</p>
+                    <h4>Class: Unit</h4>
+                    <p>Adjacent units may also be left unspecified to simply take up the remaining space.</p>
                 </div>
             </section>
         </main>
