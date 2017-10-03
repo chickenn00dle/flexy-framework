@@ -434,7 +434,7 @@ template {
 
 body {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -445,7 +445,6 @@ body {
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #404040;
   margin: 0 0 1rem 0;
 }
 
@@ -483,6 +482,10 @@ h5 {
 h6 {
   font-size: 1rem;
   font-weight: 500;
+}
+
+p {
+  color: #404040;
 }
 
 body {

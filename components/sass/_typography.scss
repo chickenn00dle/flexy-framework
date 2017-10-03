@@ -12,7 +12,6 @@ body {
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: $colorTextPrimary;
     margin: 0 0 1rem 0;
 }
 
@@ -50,4 +49,8 @@ h5 {
 h6 {
     font-size: 1rem;
     font-weight: 500;
+}
+
+p {
+    color: $colorTextPrimary;
 }
