@@ -446,16 +446,18 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
   font-size: 1rem;
   line-height: 1.5rem;
   color: #404040;
+  margin: 0 0 1rem 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #404040;
-  margin: .5rem 0;
+  margin: 0 0 .5rem 0;
 }
 
 h1 {
   font-size: 5rem;
   font-weight: 900;
+  margin: 1rem 0;
 }
 
 h2 {
@@ -488,6 +490,7 @@ body {
 }
 
 .shell {
+  background: #fff;
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
   display: -ms-flexbox;
@@ -525,11 +528,10 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  width: 100vw;
+  max-width: 100vw;
 }
 .shell .module .unit, .shell .module .unit-1, .shell .module .unit-2, .shell .module .unit-3, .shell .module .unit-4, .shell .module .unit-5, .shell .module .unit-6, .shell .module .unit-7, .shell .module .unit-8, .shell .module .unit-9 {
   padding: .5rem;
-  border: 1px solid #dbdbdb;
   box-sizing: border-box;
   -webkit-box-flex: 1 1 100%;
   -webkit-flex: 1 1 100%;
@@ -550,10 +552,10 @@ body {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    max-width: 1440px;
   }
   .shell .module .unit {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 1 1 33%;
@@ -566,7 +568,6 @@ body {
   }
   .shell .module .unit-1 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 10%;
@@ -579,7 +580,6 @@ body {
   }
   .shell .module .unit-2 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 20%;
@@ -592,7 +592,6 @@ body {
   }
   .shell .module .unit-3 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 30%;
@@ -605,7 +604,6 @@ body {
   }
   .shell .module .unit-4 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 40%;
@@ -618,7 +616,6 @@ body {
   }
   .shell .module .unit-5 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 50%;
@@ -631,7 +628,6 @@ body {
   }
   .shell .module .unit-6 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 60%;
@@ -644,7 +640,6 @@ body {
   }
   .shell .module .unit-7 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 70%;
@@ -657,7 +652,6 @@ body {
   }
   .shell .module .unit-8 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 80%;
@@ -670,7 +664,6 @@ body {
   }
   .shell .module .unit-9 {
     padding: .5rem;
-    border: 1px solid #dbdbdb;
     box-sizing: border-box;
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 90%;
