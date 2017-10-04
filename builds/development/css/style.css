@@ -434,7 +434,7 @@ template {
 
 body {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -486,6 +486,15 @@ h6 {
 
 p {
   color: #404040;
+}
+
+a {
+  text-decoration: none;
+  color: #ff4444;
+}
+
+a:hover {
+  color: #f70000;
 }
 
 body {
@@ -683,7 +692,76 @@ body {
     margin: 0 .5rem .5rem .5rem;
   }
 }
-nav {
+header {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  background: #fff;
+}
+header nav {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  width: 100vw;
+  -webkit-box-shadow: 0 0 5px 0 #404040;
+  -moz-box-shadow: 0 0 5px 0 #404040;
+  box-shadow: 0 0 5px 0 #404040;
+}
+header nav .nav-module {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  width: 100%;
+  padding: .5rem 1rem 0;
+  box-sizing: border-box;
+}
+header nav .nav-module .nav-upper {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
   display: -ms-flexbox;
@@ -701,18 +779,12 @@ nav {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: space-between;
-  width: 100vw;
+  -webkit-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
 }
-nav #logo {
-  background-image: url("http://placehold.it/150x150/ff4444/ffffff?text=Logo");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 3rem;
-  width: 3rem;
-  padding: .5rem;
-  box-sizing: border-box;
-}
-nav ul {
+header nav .nav-module .nav-lower {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
   display: -ms-flexbox;
@@ -723,26 +795,42 @@ nav ul {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  -ms-flex-pack: flex-end;
-  -webkit-box-flex: 1 0 auto;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-flex: 0 1 100%;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
 }
-nav ul li {
+header nav .nav-module .nav-links {
+  margin: 0;
+  padding: 0;
+}
+header nav .nav-module .nav-links li {
   list-style: none;
-  margin: 0 1rem;
+  float: left;
+  margin: 0 5rem .25rem;
+}
+header nav .nav-module .nav-sns li {
+  list-style: none;
+  float: left;
+  margin: 0 .5rem;
+}
+header nav .nav-module .nav-sns li:last-child {
+  margin-right: 0;
+}
+header nav .nav-module .nav-sns li a {
+  font-size: 2rem;
+  color: #404040;
 }
 
 @media screen and (min-width: 768px) {
-  #logo {
-    height: 5rem;
-    width: 5rem;
+  header nav .nav-module {
+    max-width: 1280px;
   }
 }

@@ -26,7 +26,7 @@ body {
     }
 }
 
-@include mediaQuery($tablet){
+@include mediaQuery($mobile-lg){
     .shell {
 
         section {

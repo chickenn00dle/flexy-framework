@@ -5,18 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Framework | A FlexBox based framework</title>
         <link rel="stylesheet" href="css/style.css" />
-        <script src="https://use.fontawesome.com/455456b5e5.js"></script>
+        <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <header>
             <nav>
-                <div id="logo"></div>
-                <ul>
-                    <li>Link 1</li>
-                    <li>Link 2</li>
-                    <li>Link 3</li>
-                    <li>Link 4</li>
-                </ul>
+                <div class="nav-module">
+                    <div class="nav-upper">
+                        <div id="logo"><a href="/"><img src="http://placehold.it/75x75/ff4444/ffffff?text=Logo" alt="Generic Logo" /></a></div>
+                        <ul class="nav-sns">
+                            <li><a href="https://twitter.com/ChickenN00dle" target="_blank"><span class="fa fa-twitter" aria-hidden="true"></span></a></li>
+                            <li><a href="https://github.com/chickenn00dle" target="_blank"><span class="fa fa-github" aria-hidden="true"></span></a></li>
+                            <li><a href="https://codepen.io/chickenn00dle/" target="_blank"><span class="fa fa-codepen" aria-hidden="true"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-lower">
+                        <ul class="nav-links">
+                            <li><a href="#">Grid <span class="fa fa-caret-down"></span></a></li>
+                            <li><a href="#">Grid <span class="fa fa-caret-down"></span></a></li>
+                            <li><a href="#">Grid <span class="fa fa-caret-down"></span></a></li>
+                            <li><a href="#">Grid <span class="fa fa-caret-down"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </header>
         <main class="shell">
@@ -25,7 +36,8 @@
                     <div class="unit">
                         <h1>Flexy</h1>
                         <h2>A FlexBox based framework.</h2>
-                        <p>The "grid" system is essential to any framework. While the flexy sytsem is not very different from how many others work, its philosophy does, if only ever so slightly.</p>
+                        <p>Welcome to Flexy, a very simple flexbox based framework designed and developed by <a href="#">me</a> as a learning experience and a tool to use for all of my future web projects.</p>
+                        <p>Flexy is made entirely of css and is made to be as minimalistic as possible. This way you are free to build upon it however you see fit.</p>
                     </div>
                 </div>
             </section>
@@ -33,62 +45,15 @@
             <section>
                 <div class="module">
                     <div class="unit">
-                        <h3>The Shell</h3>
-                        <p>All page content is placed into a Flexy <b>Shell</b>. As the name implies, it serves as an empty "shell" within which you will place all of your modules. You should only need one shell per page and for semantics sake, shells should be applied to your pages main tag.</p>
+                        <h3>Flexy Guide</h3>
+                        <ul>
+                            <li><a href="/grid.html">Grid</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <section>
-                <div class="module">
-                    <div class="unit">
-                        <h3>The Module</h3>
-                        <p>
-                            Modules house groups of similar content. A module serves as a sort of internal structure to a pages shell. Place your module divs within unique section tags.
-                        </p>
-                    </div>
-                </div>
-            </section>
 
-            <section>
-                <div class="module">
-                    <div class="unit">
-                        <h3>The Unit</h3>
-                        <p>Units are where you place the actual content of your page. All headings, paragraphs, anchor tags, and etc.</p>
-                        <p>On smaller viewports, units will take up 100% of the width, while on larger screens the unit will behave as follows:</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="module">
-                    <div class="unit">
-                        <h4>Class: Unit</h4>
-                        <p>By default, units will take up even amounts of space across the width of the viewport.</p>
-                    </div>
-                    <div class="unit">
-                        <h4>Class: Unit</h4>
-                        <p>All units placed within a module will grow evenly as the page width increases.</p>
-                    </div>
-                    <div class="unit">
-                        <h4>Class: Unit</h4>
-                        <p>And will shrink evenly as the page width decreases.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="module">
-                    <div class="unit-7">
-                        <h4>Class: Unit-7</h4>
-                        <p>If you'd like to specify the width of a unit, simply add 1-10 to the unit in question. (Units within a single module should total to less than 10.)</p>
-                    </div>
-                    <div class="unit">
-                        <h4>Class: Unit</h4>
-                        <p>Adjacent units may also be left unspecified to simply take up the remaining space.</p>
-                    </div>
-                </div>
-            </section>
         </main>
         <footer>
             <section>

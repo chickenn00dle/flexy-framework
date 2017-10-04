@@ -3,7 +3,7 @@ body {
     font-size: $mobileFontSize;
 }
 
-@include mediaQuery($tablet){
+@include mediaQuery($mobile-lg){
     body {
         font-size: $globalFontSize;
     }
@@ -53,4 +53,13 @@ h6 {
 
 p {
     color: $colorTextPrimary;
+}
+
+a {
+    text-decoration: none;
+    color: $colorLinkPrimary;
+}
+
+a:hover {
+    color: $colorLinkSecondary;
 }

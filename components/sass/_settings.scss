@@ -18,7 +18,7 @@ $colorTextSecondary: $light-gray;
 $colorTextInverse: $white;
 
 $colorLinkPrimary: $red;
-$colorLinkSecondary: $red;
+$colorLinkSecondary: darken($red, 15%);
 
 $colorBorderPrimary: $light-gray;
 
@@ -28,12 +28,12 @@ $colorShadowSecondary: $dark-gray;
 // Fonts
 $globalFont: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $globalFontSize: 18px;
-$mobileFontSize: 12px;
+$mobileFontSize: 16px;
 
 // Widths
-$mobile: 375px;
-$tablet: 768px;
-$tablet-lg: 1024px;
+$mobile-sm: 375px;
+$mobile-lg: 768px;
+$mobile-xl: 1024px;
 $laptop: 1280px;
 $laptop-lg: 1440px;
 $retina: 2560px;

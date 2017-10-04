@@ -32,7 +32,7 @@ if (env === 'development'){
 
 coffeeSources = ['components/coffee/*.coffee'];
 jsSources = ['components/scripts/*.js'];
-sassSources = ['components/sass/*.scss'];
+sassSources = ['components/sass/*.scss', 'components/sass/modules/*.scss'];
 htmlSources = ['builds/development/*.html'];
 jsonSources = ['builds/development/js/*.json'];
 

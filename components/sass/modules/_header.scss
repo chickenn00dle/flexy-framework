@@ -1,33 +1,72 @@
-nav {
+header {
     @include flexContainer(row, nowrap);
-    @include flexAxis(space-between, center);
-    width: 100vw;
+    @include flexAxis(center, center);
+    @include flexItem(1, 1, 100%);
+    background: $colorBgPrimary;
 
-    #logo {
-        background-image: url("http://placehold.it/150x150/ff4444/ffffff?text=Logo");
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 3rem;
-        width: 3rem;
-        padding: .5rem;
-        box-sizing: border-box;
-    }
-
-    ul {
+    nav {
         @include flexContainer(row, nowrap);
-        @include flexAxis(flex-end, center);
-        @include flexItem(1, 0, auto);
+        @include flexAxis(center, center);
+        width: 100vw;
+        @include boxShadow(0, 0, 5px, 0, $colorShadowPrimary);
 
-        li {
-            list-style: none;
-            margin: 0 1rem;
+        .nav-module {
+            @include flexContainer(column, nowrap);
+            @include flexAxis(flex-start, stretch);
+            width: 100%;
+            padding: .5rem 1rem 0;
+            box-sizing: border-box;
+
+            .nav-upper {
+                @include flexContainer(row, nowrap);
+                @include flexAxis(space-between, center);
+                @include flexItem(1, 1, 100%);
+            }
+
+            .nav-lower {
+                @include flexContainer(row, nowrap);
+                @include flexAxis(center, flex-end);
+                @include flexItem(0, 1, 100%);
+            }
+
+            .nav-links {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    float: left;
+                    margin: 0 5rem .25rem;
+                }
+            }
+
+            .nav-sns {
+                li {
+                    list-style: none;
+                    float: left;
+                    margin: 0 .5rem;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        font-size: 2rem;
+                        color: $colorTextPrimary;
+                    }
+                }
+            }
         }
     }
 }
 
-@include mediaQuery($tablet) {
-    #logo {
-        height: 5rem;
-        width: 5rem;
+@include mediaQuery($mobile-lg){
+    header {
+        nav {
+
+            .nav-module {
+                max-width: $laptop;
+            }
+        }
     }
 }
