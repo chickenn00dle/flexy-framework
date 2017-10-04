@@ -51,8 +51,12 @@ header {
                     }
 
                     a {
-                        font-size: 2rem;
-                        color: $colorTextPrimary;
+                        font-size: 2.25rem;
+                        color: $colorLinkSecondary;
+
+                        &:hover {
+                            color: $colorLinkSecondaryDark;
+                        }
                     }
                 }
             }

@@ -735,9 +735,9 @@ header nav {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
-  -webkit-box-shadow: 0 0 5px 0 #404040;
-  -moz-box-shadow: 0 0 5px 0 #404040;
-  box-shadow: 0 0 5px 0 #404040;
+  -webkit-box-shadow: 0 0 5px 0 #b5b5b5;
+  -moz-box-shadow: 0 0 5px 0 #b5b5b5;
+  box-shadow: 0 0 5px 0 #b5b5b5;
 }
 header nav .nav-module {
   -webkit-display: -webkit-flex;
@@ -825,8 +825,11 @@ header nav .nav-module .nav-sns li:last-child {
   margin-right: 0;
 }
 header nav .nav-module .nav-sns li a {
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: #404040;
+}
+header nav .nav-module .nav-sns li a:hover {
+  color: #1a1a1a;
 }
 
 @media screen and (min-width: 768px) {
