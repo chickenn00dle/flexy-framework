@@ -1,6 +1,7 @@
 footer {
     @include flexContainer(column, nowrap);
     @include flexAxis(center, center);
+    @include flexItem(0, 0, auto);
     width: 100vw;
     background: $colorBgFooter;
 
@@ -22,17 +23,17 @@ footer {
 
             a {
                 font-size: 2.25rem;
-                color: $colorTextInverse;
+                color: $colorTextSecondary;
 
                 &:hover {
-                    color: $colorLinkPrimaryDark;
+                    color: $colorTextInverse;
                 }
             }
         }
     }
 
     .footer-copyright {
-        color: $colorTextInverse;
+        color: $colorTextSecondary;
     }
 }
 

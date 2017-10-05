@@ -494,15 +494,31 @@ a {
 }
 
 a:hover {
-  color: #c40000;
+  color: #f70000;
 }
 
 body {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
   width: 100vw;
   height: 100vh;
 }
-
-.shell {
+body .shell {
   background: #fff;
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -526,12 +542,11 @@ body {
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
   width: 100vw;
-  height: 100vh;
 }
-.shell section {
+body .shell section {
   width: 100vw;
 }
-.shell .module {
+body .shell section .module {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
   display: -ms-flexbox;
@@ -554,7 +569,7 @@ body {
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
-.shell .module .unit, .shell .module .unit-1, .shell .module .unit-2, .shell .module .unit-3, .shell .module .unit-4, .shell .module .unit-5, .shell .module .unit-6, .shell .module .unit-7, .shell .module .unit-8, .shell .module .unit-9 {
+body .shell section .module .unit, body .shell section .module .unit-1, body .shell section .module .unit-2, body .shell section .module .unit-3, body .shell section .module .unit-4, body .shell section .module .unit-5, body .shell section .module .unit-6, body .shell section .module .unit-7, body .shell section .module .unit-8, body .shell section .module .unit-9 {
   -webkit-box-flex: 1 1 100%;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
@@ -565,7 +580,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .shell section {
+  body .shell section {
     -webkit-display: -webkit-flex;
     -webkit-display: -webkit-box;
     display: -ms-flexbox;
@@ -584,7 +599,7 @@ body {
     justify-content: center;
     -ms-flex-pack: center;
   }
-  .shell .module {
+  body .shell section .module {
     -webkit-display: -webkit-flex;
     -webkit-display: -webkit-box;
     display: -ms-flexbox;
@@ -597,104 +612,104 @@ body {
     flex-direction: row;
     max-width: 1280px;
   }
-  .shell .module .unit {
+  body .shell section .module .unit {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 1 1 33%;
     -webkit-flex: 1 1 33%;
     -ms-flex: 1 1 33%;
     flex: 1 1 33%;
   }
-  .shell .module .unit:first-child {
+  body .shell section .module .unit:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-1 {
+  body .shell section .module .unit-1 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 10%;
     -webkit-flex: 0 0 10%;
     -ms-flex: 0 0 10%;
     flex: 0 0 10%;
   }
-  .shell .module .unit-1:first-child {
+  body .shell section .module .unit-1:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-2 {
+  body .shell section .module .unit-2 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 20%;
     -webkit-flex: 0 0 20%;
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
   }
-  .shell .module .unit-2:first-child {
+  body .shell section .module .unit-2:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-3 {
+  body .shell section .module .unit-3 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 30%;
     -webkit-flex: 0 0 30%;
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
   }
-  .shell .module .unit-3:first-child {
+  body .shell section .module .unit-3:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-4 {
+  body .shell section .module .unit-4 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 40%;
     -webkit-flex: 0 0 40%;
     -ms-flex: 0 0 40%;
     flex: 0 0 40%;
   }
-  .shell .module .unit-4:first-child {
+  body .shell section .module .unit-4:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-5 {
+  body .shell section .module .unit-5 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 50%;
     -webkit-flex: 0 0 50%;
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
   }
-  .shell .module .unit-5:first-child {
+  body .shell section .module .unit-5:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-6 {
+  body .shell section .module .unit-6 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 60%;
     -webkit-flex: 0 0 60%;
     -ms-flex: 0 0 60%;
     flex: 0 0 60%;
   }
-  .shell .module .unit-6:first-child {
+  body .shell section .module .unit-6:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-7 {
+  body .shell section .module .unit-7 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 70%;
     -webkit-flex: 0 0 70%;
     -ms-flex: 0 0 70%;
     flex: 0 0 70%;
   }
-  .shell .module .unit-7:first-child {
+  body .shell section .module .unit-7:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-8 {
+  body .shell section .module .unit-8 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 80%;
     -webkit-flex: 0 0 80%;
     -ms-flex: 0 0 80%;
     flex: 0 0 80%;
   }
-  .shell .module .unit-8:first-child {
+  body .shell section .module .unit-8:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
-  .shell .module .unit-9 {
+  body .shell section .module .unit-9 {
     margin: 0 .5rem .5rem 0;
     -webkit-box-flex: 0 0 90%;
     -webkit-flex: 0 0 90%;
     -ms-flex: 0 0 90%;
     flex: 0 0 90%;
   }
-  .shell .module .unit-9:first-child {
+  body .shell section .module .unit-9:first-child {
     margin: 0 .5rem .5rem .5rem;
   }
 }
@@ -706,9 +721,9 @@ header {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -716,11 +731,12 @@ header {
   -webkit-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -webkit-box-flex: 1 1 100%;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   background: #fff;
+  margin-bottom: 1px;
 }
 header nav {
   -webkit-display: -webkit-flex;
@@ -741,9 +757,7 @@ header nav {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
-  -webkit-box-shadow: 0 0 5px 0 #9b9b9b;
-  -moz-box-shadow: 0 0 5px 0 #9b9b9b;
-  box-shadow: 0 0 5px 0 #9b9b9b;
+  border-bottom: 5px solid #ff4444;
 }
 header nav .nav-module {
   -webkit-display: -webkit-flex;
@@ -791,14 +805,14 @@ header nav .nav-module .nav-upper {
   flex: 1 1 100%;
 }
 header nav .nav-module .nav-upper #logo img {
-  -webkit-box-shadow: 0 0 1px 0 #9b9b9b;
-  -moz-box-shadow: 0 0 1px 0 #9b9b9b;
-  box-shadow: 0 0 1px 0 #9b9b9b;
+  -webkit-box-shadow: 0 0 1px 0 #b5b5b5;
+  -moz-box-shadow: 0 0 1px 0 #b5b5b5;
+  box-shadow: 0 0 1px 0 #b5b5b5;
 }
 header nav .nav-module .nav-upper #logo img:hover {
-  -webkit-box-shadow: 0 0 5px 0 #9b9b9b;
-  -moz-box-shadow: 0 0 5px 0 #9b9b9b;
-  box-shadow: 0 0 5px 0 #9b9b9b;
+  -webkit-box-shadow: 0 0 7px 0 #b5b5b5;
+  -moz-box-shadow: 0 0 7px 0 #b5b5b5;
+  box-shadow: 0 0 7px 0 #b5b5b5;
 }
 header nav .nav-module .nav-lower {
   -webkit-display: -webkit-flex;
@@ -854,6 +868,7 @@ header nav .nav-module .nav-sns {
   }
   header nav .nav-module .nav-sns {
     display: block;
+    margin: 1rem 0;
   }
   header nav .nav-module .nav-sns li {
     list-style: none;
@@ -862,11 +877,10 @@ header nav .nav-module .nav-sns {
   }
   header nav .nav-module .nav-sns li a {
     font-size: 2.25rem;
-    color: #fff;
-    text-shadow: 0 0 1px #404040, 0 0 0 #9b9b9b, 0 0 1px #404040;
+    color: #ff4444;
   }
   header nav .nav-module .nav-sns li a:hover {
-    text-shadow: 0 0 5px #404040;
+    text-shadow: 0 0 2px #b5b5b5;
   }
 }
 footer {
@@ -887,6 +901,10 @@ footer {
   -webkit-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  -webkit-box-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 100vw;
   background: #2b2b2b;
 }
@@ -925,13 +943,13 @@ footer .footer-sns li {
 }
 footer .footer-sns li a {
   font-size: 2.25rem;
-  color: #fff;
+  color: #dbdbdb;
 }
 footer .footer-sns li a:hover {
-  color: #c40000;
+  color: #fff;
 }
 footer .footer-copyright {
-  color: #fff;
+  color: #dbdbdb;
 }
 
 @media screen and (min-width: 768px) {

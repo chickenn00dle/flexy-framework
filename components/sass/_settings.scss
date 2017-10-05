@@ -5,13 +5,17 @@ $light-gray: #dbdbdb;
 $gray: #404040;
 $dark-gray: #2b2b2b;
 $red: #ff4444;
+$pink: #ff44a2;
 $orange: #ffa244;
+$blue: #44a2ff;
+$green: #44ffa2;
 $tan: #fff7f1;
 
 $colorBgPrimary: $white;
-$colorBgSecondary: $tan;
-$colorBgCallout: $dark-gray;
+$colorBgSecondary: $red;
+$colorBgCallout: $orange;
 $colorBgHeader: $white;
+$colorBgHeaderSecondary: $red;
 $colorBgFooter: $dark-gray;
 
 $colorTextPrimary: $gray;
@@ -19,13 +23,13 @@ $colorTextSecondary: $light-gray;
 $colorTextInverse: $white;
 
 $colorLinkPrimary: $red;
-$colorLinkPrimaryDark: darken($red, 25%);
-$colorLinkSecondary: $gray;
-$colorLinkSecondaryDark: darken($gray, 25%);
+$colorLinkPrimaryDark: darken($red, 15%);
+$colorLinkSecondary: $blue;
+$colorLinkSecondaryDark: darken($blue, 15%);
 
 $colorBorderPrimary: $light-gray;
 
-$colorShadowPrimary: darken($light-gray, 25%);
+$colorShadowPrimary: darken($light-gray, 15%);
 $colorShadowSecondary: $gray;
 
 // Fonts
