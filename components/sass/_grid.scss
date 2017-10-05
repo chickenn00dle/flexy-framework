@@ -1,12 +1,15 @@
 body {
     width: 100vw;
+    height: 100vh;
 }
 
 .shell {
     background: $colorBgPrimary;
     @include flexContainer(column, nowrap);
     @include flexAxis(flex-start, center);
+    @include flexItem(1, 0, auto);
     width: 100vw;
+    height: 100vh;
 
     section {
         width: 100vw;

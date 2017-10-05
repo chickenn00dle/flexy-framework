@@ -19,13 +19,13 @@ $colorTextSecondary: $light-gray;
 $colorTextInverse: $white;
 
 $colorLinkPrimary: $red;
-$colorLinkPrimaryDark: darken($red, 15%);
+$colorLinkPrimaryDark: darken($red, 25%);
 $colorLinkSecondary: $gray;
-$colorLinkSecondaryDark: darken($gray, 15%);
+$colorLinkSecondaryDark: darken($gray, 25%);
 
 $colorBorderPrimary: $light-gray;
 
-$colorShadowPrimary: darken($light-gray, 15%);
+$colorShadowPrimary: darken($light-gray, 25%);
 $colorShadowSecondary: $gray;
 
 // Fonts

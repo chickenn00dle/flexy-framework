@@ -1,0 +1,45 @@
+footer {
+    @include flexContainer(column, nowrap);
+    @include flexAxis(center, center);
+    width: 100vw;
+    background: $colorBgFooter;
+
+    .footer-module {
+        @include flexContainer(column, nowrap);
+        @include flexAxis(center, center);
+        @include flexItem(1, 1, 100%);
+        padding: 1rem .5rem;
+    }
+
+    .footer-sns {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            float: left;
+            margin: 1rem;
+
+            a {
+                font-size: 2.25rem;
+                color: $colorTextInverse;
+
+                &:hover {
+                    color: $colorLinkPrimaryDark;
+                }
+            }
+        }
+    }
+
+    .footer-copyright {
+        color: $colorTextInverse;
+    }
+}
+
+@include mediaQuery($mobile-lg){
+    footer {
+        .footer-module {
+            max-width: $laptop;
+        }
+    }
+}

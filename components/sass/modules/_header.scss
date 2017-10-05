@@ -21,6 +21,14 @@ header {
                 @include flexContainer(row, nowrap);
                 @include flexAxis(center, center);
                 @include flexItem(1, 1, 100%);
+
+                #logo img {
+                    @include boxShadow(0, 0, 1px, 0, $colorShadowPrimary);
+
+                    &:hover {
+                        @include boxShadow(0, 0, 5px, 0, $colorShadowPrimary);
+                    }
+                }
             }
 
             .nav-lower {
@@ -72,18 +80,14 @@ header {
                         float: left;
                         margin: 0 .5rem;
 
-                        &:last-child {
-                            margin-right: 0;
-                        }
-
                         a {
                             font-size: 2.25rem;
                             color: $colorTextInverse;
-                            text-shadow: 0 1px 2px $colorShadowPrimary;
+                            text-shadow: 0 0 1px $colorShadowSecondary, 0 0 0 $colorShadowPrimary, 0 0 1px $colorShadowSecondary;
 
                             &:hover {
-                                color: $colorLinkPrimaryDark;
-                                text-shadow: 0 0 1px $colorShadowSecondary;
+                                // color: $colorLinkPrimaryDark;
+                                text-shadow: 0 0 5px $colorShadowSecondary;
                             }
                         }
                     }
