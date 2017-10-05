@@ -432,13 +432,13 @@ template {
   display: none;
 }
 
-body {
+html {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
-  body {
+  html {
     font-size: 18px;
   }
 }
@@ -449,6 +449,7 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #404040;
   margin: 0 0 .5rem 0;
 }

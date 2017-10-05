@@ -33,7 +33,8 @@ $colorShadowPrimary: darken($light-gray, 15%);
 $colorShadowSecondary: $gray;
 
 // Fonts
-$globalFont: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$globalFontPrimary: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$globalFontSecondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $globalFontSize: 18px;
 $mobileFontSize: 16px;
 

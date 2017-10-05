@@ -1,10 +1,10 @@
-body {
-    font-family: $globalFont;
+html {
+    font-family: $globalFontPrimary;
     font-size: $mobileFontSize;
 }
 
 @include mediaQuery($mobile-lg){
-    body {
+    html {
         font-size: $globalFontSize;
     }
 }
@@ -16,6 +16,7 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: $globalFontSecondary;
     color: $colorTextPrimary;
     margin: 0 0 .5rem 0;
 }
