@@ -43,10 +43,15 @@ header {
                 margin: 0;
                 padding: 0;
 
+                @include flexContainer(row, nowrap);
+                @include flexAxis(center, flex-end);
+                @include flexItem(0, 1, 100%);
+
                 li {
+                    @include flexItem(1, 1, auto);
                     list-style: none;
-                    float: left;
-                    margin: 0 1.25rem .25rem;
+                    text-align: center;
+                    margin: 0 auto;
                 }
             }
 
@@ -69,9 +74,7 @@ header {
                 }
 
                 .nav-links {
-                    li {
-                        margin: 0 4rem .25rem;
-                    }
+                    @include flexItem(0, 1, 50%);
                 }
 
                 .nav-sns {

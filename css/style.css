@@ -841,11 +841,36 @@ header nav .nav-module .nav-lower {
 header nav .nav-module .nav-links {
   margin: 0;
   padding: 0;
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-flex: 0 1 100%;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
 }
 header nav .nav-module .nav-links li {
+  -webkit-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   list-style: none;
-  float: left;
-  margin: 0 1.25rem .25rem;
+  text-align: center;
+  margin: 0 auto;
 }
 header nav .nav-module .nav-sns {
   display: none;
@@ -864,8 +889,11 @@ header nav .nav-module .nav-sns {
     justify-content: space-between;
     -ms-flex-pack: space-between;
   }
-  header nav .nav-module .nav-links li {
-    margin: 0 4rem .25rem;
+  header nav .nav-module .nav-links {
+    -webkit-box-flex: 0 1 50%;
+    -webkit-flex: 0 1 50%;
+    -ms-flex: 0 1 50%;
+    flex: 0 1 50%;
   }
   header nav .nav-module .nav-sns {
     display: block;
