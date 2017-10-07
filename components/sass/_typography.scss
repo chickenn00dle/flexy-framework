@@ -64,3 +64,21 @@ a {
 a:hover {
     color: $colorLinkPrimaryDark;
 }
+
+.hidden {
+    display: none;
+}
+
+.hidden-mobile {
+    display: none;
+
+    @include mediaQuery($mobile-lg) {
+        .hidden-mobile {
+            @include flexOnly();
+        }
+
+        .hidden-desktop {
+            display: none;
+        }
+    };
+}

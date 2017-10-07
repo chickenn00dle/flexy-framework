@@ -78,23 +78,28 @@ header {
                 }
 
                 .nav-sns {
-                    display: block;
-                    margin: 1rem 0;
+                    margin: 0;
+                    padding: 0;
+                    @include flexContainer(row, nowrap);
+                    @include flexAxis(space-around, center);
+                    @include flexItem(0, 1, 10rem);
 
                     li {
+                        @include flexItem(0, 1, auto);
                         list-style: none;
-                        float: left;
-                        margin: 0 .5rem;
+                        text-align: center;
+                        margin: 0 auto;
 
                         a {
                             font-size: 2.25rem;
-                            color: $colorLinkPrimary;
 
                             &:hover {
                                 text-shadow: 0 0 2px $colorShadowPrimary;
                             }
+
                         }
                     }
+
                 }
             }
         }

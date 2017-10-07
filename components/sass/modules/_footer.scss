@@ -1,39 +1,42 @@
 footer {
-    @include flexContainer(column, nowrap);
-    @include flexAxis(center, center);
-    @include flexItem(0, 0, auto);
     width: 100vw;
     background: $colorBgFooter;
+    // @include flexContainer(column, nowrap);
 
     .footer-module {
         @include flexContainer(column, nowrap);
-        @include flexAxis(center, center);
-        @include flexItem(1, 1, 100%);
-        padding: 1rem .5rem;
-    }
+        @include flexAxis(flex-start, center);
+        width: 100%;
+        padding: 1rem;
+        margin: auto;
+        box-sizing: border-box;
 
-    .footer-sns {
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style: none;
-            float: left;
+        .footer-sns {
             margin: 1rem;
+            padding: 0;
+            @include flexContainer(row, nowrap);
+            @include flexAxis(center, center);
 
-            a {
-                font-size: 2.25rem;
-                color: $colorTextSecondary;
+            li {
+                list-style: none;
+                text-align: center;
+                margin: 0 1rem;
 
-                &:hover {
+                a {
+                    font-size: 2.5rem;
                     color: $colorTextInverse;
+
+                    &:hover {
+                        text-shadow: 0 0 2px $colorShadowPrimary;
+                    }
+
                 }
             }
         }
-    }
 
-    .footer-copyright {
-        color: $colorTextSecondary;
+        .footer-copyright {
+            color: $colorTextSecondary;
+        }
     }
 }
 
