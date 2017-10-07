@@ -3,14 +3,13 @@ header {
     @include flexAxis(center, center);
     @include flexItem(0, 0, auto);
     background: $colorBgHeader;
-    margin-bottom: 1px;
 
     nav {
         @include flexContainer(row, nowrap);
         @include flexAxis(center, center);
         width: 100vw;
         // @include boxShadow(0, 0, 5px, 0, $colorShadowPrimary);
-        border-bottom: 5px solid $colorLinkPrimary;
+        border-bottom: 5px solid $colorBgHeaderSecondary;
 
         .nav-module {
             @include flexContainer(column, nowrap);

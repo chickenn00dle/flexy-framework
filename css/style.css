@@ -585,6 +585,23 @@ body .shell {
   width: 100vw;
 }
 body .shell section {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
   width: 100vw;
 }
 body .shell section .module {
@@ -598,13 +615,6 @@ body .shell section .module {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
   -webkit-box-flex: 1 1 100%;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
@@ -621,25 +631,6 @@ body .shell section .module .unit, body .shell section .module .unit-1, body .sh
 }
 
 @media screen and (min-width: 768px) {
-  body .shell section {
-    -webkit-display: -webkit-flex;
-    -webkit-display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-  }
   body .shell section .module {
     -webkit-display: -webkit-flex;
     -webkit-display: -webkit-box;
@@ -777,7 +768,6 @@ header {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   background: #fff;
-  margin-bottom: 1px;
 }
 header nav {
   -webkit-display: -webkit-flex;
@@ -798,7 +788,7 @@ header nav {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
-  border-bottom: 5px solid #ff4444;
+  border-bottom: 5px solid #404040;
 }
 header nav .nav-module {
   -webkit-display: -webkit-flex;
@@ -1042,4 +1032,32 @@ footer .footer-module .footer-copyright {
   footer .footer-module {
     max-width: 1280px;
   }
+}
+.bg-full, .bg-half, .bg-fourth {
+  background: #ff4444;
+  margin-bottom: 1rem;
+}
+.bg-full .module, .bg-half .module, .bg-fourth .module {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+.bg-full .module .unit h1, .bg-half .module .unit h1, .bg-fourth .module .unit h1, .bg-full .module .unit h2, .bg-half .module .unit h2, .bg-fourth .module .unit h2, .bg-full .module .unit h3, .bg-half .module .unit h3, .bg-fourth .module .unit h3, .bg-full .module .unit h4, .bg-half .module .unit h4, .bg-fourth .module .unit h4, .bg-full .module .unit h5, .bg-half .module .unit h5, .bg-fourth .module .unit h5, .bg-full .module .unit h6, .bg-half .module .unit h6, .bg-fourth .module .unit h6, .bg-full .module .unit p, .bg-half .module .unit p, .bg-fourth .module .unit p {
+  color: #fff;
+}
+
+.bg-full {
+  height: 100vh;
+}
+
+.bg-half {
+  height: 50vh;
+}
+
+.bg-fourth {
+  height: 25vh;
 }

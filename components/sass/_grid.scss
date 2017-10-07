@@ -12,11 +12,12 @@ body {
         width: 100vw;
 
         section {
+            @include flexContainer(row, nowrap);
+            @include flexAxis(center, stretch);
             width: 100vw;
 
             .module {
                 @include flexContainer(row, wrap);
-                @include flexAxis(center, stretch);
                 @include flexItem(1, 1, 100%);
 
                 .unit, .unit-1, .unit-2, .unit-3, .unit-4, .unit-5, .unit-6, .unit-7, .unit-8, .unit-9 {
@@ -35,8 +36,6 @@ body {
     body {
         .shell {
             section {
-                @include flexContainer(row, nowrap);
-                @include flexAxis(center, stretch);
 
                 .module {
                     @include flexContainer(row, nowrap);
