@@ -25,11 +25,6 @@ footer {
                 a {
                     font-size: 2.5rem;
                     color: $colorTextInverse;
-
-                    &:hover {
-                        text-shadow: 0 0 2px $colorShadowPrimary;
-                    }
-
                 }
             }
         }

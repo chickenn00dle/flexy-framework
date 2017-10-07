@@ -82,3 +82,27 @@ a:hover {
         }
     };
 }
+
+.twitter {
+    color: $colorTwitter;
+
+    &:hover {
+        color: $colorTwitterDark;
+    }
+}
+
+.github {
+    color: $colorGithub;
+
+    &:hover {
+        color: $colorGithubDark;
+    }
+}
+
+.codepen {
+    color: $colorCodepen;
+
+    &:hover {
+        color: $colorCodepenDark;
+    }
+}

@@ -32,6 +32,13 @@ $colorBorderPrimary: $light-gray;
 $colorShadowPrimary: darken($light-gray, 15%);
 $colorShadowSecondary: $gray;
 
+$colorTwitter: #00aced;
+$colorTwitterDark: #0084b4;
+$colorGithub: #333;
+$colorGithubDark: darken($colorGithub, 15%);
+$colorCodepen: #212121;
+$colorCodepenDark: darken($colorCodepen, 15%);
+
 // Fonts
 $globalFontPrimary: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $globalFontSecondary: "Helvetica Neue", Helvetica, Arial, sans-serif;

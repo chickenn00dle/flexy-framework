@@ -517,6 +517,27 @@ a:hover {
   }
 }
 
+.twitter {
+  color: #00aced;
+}
+.twitter:hover {
+  color: #0084b4;
+}
+
+.github {
+  color: #333;
+}
+.github:hover {
+  color: #0d0d0d;
+}
+
+.codepen {
+  color: #212121;
+}
+.codepen:hover {
+  color: black;
+}
+
 body {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -1011,9 +1032,6 @@ footer .footer-module .footer-sns li {
 footer .footer-module .footer-sns li a {
   font-size: 2.5rem;
   color: #fff;
-}
-footer .footer-module .footer-sns li a:hover {
-  text-shadow: 0 0 2px #b5b5b5;
 }
 footer .footer-module .footer-copyright {
   color: #dbdbdb;
