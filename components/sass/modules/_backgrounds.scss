@@ -43,3 +43,7 @@
 .bg-dots {
     @include radialGradient($colorBgCalloutSecondary, 10%, 25px);
 }
+
+.bg-checkered {
+    @include checkeredGradient($colorBgCalloutSecondary, 50px);
+}

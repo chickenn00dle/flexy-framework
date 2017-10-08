@@ -108,3 +108,20 @@
         darken($color, 10%);
     background-size: $size/2 $size/2;
 }
+
+@mixin checkeredGradient($color, $size) {
+    background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, $color), color-stop(0.25, darken($color, 10%))),
+                      gradient(linear, 0 0, 100% 100%, color-stop(0.25, $color), color-stop(0.25, transparent)),
+                      gradient(linear, 0 100%, 100% 0, color-stop(0.75, darken($color, 10%)), color-stop(0.75, $color)),
+                      gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, $color));
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, $color), color-stop(0.25, darken($color, 10%))),
+                    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, $color), color-stop(0.25, transparent)),
+                    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, darken($color, 10%)), color-stop(0.75, $color)),
+                    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, $color));
+
+  -webkit-background-size: $size $size;
+     -moz-background-size: $size $size;
+          background-size: $size $size;
+
+  background-position: 0 0, $size/2 0, $size/2 ($size/2)*-1, 0px $size/2;
+}
