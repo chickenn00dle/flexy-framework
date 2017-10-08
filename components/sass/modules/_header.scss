@@ -8,8 +8,8 @@ header {
         @include flexContainer(row, nowrap);
         @include flexAxis(center, center);
         width: 100vw;
-        // @include boxShadow(0, 0, 5px, 0, $colorShadowPrimary);
-        border-bottom: 5px solid $colorBgHeaderSecondary;
+        // @include boxShadow(0, 1px, 10px, 2px, $colorShadowSecondary);
+        border-bottom: 5px solid darken($colorBgHeaderSecondary, 10%);
 
         .nav-module {
             @include flexContainer(column, nowrap);

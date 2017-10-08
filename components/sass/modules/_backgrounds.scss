@@ -1,5 +1,4 @@
 %bg {
-    background: $colorBgSecondary;
     margin-bottom: 1rem;
 
     .module {
@@ -15,15 +14,32 @@
 
 .bg-full {
     @extend %bg;
+    background: $colorBgCalloutPrimary;
     height: 100vh;
 }
 
 .bg-half {
     @extend %bg;
+    background: $colorBgCalloutPrimary;
     height: 50vh;
 }
 
 .bg-fourth {
     @extend %bg;
+    background: $colorBgCalloutPrimary;
     height: 25vh;
+}
+
+.bg-secondary {
+    @extend %bg;
+    background: $colorBgCalloutSecondary;
+    height: 50vh;
+}
+
+.bg-gradient {
+    @include linearGradient(to bottom right, $colorBgCalloutSecondary);
+}
+
+.bg-dots {
+    @include radialGradient($colorBgCalloutSecondary, 10%, 25px);
 }

@@ -82,3 +82,29 @@
        -moz-border-radius: $pixels;
             border-radius: $pixels;
 }
+
+@mixin linearGradient($direction, $color) {
+    background: -webkit-linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
+       background: -moz-linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
+        background: -ms-linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
+         background: -o-linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
+           background: -webkit-gradient(linear, $direction, color-stop(0%, lighten($color, 10%)), color-stop(100%, darken($color, 10%)));
+            background: linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten($color, 10%)', endColorstr="darken($color, 10%)",GradientType=0);
+}
+
+@mixin radialGradient($color, $pos, $size) {
+    background:
+        -moz-radial-gradient($color $pos, transparent $pos),
+        -moz-radial-gradient($color $pos * 2, transparent $pos * 2),
+        darken($color, 10%);
+    background:
+        -webkit-radial-gradient($color $pos, transparent $pos),
+        -webkit-radial-gradient($color $pos * 2, transparent $pos * 2),
+        darken($color, 10%);
+    background:
+        radial-gradient($color $pos, transparent $pos),
+        radial-gradient($color $pos * 2, transparent $pos * 2),
+        darken($color, 10%);
+    background-size: $size/2 $size/2;
+}

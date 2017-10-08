@@ -788,7 +788,7 @@ header nav {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
-  border-bottom: 5px solid #404040;
+  border-bottom: 5px solid #ff1111;
 }
 header nav .nav-module {
   -webkit-display: -webkit-flex;
@@ -1033,11 +1033,10 @@ footer .footer-module .footer-copyright {
     max-width: 1280px;
   }
 }
-.bg-full, .bg-half, .bg-fourth {
-  background: #ff4444;
+.bg-full, .bg-half, .bg-fourth, .bg-secondary {
   margin-bottom: 1rem;
 }
-.bg-full .module, .bg-half .module, .bg-fourth .module {
+.bg-full .module, .bg-half .module, .bg-fourth .module, .bg-secondary .module {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1046,18 +1045,43 @@ footer .footer-module .footer-copyright {
   justify-content: center;
   -ms-flex-pack: center;
 }
-.bg-full .module .unit h1, .bg-half .module .unit h1, .bg-fourth .module .unit h1, .bg-full .module .unit h2, .bg-half .module .unit h2, .bg-fourth .module .unit h2, .bg-full .module .unit h3, .bg-half .module .unit h3, .bg-fourth .module .unit h3, .bg-full .module .unit h4, .bg-half .module .unit h4, .bg-fourth .module .unit h4, .bg-full .module .unit h5, .bg-half .module .unit h5, .bg-fourth .module .unit h5, .bg-full .module .unit h6, .bg-half .module .unit h6, .bg-fourth .module .unit h6, .bg-full .module .unit p, .bg-half .module .unit p, .bg-fourth .module .unit p {
+.bg-full .module .unit h1, .bg-half .module .unit h1, .bg-fourth .module .unit h1, .bg-secondary .module .unit h1, .bg-full .module .unit h2, .bg-half .module .unit h2, .bg-fourth .module .unit h2, .bg-secondary .module .unit h2, .bg-full .module .unit h3, .bg-half .module .unit h3, .bg-fourth .module .unit h3, .bg-secondary .module .unit h3, .bg-full .module .unit h4, .bg-half .module .unit h4, .bg-fourth .module .unit h4, .bg-secondary .module .unit h4, .bg-full .module .unit h5, .bg-half .module .unit h5, .bg-fourth .module .unit h5, .bg-secondary .module .unit h5, .bg-full .module .unit h6, .bg-half .module .unit h6, .bg-fourth .module .unit h6, .bg-secondary .module .unit h6, .bg-full .module .unit p, .bg-half .module .unit p, .bg-fourth .module .unit p, .bg-secondary .module .unit p {
   color: #fff;
 }
 
 .bg-full {
+  background: #ff4444;
   height: 100vh;
 }
 
 .bg-half {
+  background: #ff4444;
   height: 50vh;
 }
 
 .bg-fourth {
+  background: #ff4444;
   height: 25vh;
+}
+
+.bg-secondary {
+  background: #2b2b2b;
+  height: 50vh;
+}
+
+.bg-gradient {
+  background: -webkit-linear-gradient(to bottom right, #454545 0%, #121212 100%);
+  background: -moz-linear-gradient(to bottom right, #454545 0%, #121212 100%);
+  background: -ms-linear-gradient(to bottom right, #454545 0%, #121212 100%);
+  background: -o-linear-gradient(to bottom right, #454545 0%, #121212 100%);
+  background: -webkit-gradient(linear, to bottom right, color-stop(0%, #454545), color-stop(100%, #121212));
+  background: linear-gradient(to bottom right, #454545 0%, #121212 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten($color, 10%)', endColorstr="darken($color, 10%)",GradientType=0);
+}
+
+.bg-dots {
+  background: -moz-radial-gradient(#2b2b2b 10%, transparent 10%), -moz-radial-gradient(#2b2b2b 20%, transparent 20%), #121212;
+  background: -webkit-radial-gradient(#2b2b2b 10%, transparent 10%), -webkit-radial-gradient(#2b2b2b 20%, transparent 20%), #121212;
+  background: radial-gradient(#2b2b2b 10%, rgba(0, 0, 0, 0) 10%), radial-gradient(#2b2b2b 20%, rgba(0, 0, 0, 0) 20%), #121212;
+  background-size: 12.5px 12.5px;
 }
