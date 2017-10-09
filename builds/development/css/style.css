@@ -1076,7 +1076,6 @@ footer .footer-module .footer-copyright {
   background: -o-linear-gradient(to bottom right, #454545 0%, #121212 100%);
   background: -webkit-gradient(linear, to bottom right, color-stop(0%, #454545), color-stop(100%, #121212));
   background: linear-gradient(to bottom right, #454545 0%, #121212 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten($color, 10%)', endColorstr="darken($color, 10%)",GradientType=0);
 }
 
 .bg-dots {
@@ -1087,10 +1086,17 @@ footer .footer-module .footer-copyright {
 }
 
 .bg-checkered {
-  background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, #2b2b2b), color-stop(0.25, #121212)), gradient(linear, 0 0, 100% 100%, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), gradient(linear, 0 100%, 100% 0, color-stop(0.75, #121212), color-stop(0.75, #2b2b2b)), gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b));
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #2b2b2b), color-stop(0.25, #121212)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, #121212), color-stop(0.75, #2b2b2b)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b));
+  background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), gradient(linear, 0 0, 100% 100%, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b)), gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b));
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, #121212), color-stop(0.75, #2b2b2b));
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
   background-size: 50px 50px;
   background-position: 0 0, 25px 0, 25px -25px, 0px 25px;
+}
+
+.bg-striped {
+  background: repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
+  background: -o-repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
+  background: -moz-repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
+  background: -webkit-repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
 }

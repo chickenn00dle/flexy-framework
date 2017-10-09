@@ -90,7 +90,6 @@
          background: -o-linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
            background: -webkit-gradient(linear, $direction, color-stop(0%, lighten($color, 10%)), color-stop(100%, darken($color, 10%)));
             background: linear-gradient($direction, lighten($color, 10%) 0%, darken($color, 10%) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='lighten($color, 10%)', endColorstr="darken($color, 10%)",GradientType=0);
 }
 
 @mixin radialGradient($color, $pos, $size) {
@@ -110,18 +109,25 @@
 }
 
 @mixin checkeredGradient($color, $size) {
-    background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, $color), color-stop(0.25, darken($color, 10%))),
+    background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, $color), color-stop(0.25, transparent)),
                       gradient(linear, 0 0, 100% 100%, color-stop(0.25, $color), color-stop(0.25, transparent)),
-                      gradient(linear, 0 100%, 100% 0, color-stop(0.75, darken($color, 10%)), color-stop(0.75, $color)),
+                      gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, $color)),
                       gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, $color));
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, $color), color-stop(0.25, darken($color, 10%))),
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, $color), color-stop(0.25, transparent)),
                     -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, $color), color-stop(0.25, transparent)),
-                    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, darken($color, 10%)), color-stop(0.75, $color)),
-                    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, $color));
+                    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, $color)),
+                    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, darken($color, 10%)), color-stop(0.75, $color));
 
   -webkit-background-size: $size $size;
      -moz-background-size: $size $size;
           background-size: $size $size;
 
   background-position: 0 0, $size/2 0, $size/2 ($size/2)*-1, 0px $size/2;
+}
+
+@mixin stripedGradient($direction, $color, $size) {
+    background: repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
+    background: -o-repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
+    background: -moz-repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
+    background: -webkit-repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
 }
