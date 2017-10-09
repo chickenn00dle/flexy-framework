@@ -40,7 +40,7 @@
     @include linearGradient(to bottom right, $colorBgCalloutSecondary);
 }
 
-.bg-dots {
+.bg-polkadots {
     @include radialGradient($colorBgCalloutSecondary, 10%, 25px);
 }
 
