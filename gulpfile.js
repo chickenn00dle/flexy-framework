@@ -24,9 +24,11 @@ env = process.env.NODE_ENV || 'development';
 
 if (env === 'development'){
     outputDir = 'builds/development/';
+    ghPages = 'docs/';
     sassStyle = 'expanded';
 } else {
     outputDir = 'builds/production/';
+    ghPages = 'docs/'
     sassStyle = 'compressed';
 }
 
@@ -71,10 +73,29 @@ gulp.task('compass', function(){
         .pipe(connect.reload())
 });
 
+gulp.task('compass2', function(){
+    gulp.src('components/sass/style.scss')
+        .pipe(compass({
+            sass: 'components/sass',
+            style: sassStyle,
+            image: outputDir + 'img'
+        })
+            .on('error', gutil.log))
+        .pipe(gulp.dest(ghPages + 'css'))
+        .pipe(connect.reload())
+});
+
 gulp.task('html', function(){
     gulp.src(htmlSources)
         .pipe(gulpif(env === 'production', HTMLminify()))
         .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+        .pipe(connect.reload())
+});
+
+gulp.task('html2', function(){
+    gulp.src(htmlSources)
+        .pipe(gulpif(env === 'production', HTMLminify()))
+        .pipe(gulpif(env === 'production', gulp.dest(ghPages)))
         .pipe(connect.reload())
 });
 
@@ -106,4 +127,4 @@ gulp.task('watch', function(){
     gulp.watch('builds/development/img/**/*.*', ['imagemin']);
 });
 
-gulp.task('default', ['coffee', 'js', 'json', 'compass', 'html', 'imagemin', 'connect', 'watch']);
+gulp.task('default', ['coffee', 'js', 'json', 'compass', 'compass2', 'html', 'html2', 'imagemin', 'connect', 'watch']);
