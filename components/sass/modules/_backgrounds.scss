@@ -33,7 +33,6 @@
 .bg-secondary {
     @extend %bg;
     background: $colorBgCalloutSecondary;
-    height: 50vh;
 }
 
 .bg-gradient {
