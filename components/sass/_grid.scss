@@ -39,6 +39,7 @@ body {
 
                 .module {
                     @include flexContainer(row, nowrap);
+                    @include flexAxis(center, center);
                     max-width: $laptop;
 
                     .unit {

@@ -3,12 +3,6 @@ html {
     font-size: $mobileFontSize;
 }
 
-@include mediaQuery($mobile-lg){
-    html {
-        font-size: $globalFontSize;
-    }
-}
-
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -21,33 +15,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: 900;
-    margin: 1rem 0;
+    text-align: center;
 }
 
 h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-h3 {
     font-size: 2rem;
     font-weight: 700;
 }
 
-h4 {
+h3 {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-h5 {
+h4 {
     font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1rem;
     font-weight: 500;
 }
 
 h6 {
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 500;
 }
 
@@ -104,5 +98,28 @@ a:hover {
 
     &:hover {
         color: $colorCodepenDark;
+    }
+}
+
+@include mediaQuery($mobile-lg){
+    html {
+        font-size: $globalFontSize;
+    }
+
+    h1 {
+        font-size: 5rem;
+        text-align: left;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
     }
 }

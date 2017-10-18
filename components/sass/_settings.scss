@@ -33,7 +33,7 @@ $colorLinkSecondaryDark: lighten($gray, 15%);
 
 $colorBorderPrimary: $light-gray;
 
-$colorShadowPrimary: darken($light-gray, 15%);
+$colorShadowPrimary: $light-gray;
 $colorShadowSecondary: $gray;
 
 $colorTwitter: #00aced;
@@ -46,8 +46,8 @@ $colorCodepenDark: darken($colorCodepen, 15%);
 // Fonts
 $globalFontPrimary: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $globalFontSecondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$globalFontSize: 18px;
-$mobileFontSize: 12px;
+$globalFontSize: 20px;
+$mobileFontSize: 22px;
 
 // Widths
 $mobile-sm: 375px;
@@ -56,4 +56,4 @@ $mobile-xl: 1024px;
 $laptop: 1280px;
 $laptop-lg: 1440px;
 $retina: 2560px;
-$retina-lg: 2880px
+$retina-lg: 2880px;

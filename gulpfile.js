@@ -34,7 +34,7 @@ if (env === 'development'){
 
 coffeeSources = ['components/coffee/*.coffee'];
 jsSources = ['components/scripts/*.js'];
-sassSources = ['components/sass/*.scss', 'components/sass/modules/*.scss'];
+sassSources = ['components/sass/**/*.scss'];
 htmlSources = ['builds/development/*.html'];
 jsonSources = ['builds/development/js/*.json'];
 
@@ -121,7 +121,7 @@ gulp.task('connect', function(){
 gulp.task('watch', function(){
     gulp.watch(coffeeSources, ['coffee']);
     gulp.watch(jsSources, ['js']);
-    gulp.watch(sassSources, ['compass']);
+    gulp.watch(sassSources, ['compass', 'compass2']);
     gulp.watch(htmlSources, ['html']);
     gulp.watch(jsonSources, ['json']);
     gulp.watch('builds/development/img/**/*.*', ['imagemin']);

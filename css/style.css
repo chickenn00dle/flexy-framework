@@ -434,14 +434,9 @@ template {
 
 html {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 12px;
+  font-size: 22px;
 }
 
-@media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-}
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -454,33 +449,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 900;
-  margin: 1rem 0;
+  text-align: center;
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-h3 {
   font-size: 2rem;
   font-weight: 700;
 }
 
-h4 {
+h3 {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-h5 {
+h4 {
   font-size: 1.25rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1rem;
   font-weight: 500;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 500;
 }
 
@@ -538,6 +533,28 @@ a:hover {
   color: black;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 5rem;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+}
 body {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -642,6 +659,13 @@ body .shell section .module .unit, body .shell section .module .unit-1, body .sh
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
     max-width: 1280px;
   }
   body .shell section .module .unit {
@@ -837,14 +861,14 @@ header nav .nav-module .nav-upper {
   margin-bottom: 1rem;
 }
 header nav .nav-module .nav-upper #logo img {
-  -webkit-box-shadow: 0 0 1px 0 #b5b5b5;
-  -moz-box-shadow: 0 0 1px 0 #b5b5b5;
-  box-shadow: 0 0 1px 0 #b5b5b5;
+  -webkit-box-shadow: 0 0 1px 0 #dbdbdb;
+  -moz-box-shadow: 0 0 1px 0 #dbdbdb;
+  box-shadow: 0 0 1px 0 #dbdbdb;
 }
 header nav .nav-module .nav-upper #logo img:hover {
-  -webkit-box-shadow: 0 0 7px 0 #b5b5b5;
-  -moz-box-shadow: 0 0 7px 0 #b5b5b5;
-  box-shadow: 0 0 7px 0 #b5b5b5;
+  -webkit-box-shadow: 0 0 7px 0 #dbdbdb;
+  -moz-box-shadow: 0 0 7px 0 #dbdbdb;
+  box-shadow: 0 0 7px 0 #dbdbdb;
 }
 header nav .nav-module .nav-lower {
   -webkit-display: -webkit-flex;
@@ -967,7 +991,7 @@ header nav .nav-module .nav-sns {
     font-size: 2.25rem;
   }
   header nav .nav-module .nav-sns li a:hover {
-    text-shadow: 0 0 2px #b5b5b5;
+    text-shadow: 0 0 2px #dbdbdb;
   }
 }
 footer {
