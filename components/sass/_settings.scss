@@ -28,8 +28,8 @@ $colorTextInverse: $white;
 
 $colorLinkPrimary: $red;
 $colorLinkPrimaryDark: darken($red, 15%);
-$colorLinkSecondary: $blue;
-$colorLinkSecondaryDark: darken($blue, 15%);
+$colorLinkSecondary: $gray;
+$colorLinkSecondaryDark: lighten($gray, 15%);
 
 $colorBorderPrimary: $light-gray;
 
@@ -47,7 +47,7 @@ $colorCodepenDark: darken($colorCodepen, 15%);
 $globalFontPrimary: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 $globalFontSecondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $globalFontSize: 18px;
-$mobileFontSize: 16px;
+$mobileFontSize: 12px;
 
 // Widths
 $mobile-sm: 375px;

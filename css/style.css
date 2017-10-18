@@ -434,7 +434,7 @@ template {
 
 html {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -902,6 +902,9 @@ header nav .nav-module .nav-links li {
   list-style: none;
   text-align: center;
   margin: 0 auto;
+}
+header nav .nav-module .nav-links li a {
+  color: #404040;
 }
 header nav .nav-module .nav-sns {
   display: none;
