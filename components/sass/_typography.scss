@@ -5,12 +5,13 @@ html {
 
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
+    color: $colorTextPrimary;
     line-height: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $globalFontSecondary;
-    color: $colorTextPrimary;
+    color: $colorHeadingPrimary;
     margin: 0 0 .5rem 0;
 }
 
@@ -44,18 +45,62 @@ h6 {
     font-weight: 500;
 }
 
-p {
-    color: $colorTextPrimary;
-    margin: 0 0 1rem 0;
-}
-
 a {
     text-decoration: none;
     color: $colorLinkPrimary;
 }
 
+p {
+    margin: 0 0 1rem 0;
+}
+
 a:hover {
     color: $colorLinkPrimaryDark;
+}
+
+ol, ul {
+    padding: 0 0 0 1.1rem;
+}
+
+dl {
+    width: 100%;
+    @include flexContainer(row, wrap);
+    @include flexAxis(flex-start, space-between);
+
+    dt {
+        @include flexItem(1, 1, 100%);
+        font-weight: bold;
+    }
+
+    dd {
+        @include flexItem(1, 1, 100%);
+        margin: 0;
+    }
+}
+
+blockquote {
+    margin: 0;
+    text-align: center;
+
+    &:before {
+        content: open-quote;
+        font-size: 5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin: -3rem 0 0 0;
+    }
+
+    cite {
+        font-size: .9rem;
+        color: $colorTextSecondary;
+    }
+
+    cite:before{
+        content: "\2014 ";
+    }
 }
 
 .hidden {
@@ -107,7 +152,6 @@ a:hover {
 
     h1 {
         font-size: 5rem;
-        text-align: left;
     }
 
     h2 {
@@ -120,5 +164,17 @@ a:hover {
 
     h4 {
         font-size: 1.5rem;
+    }
+
+    dl {
+
+        dt {
+            @include flexItem(1, 1, 15%);
+        }
+
+        dd {
+            @include flexItem(1, 1, 85%);
+            margin: 0;
+        }
     }
 }

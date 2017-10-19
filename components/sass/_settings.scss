@@ -1,9 +1,9 @@
 // Colors
 $white: #fff;
 $black: #000;
-$light-gray: #dbdbdb;
-$gray: #404040;
-$dark-gray: #2b2b2b;
+$light-gray: #d6d6d6;
+$gray: rgba(50, 50, 50, .9);
+$dark-gray: #323232;
 $red: #ff4444;
 $pink: #ff44a2;
 $orange: #ffa244;
@@ -22,6 +22,7 @@ $colorBgHeaderSecondary: $red;
 
 $colorBgFooter: $dark-gray;
 
+$colorHeadingPrimary: $dark-gray;
 $colorTextPrimary: $gray;
 $colorTextSecondary: $light-gray;
 $colorTextInverse: $white;
@@ -29,13 +30,14 @@ $colorTextInverse: $white;
 $colorLinkPrimary: $red;
 $colorLinkPrimaryDark: darken($red, 15%);
 $colorLinkSecondary: $gray;
-$colorLinkSecondaryDark: lighten($gray, 15%);
+$colorLinkSecondaryDark: dark-gray;
 
 $colorBorderPrimary: $light-gray;
 
 $colorShadowPrimary: $light-gray;
 $colorShadowSecondary: $gray;
 
+// Brand Colors
 $colorTwitter: #00aced;
 $colorTwitterDark: #0084b4;
 $colorGithub: #333;
@@ -44,10 +46,10 @@ $colorCodepen: #212121;
 $colorCodepenDark: darken($colorCodepen, 15%);
 
 // Fonts
-$globalFontPrimary: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$globalFontPrimary: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $globalFontSecondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $globalFontSize: 20px;
-$mobileFontSize: 22px;
+$mobileFontSize: 18px;
 
 // Widths
 $mobile-sm: 375px;

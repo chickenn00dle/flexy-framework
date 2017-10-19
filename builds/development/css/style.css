@@ -433,18 +433,19 @@ template {
 }
 
 html {
-  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-  font-size: 22px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
   font-size: 1rem;
+  color: rgba(50, 50, 50, 0.9);
   line-height: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #404040;
+  color: #323232;
   margin: 0 0 .5rem 0;
 }
 
@@ -478,18 +479,77 @@ h6 {
   font-weight: 500;
 }
 
-p {
-  color: #404040;
-  margin: 0 0 1rem 0;
-}
-
 a {
   text-decoration: none;
   color: #ff4444;
 }
 
+p {
+  margin: 0 0 1rem 0;
+}
+
 a:hover {
   color: #f70000;
+}
+
+ol, ul {
+  padding: 0 0 0 1.1rem;
+}
+
+dl {
+  width: 100%;
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: space-between;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+}
+dl dt {
+  -webkit-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  font-weight: bold;
+}
+dl dd {
+  -webkit-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+  text-align: center;
+}
+blockquote:before {
+  content: open-quote;
+  font-size: 5rem;
+}
+blockquote p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: -3rem 0 0 0;
+}
+blockquote cite {
+  font-size: .9rem;
+  color: #d6d6d6;
+}
+blockquote cite:before {
+  content: "\2014 ";
 }
 
 .hidden {
@@ -539,7 +599,6 @@ a:hover {
 
   h1 {
     font-size: 5rem;
-    text-align: left;
   }
 
   h2 {
@@ -552,6 +611,20 @@ a:hover {
 
   h4 {
     font-size: 1.5rem;
+  }
+
+  dl dt {
+    -webkit-box-flex: 1 1 15%;
+    -webkit-flex: 1 1 15%;
+    -ms-flex: 1 1 15%;
+    flex: 1 1 15%;
+  }
+  dl dd {
+    -webkit-box-flex: 1 1 85%;
+    -webkit-flex: 1 1 85%;
+    -ms-flex: 1 1 85%;
+    flex: 1 1 85%;
+    margin: 0;
   }
 }
 body {
@@ -619,6 +692,7 @@ body .shell section {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
+  margin-bottom: 1rem;
 }
 body .shell section .module {
   -webkit-display: -webkit-flex;
@@ -860,14 +934,14 @@ header nav .nav-module .nav-upper {
   margin-bottom: 1rem;
 }
 header nav .nav-module .nav-upper #logo img {
-  -webkit-box-shadow: 0 0 1px 0 #dbdbdb;
-  -moz-box-shadow: 0 0 1px 0 #dbdbdb;
-  box-shadow: 0 0 1px 0 #dbdbdb;
+  -webkit-box-shadow: 0 0 1px 0 #d6d6d6;
+  -moz-box-shadow: 0 0 1px 0 #d6d6d6;
+  box-shadow: 0 0 1px 0 #d6d6d6;
 }
 header nav .nav-module .nav-upper #logo img:hover {
-  -webkit-box-shadow: 0 0 7px 0 #dbdbdb;
-  -moz-box-shadow: 0 0 7px 0 #dbdbdb;
-  box-shadow: 0 0 7px 0 #dbdbdb;
+  -webkit-box-shadow: 0 0 7px 0 #d6d6d6;
+  -moz-box-shadow: 0 0 7px 0 #d6d6d6;
+  box-shadow: 0 0 7px 0 #d6d6d6;
 }
 header nav .nav-module .nav-lower {
   -webkit-display: -webkit-flex;
@@ -927,7 +1001,7 @@ header nav .nav-module .nav-links li {
   margin: 0 auto;
 }
 header nav .nav-module .nav-links li a {
-  color: #404040;
+  color: rgba(50, 50, 50, 0.9);
 }
 header nav .nav-module .nav-sns {
   display: none;
@@ -990,12 +1064,12 @@ header nav .nav-module .nav-sns {
     font-size: 2.25rem;
   }
   header nav .nav-module .nav-sns li a:hover {
-    text-shadow: 0 0 2px #dbdbdb;
+    text-shadow: 0 0 2px #d6d6d6;
   }
 }
 footer {
   width: 100vw;
-  background: #2b2b2b;
+  background: #323232;
 }
 footer .footer-module {
   -webkit-display: -webkit-flex;
@@ -1051,7 +1125,7 @@ footer .footer-module .footer-sns li a {
   color: #fff;
 }
 footer .footer-module .footer-copyright {
-  color: #dbdbdb;
+  color: #d6d6d6;
 }
 
 @media screen and (min-width: 768px) {
@@ -1091,28 +1165,28 @@ footer .footer-module .footer-copyright {
 }
 
 .bg-secondary {
-  background: #2b2b2b;
+  background: #323232;
 }
 
 .bg-gradient {
-  background: -webkit-linear-gradient(to bottom right, #454545 0%, #121212 100%);
-  background: -moz-linear-gradient(to bottom right, #454545 0%, #121212 100%);
-  background: -ms-linear-gradient(to bottom right, #454545 0%, #121212 100%);
-  background: -o-linear-gradient(to bottom right, #454545 0%, #121212 100%);
-  background: -webkit-gradient(linear, to bottom right, color-stop(0%, #454545), color-stop(100%, #121212));
-  background: linear-gradient(to bottom right, #454545 0%, #121212 100%);
+  background: -webkit-linear-gradient(to bottom right, #4c4c4c 0%, #191919 100%);
+  background: -moz-linear-gradient(to bottom right, #4c4c4c 0%, #191919 100%);
+  background: -ms-linear-gradient(to bottom right, #4c4c4c 0%, #191919 100%);
+  background: -o-linear-gradient(to bottom right, #4c4c4c 0%, #191919 100%);
+  background: -webkit-gradient(linear, to bottom right, color-stop(0%, #4c4c4c), color-stop(100%, #191919));
+  background: linear-gradient(to bottom right, #4c4c4c 0%, #191919 100%);
 }
 
 .bg-polkadots {
-  background: -moz-radial-gradient(#2b2b2b 10%, transparent 10%), -moz-radial-gradient(#2b2b2b 20%, transparent 20%), #121212;
-  background: -webkit-radial-gradient(#2b2b2b 10%, transparent 10%), -webkit-radial-gradient(#2b2b2b 20%, transparent 20%), #121212;
-  background: radial-gradient(#2b2b2b 10%, rgba(0, 0, 0, 0) 10%), radial-gradient(#2b2b2b 20%, rgba(0, 0, 0, 0) 20%), #121212;
+  background: -moz-radial-gradient(#323232 10%, transparent 10%), -moz-radial-gradient(#323232 20%, transparent 20%), #191919;
+  background: -webkit-radial-gradient(#323232 10%, transparent 10%), -webkit-radial-gradient(#323232 20%, transparent 20%), #191919;
+  background: radial-gradient(#323232 10%, rgba(0, 0, 0, 0) 10%), radial-gradient(#323232 20%, rgba(0, 0, 0, 0) 20%), #191919;
   background-size: 12.5px 12.5px;
 }
 
 .bg-checkered {
-  background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), gradient(linear, 0 0, 100% 100%, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b)), gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b));
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #2b2b2b), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #2b2b2b)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, #121212), color-stop(0.75, #2b2b2b));
+  background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, #323232), color-stop(0.25, transparent)), gradient(linear, 0 0, 100% 100%, color-stop(0.25, #323232), color-stop(0.25, transparent)), gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #323232)), gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #323232));
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #323232), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #323232), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #323232)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, #191919), color-stop(0.75, #323232));
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
   background-size: 50px 50px;
@@ -1120,8 +1194,8 @@ footer .footer-module .footer-copyright {
 }
 
 .bg-striped {
-  background: repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
-  background: -o-repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
-  background: -moz-repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
-  background: -webkit-repeating-linear-gradient(315deg, #2b2b2b, #2b2b2b 2.5px, #121212 2.5px, #121212 10px);
+  background: repeating-linear-gradient(315deg, #323232, #323232 2.5px, #191919 2.5px, #191919 10px);
+  background: -o-repeating-linear-gradient(315deg, #323232, #323232 2.5px, #191919 2.5px, #191919 10px);
+  background: -moz-repeating-linear-gradient(315deg, #323232, #323232 2.5px, #191919 2.5px, #191919 10px);
+  background: -webkit-repeating-linear-gradient(315deg, #323232, #323232 2.5px, #191919 2.5px, #191919 10px);
 }
