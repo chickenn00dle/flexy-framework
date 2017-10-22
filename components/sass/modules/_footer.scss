@@ -1,6 +1,6 @@
 footer {
     width: 100vw;
-    background: $colorBgFooter;
+    background: $colorBgFooterOne;
     // @include flexContainer(column, nowrap);
 
     .footer-module {
@@ -30,7 +30,7 @@ footer {
         }
 
         .footer-copyright {
-            color: $colorTextSecondary;
+            color: $colorTextTwo;
         }
     }
 }

@@ -11,31 +11,33 @@ $blue: #44a2ff;
 $green: #44ffa2;
 $tan: #fff7f1;
 
-$colorBgPrimary: $white;
-$colorBgSecondary: $red;
+$colorBgBodyOne: $white;
+$colorBgBodyTwo: $red;
 
-$colorBgCalloutPrimary: $red;
-$colorBgCalloutSecondary: $dark-gray;
+$colorBgFullOne: $red;
+$colorBgFullTwo: $dark-gray;
 
-$colorBgHeader: $white;
-$colorBgHeaderSecondary: $red;
+$colorBgHeaderOne: $white;
+$colorBgHeaderTwo: $red;
 
-$colorBgFooter: $dark-gray;
+$colorBgFooterOne: $dark-gray;
+$colorBgFooterTwo: $gray;
 
-$colorHeadingPrimary: $dark-gray;
-$colorTextPrimary: $gray;
-$colorTextSecondary: $light-gray;
+$colorHeadingOne: $dark-gray;
+
+$colorTextOne: $gray;
+$colorTextTwo: $light-gray;
 $colorTextInverse: $white;
 
-$colorLinkPrimary: $red;
-$colorLinkPrimaryDark: darken($red, 15%);
-$colorLinkSecondary: $gray;
-$colorLinkSecondaryDark: dark-gray;
+$colorLinkOne: $red;
+$colorLinkOneDark: darken($red, 15%);
+$colorLinkTwo: $gray;
+$colorLinkTwoDark: dark-gray;
 
-$colorBorderPrimary: $light-gray;
+$colorBorderOne: $light-gray;
 
-$colorShadowPrimary: $light-gray;
-$colorShadowSecondary: $gray;
+$colorShadowOne: $light-gray;
+$colorShadowTwo: $gray;
 
 // Brand Colors
 $colorTwitter: #00aced;
@@ -46,8 +48,8 @@ $colorCodepen: #212121;
 $colorCodepenDark: darken($colorCodepen, 15%);
 
 // Fonts
-$globalFontPrimary: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$globalFontSecondary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$globalFontOne: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$globalFontTwo: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $globalFontSize: 20px;
 $mobileFontSize: 18px;
 

@@ -14,39 +14,39 @@
 
 .bg-full {
     @extend %bg;
-    background: $colorBgCalloutPrimary;
+    background: $colorBgFullOne;
     height: 100vh;
 }
 
 .bg-half {
     @extend %bg;
-    background: $colorBgCalloutPrimary;
+    background: $colorBgFullOne;
     height: 50vh;
 }
 
 .bg-fourth {
     @extend %bg;
-    background: $colorBgCalloutPrimary;
-    height: 25vh;
+    background: $colorBgFullOne;
+    height: 30vh;
 }
 
 .bg-secondary {
     @extend %bg;
-    background: $colorBgCalloutSecondary;
+    background: $colorBgFullTwo;
 }
 
 .bg-gradient {
-    @include linearGradient(to bottom right, $colorBgCalloutSecondary);
+    @include linearGradient(to bottom right, $colorBgFullTwo);
 }
 
 .bg-polkadots {
-    @include radialGradient($colorBgCalloutSecondary, 10%, 25px);
+    @include radialGradient($colorBgFullTwo, 10%, 25px);
 }
 
 .bg-checkered {
-    @include checkeredGradient($colorBgCalloutSecondary, 50px);
+    @include checkeredGradient($colorBgFullTwo, 50px);
 }
 
 .bg-striped {
-    @include stripedGradient(315deg, $colorBgCalloutSecondary, 5px);
+    @include stripedGradient(315deg, $colorBgFullTwo, 5px);
 }

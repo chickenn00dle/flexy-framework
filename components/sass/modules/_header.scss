@@ -2,14 +2,13 @@ header {
     @include flexContainer(column, nowrap);
     @include flexAxis(center, center);
     @include flexItem(0, 0, auto);
-    background: $colorBgHeader;
+    background: $colorBgHeaderOne;
 
     nav {
         @include flexContainer(row, nowrap);
         @include flexAxis(center, center);
         width: 100vw;
-        // @include boxShadow(0, 1px, 10px, 2px, $colorShadowSecondary);
-        border-bottom: 5px solid darken($colorBgHeaderSecondary, 10%);
+        @include boxShadow(0, 1px, 10px, 2px, $colorShadowTwo);
 
         .nav-module {
             @include flexContainer(column, nowrap);
@@ -25,10 +24,10 @@ header {
                 margin-bottom: 1rem;
 
                 #logo img {
-                    @include boxShadow(0, 0, 1px, 0, $colorShadowPrimary);
+                    @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
 
                     &:hover {
-                        @include boxShadow(0, 0, 7px, 0, $colorShadowPrimary);
+                        @include boxShadow(0, 0, 7px, 0, $colorShadowOne);
                     }
                 }
             }
@@ -37,6 +36,7 @@ header {
                 @include flexContainer(row, nowrap);
                 @include flexAxis(center, flex-end);
                 @include flexItem(0, 1, 100%);
+                padding: .25rem;
             }
 
             .nav-links {
@@ -54,7 +54,7 @@ header {
                     margin: 0 auto;
 
                     a {
-                        color: $colorLinkSecondary;
+                        color: $colorLinkTwo;
                     }
                 }
             }
@@ -98,7 +98,7 @@ header {
                             font-size: 2.25rem;
 
                             &:hover {
-                                text-shadow: 0 0 2px $colorShadowPrimary;
+                                text-shadow: 0 0 2px $colorShadowOne;
                             }
 
                         }

@@ -5,7 +5,7 @@ body {
     height: 100vh;
 
     .shell {
-        background: $colorBgPrimary;
+        background: $colorBgBodyOne;
         @include flexContainer(column, nowrap);
         @include flexAxis(flex-start, center);
         @include flexItem(1, 0, auto);
@@ -40,7 +40,7 @@ body {
 
                 .module {
                     @include flexContainer(row, nowrap);
-                    @include flexAxis(center, center);
+                    @include flexAxis(flex-start, center);
                     max-width: $laptop;
 
                     .unit {
@@ -132,6 +132,10 @@ body {
                         }
                     }
 
+                }
+
+                .module-centered {
+                    @include flexAxis(center, center);
                 }
             }
         }
