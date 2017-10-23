@@ -546,7 +546,7 @@ blockquote p {
 }
 blockquote cite {
   font-size: .9rem;
-  color: #889188;
+  color: #bdc2bd;
 }
 blockquote cite:before {
   content: "\2014 ";
@@ -965,14 +965,14 @@ header nav .nav-module .nav-upper {
   margin-bottom: 1rem;
 }
 header nav .nav-module .nav-upper #logo img {
-  -webkit-box-shadow: 0 0 1px 0 #889188;
-  -moz-box-shadow: 0 0 1px 0 #889188;
-  box-shadow: 0 0 1px 0 #889188;
+  -webkit-box-shadow: 0 0 1px 0 #bdc2bd;
+  -moz-box-shadow: 0 0 1px 0 #bdc2bd;
+  box-shadow: 0 0 1px 0 #bdc2bd;
 }
 header nav .nav-module .nav-upper #logo img:hover {
-  -webkit-box-shadow: 0 0 7px 0 #889188;
-  -moz-box-shadow: 0 0 7px 0 #889188;
-  box-shadow: 0 0 7px 0 #889188;
+  -webkit-box-shadow: 0 0 7px 0 #bdc2bd;
+  -moz-box-shadow: 0 0 7px 0 #bdc2bd;
+  box-shadow: 0 0 7px 0 #bdc2bd;
 }
 header nav .nav-module .nav-lower {
   -webkit-display: -webkit-flex;
@@ -1099,7 +1099,7 @@ header nav .nav-module .nav-sns {
     font-size: 1.5rem;
   }
   header nav .nav-module .nav-sns li a:hover {
-    text-shadow: 0 0 2px #889188;
+    text-shadow: 0 0 2px #bdc2bd;
   }
 }
 footer {
@@ -1157,13 +1157,13 @@ footer .footer-module .footer-sns li {
 }
 footer .footer-module .footer-sns li a {
   font-size: 1.5rem;
-  color: #889188;
+  color: #bdc2bd;
 }
 footer .footer-module .footer-sns li a:hover {
   color: white;
 }
 footer .footer-module .footer-copyright {
-  color: #889188;
+  color: #bdc2bd;
 }
 
 @media screen and (min-width: 768px) {
