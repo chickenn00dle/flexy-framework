@@ -1,23 +1,25 @@
-.twitter {
-    color: $colorTwitter;
+header {
+    .twitter {
+        color: $colorTwitter;
 
-    &:hover {
-        color: $colorTwitterDark;
+        &:hover {
+            color: $colorTwitterDark;
+        }
     }
-}
 
-.github {
-    color: $colorGithub;
+    .github {
+        color: $colorGithub;
 
-    &:hover {
-        color: $colorGithubDark;
+        &:hover {
+            color: $colorGithubDark;
+        }
     }
-}
 
-.codepen {
-    color: $colorCodepen;
+    .codepen {
+        color: $colorCodepen;
 
-    &:hover {
-        color: $colorCodepenDark;
+        &:hover {
+            color: $colorCodepenDark;
+        }
     }
 }

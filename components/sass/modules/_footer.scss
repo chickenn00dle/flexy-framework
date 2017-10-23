@@ -14,13 +14,13 @@ footer {
         .footer-sns {
             @include flexContainer(row, nowrap);
             @include flexAxis(center, center);
-            margin: 1rem;
+            margin: 1rem 0 .5rem;
             padding: 0;
 
             li {
                 list-style: none;
                 text-align: center;
-                margin: 0 1rem;
+                margin: 0 .8rem;
 
                 a {
                     font-size: 1.5rem;
@@ -35,6 +35,7 @@ footer {
 
         .footer-copyright {
             color: $colorTextTwo;
+            font-size: .75rem;
         }
     }
 }

@@ -82,7 +82,7 @@ blockquote {
     margin: 0;
     text-align: center;
 
-    &:before {
+    &::before {
         content: open-quote;
         font-size: 5rem;
     }
@@ -98,7 +98,7 @@ blockquote {
         color: $colorTextTwo;
     }
 
-    cite:before{
+    cite::before{
         content: "\2014 ";
     }
 }

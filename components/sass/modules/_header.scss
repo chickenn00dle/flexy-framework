@@ -18,13 +18,12 @@ header {
             box-sizing: border-box;
 
             .nav-upper {
-                @include flexContainer(column, nowrap);
+                @include flexContainer(row, nowrap);
                 @include flexAxis(center, center);
                 @include flexItem(0, 1, auto);
                 margin-bottom: .5rem;
 
                 #logo {
-                    margin-bottom: .5rem;
 
                     img {
                         @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
@@ -35,44 +34,13 @@ header {
                     }
                 }
             }
-
-            .nav-links {
-                @include flexContainer(row, nowrap);
-                @include flexAxis(center, center);
-                @include flexItem(0, 1, auto);
-                margin: 0;
-                padding: 0;
-
-                li {
-                    @include flexItem(0, 1, auto);
-                    list-style: none;
-                    font-weight: 500;
-                    margin: 0 1.5rem 0 0;
-
-                    a {
-                        color: $colorLinkTwo;
-
-                        &:hover {
-                            color: $colorLinkTwoDark;
-                        }
-                    }
-                }
-
-                .current a {
-                    color: $colorLinkTwoDark;
-                }
-            }
-
-            .nav-hamburger {
-                
-            }
         }
     }
 }
 
 
 
-@include mediaQuery($mobile-lg){
+@include mediaQuery($mobile-lg) {
     header {
         nav {
 
@@ -114,12 +82,39 @@ header {
                     }
                 }
 
+                .nav-links {
+                    @include flexContainer(row, nowrap);
+                    @include flexAxis(center, center);
+                    @include flexItem(0, 1, auto);
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        @include flexItem(0, 1, auto);
+                        list-style: none;
+                        font-weight: 500;
+                        margin: 0 1.5rem 0 0;
+
+                        a {
+                            color: $colorLinkTwo;
+
+                            &:hover {
+                                color: $colorLinkTwoDark;
+                            }
+                        }
+                    }
+
+                    .current a {
+                        color: $colorLinkTwoDark;
+                    }
+                }
+
                 .nav-sns {
                     margin: 0;
                     padding: 0;
                     @include flexContainer(row, nowrap);
                     @include flexAxis(center, center);
-                    @include flexItem(0, 1, 10rem);
+                    @include flexItem(0, 1, 8.5rem);
 
                     li {
                         @include flexItem(0, 1, auto);

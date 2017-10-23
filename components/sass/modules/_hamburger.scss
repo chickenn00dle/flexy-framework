@@ -1,0 +1,83 @@
+.nav-hamburger {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    cursor: pointer;
+    padding: .25rem .5rem;
+    overflow: visible;
+
+    &:hover {
+        opacity: 50%;
+    }
+
+    .hamburger-outer {
+        width: 1.75rem;
+        height: .25rem;
+        display: inline-block;
+        position: relative;
+
+        .hamburger-inner {
+            display: block;
+            top: 50%;
+            margin-top: .25 / -2;
+            top: .25 / 2;
+            transition-duration: 0.25s;
+            transition-timing-function: cubic-bezier(0.6, -0.5, 0.25, 1.5);
+
+            &,
+            &::before,
+            &::after {
+                width: 1.75rem;
+                height: .25rem;
+                background: $colorTextOne;
+                @include borderRadius(15px);
+                position: absolute;
+                transition-property: transform;
+                transition-duration: 0.25s;
+                transition-timing-function: ease;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+            }
+
+            &::before {
+                top: -.5rem;
+                top: .5rem;
+                transition: opacity 0.15s 0.25s ease;
+            }
+
+            &::after {
+                top: .5rem;
+                top: 1rem;
+                transition: transform 0.25s cubic-bezier(0.6, -0.5, 0.25, 1.5);
+            }
+        }
+
+        &.active {
+            .hamburger-inner {
+                transform: translate3d(0, .5rem, 0) rotate(135deg);
+                transition-delay: 0.075s;
+
+                &::before {
+                    transition-delay: 0s;
+                    opacity: 0;
+                }
+
+                &::after {
+                    transform: translate3d(0, .5rem * -2, 0) rotate(-270deg);
+                    transition-delay: 0.075s;
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery($mobile-lg) {
+    .nav-hamburger {
+        display: none;
+    }
+};
