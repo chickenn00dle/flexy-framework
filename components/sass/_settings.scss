@@ -1,15 +1,16 @@
 // Colors
-$white: #fff;
-$black: #000;
-$light-gray: #d6d6d6;
-$gray: rgba(50, 50, 50, .9);
-$dark-gray: #323232;
-$red: #ff4444;
-$pink: #ff44a2;
-$orange: #ffa244;
-$blue: #44a2ff;
-$green: #44ffa2;
-$tan: #fff7f1;
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(120, 4%, 55%);
+$gray: hsl(156, 2%, 55%);
+$dark-gray: hsl(160, 2%, 25%);
+$black: hsl(0, 0%, 10%);
+
+$yellow: hsl(46, 90%, 65%);
+$orange: hsl(25, 75%, 47%);
+$red: hsl(2, 68%, 57%);
+$green: hsl(83, 39%, 53%);
+$blue: hsl(213, 50%, 54%);
+$purple: hsl(316, 35%, 57%);
 
 $colorBgBodyOne: $white;
 $colorBgBodyTwo: $red;
@@ -25,14 +26,14 @@ $colorBgFooterTwo: $gray;
 
 $colorHeadingOne: $dark-gray;
 
-$colorTextOne: $gray;
+$colorTextOne: $dark-gray;
 $colorTextTwo: $light-gray;
 $colorTextInverse: $white;
 
 $colorLinkOne: $red;
 $colorLinkOneDark: darken($red, 15%);
 $colorLinkTwo: $gray;
-$colorLinkTwoDark: dark-gray;
+$colorLinkTwoDark: $dark-gray;
 
 $colorBorderOne: $light-gray;
 

@@ -137,6 +137,10 @@ body {
                 .module-centered {
                     @include flexAxis(center, center);
                 }
+
+                .module-centered {
+                    @include flexAxis(flex-end, center);
+                }
             }
         }
     }

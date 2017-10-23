@@ -12,10 +12,10 @@ footer {
         box-sizing: border-box;
 
         .footer-sns {
-            margin: 1rem;
-            padding: 0;
             @include flexContainer(row, nowrap);
             @include flexAxis(center, center);
+            margin: 1rem;
+            padding: 0;
 
             li {
                 list-style: none;
@@ -23,8 +23,12 @@ footer {
                 margin: 0 1rem;
 
                 a {
-                    font-size: 2.5rem;
-                    color: $colorTextInverse;
+                    font-size: 1.5rem;
+                    color: $colorTextTwo;
+
+                    &:hover {
+                        color: $colorTextInverse;
+                    }
                 }
             }
         }

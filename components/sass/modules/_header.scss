@@ -55,6 +55,10 @@ header {
 
                     a {
                         color: $colorLinkTwo;
+
+                        &:hover {
+                            color: $colorLinkTwoDark;
+                        }
                     }
                 }
             }
@@ -85,7 +89,7 @@ header {
                     margin: 0;
                     padding: 0;
                     @include flexContainer(row, nowrap);
-                    @include flexAxis(space-around, center);
+                    @include flexAxis(center, center);
                     @include flexItem(0, 1, 10rem);
 
                     li {
@@ -95,7 +99,7 @@ header {
                         margin: 0 auto;
 
                         a {
-                            font-size: 2.25rem;
+                            font-size: 1.5rem;
 
                             &:hover {
                                 text-shadow: 0 0 2px $colorShadowOne;
