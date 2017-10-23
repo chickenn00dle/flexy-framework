@@ -109,40 +109,32 @@ blockquote {
 
 .hidden-mobile {
     display: none;
-
-    @include mediaQuery($mobile-lg) {
-        .hidden-mobile {
-            @include flexOnly();
-        }
-
-        .hidden-desktop {
-            display: none;
-        }
-    };
 }
 
-.twitter {
-    color: $colorTwitter;
-
-    &:hover {
-        color: $colorTwitterDark;
+@include mediaQuery($mobile-lg) {
+    .hidden-mobile {
+        @include flexOnly();
     }
+
+    .hidden-desktop {
+        display: none;
+    }
+};
+
+.text-center {
+    text-align: center;
 }
 
-.github {
-    color: $colorGithub;
-
-    &:hover {
-        color: $colorGithubDark;
-    }
+.text-left {
+    text-align: left;
 }
 
-.codepen {
-    color: $colorCodepen;
+.text-right {
+    text-align: right;
+}
 
-    &:hover {
-        color: $colorCodepenDark;
-    }
+.attention {
+    color: $colorAttention;
 }
 
 @include mediaQuery($mobile-lg){
@@ -175,17 +167,5 @@ blockquote {
         dd {
             @include flexItem(1, 1, 85%);
         }
-    }
-
-    .text-centered {
-        text-align: center;
-    }
-
-    .text-left {
-        text-align: left;
-    }
-
-    .text-right {
-        text-align: right;
     }
 }

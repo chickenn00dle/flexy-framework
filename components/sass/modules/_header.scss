@@ -2,7 +2,7 @@ header {
     @include flexContainer(column, nowrap);
     @include flexAxis(center, center);
     @include flexItem(0, 0, auto);
-    background: $colorBgHeaderOne;
+    background: $colorBgHeaderUpper;
 
     nav {
         @include flexContainer(row, nowrap);
@@ -12,46 +12,42 @@ header {
 
         .nav-module {
             @include flexContainer(column, nowrap);
-            @include flexAxis(flex-start, stretch);
+            @include flexAxis(center, stretch);
             width: 100%;
             padding: .5rem 1rem 0;
             box-sizing: border-box;
 
             .nav-upper {
-                @include flexContainer(row, nowrap);
+                @include flexContainer(column, nowrap);
                 @include flexAxis(center, center);
-                @include flexItem(1, 1, 100%);
-                margin-bottom: 1rem;
+                @include flexItem(0, 1, auto);
+                margin-bottom: .5rem;
 
-                #logo img {
-                    @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
+                #logo {
+                    margin-bottom: .5rem;
 
-                    &:hover {
-                        @include boxShadow(0, 0, 7px, 0, $colorShadowOne);
+                    img {
+                        @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
+
+                        &:hover {
+                            @include boxShadow(0, 0, 7px, 0, $colorShadowOne);
+                        }
                     }
                 }
             }
 
-            .nav-lower {
-                @include flexContainer(row, nowrap);
-                @include flexAxis(center, flex-end);
-                @include flexItem(0, 1, 100%);
-                padding: .25rem;
-            }
-
             .nav-links {
+                @include flexContainer(row, nowrap);
+                @include flexAxis(center, center);
+                @include flexItem(0, 1, auto);
                 margin: 0;
                 padding: 0;
 
-                @include flexContainer(row, nowrap);
-                @include flexAxis(center, flex-end);
-                @include flexItem(0, 1, 100%);
-
                 li {
-                    @include flexItem(1, 1, auto);
+                    @include flexItem(0, 1, auto);
                     list-style: none;
-                    text-align: center;
-                    margin: 0 auto;
+                    font-weight: 500;
+                    margin: 0 1.5rem 0 0;
 
                     a {
                         color: $colorLinkTwo;
@@ -61,14 +57,20 @@ header {
                         }
                     }
                 }
+
+                .current a {
+                    color: $colorLinkTwoDark;
+                }
             }
 
-            .nav-sns {
-                display: none;
+            .nav-hamburger {
+                
             }
         }
     }
 }
+
+
 
 @include mediaQuery($mobile-lg){
     header {
@@ -78,11 +80,38 @@ header {
                 max-width: $laptop;
 
                 .nav-upper {
-                    @include flexAxis(space-between, center);
+                    @include flexContainer(row, nowrap);
+                    @include flexAxis(flex-start, center);
+
+                    #logo {
+                        margin: 0 1rem 0 0;
+                    }
+
+                    .nav-links {
+                        li a {
+                            font-size: .9rem;
+                        }
+                    }
                 }
 
-                .nav-links {
-                    @include flexItem(0, 1, 50%);
+                .nav-lower {
+                    @include flexContainer(row, nowrap);
+                    @include flexAxis(flex-start, center);
+                    @include flexItem(0, 1, 100%);
+                    padding: 0 0 .5rem 0;
+
+                    .nav-links {
+                        li a {
+                            color: $colorLinkOne;
+                            padding: .25rem;
+
+                            &:hover {
+                                color: $colorTextInverse;
+                                background: $colorBgHeaderLower;
+                                @include borderRadius(5px);
+                            }
+                        }
+                    }
                 }
 
                 .nav-sns {
@@ -107,7 +136,10 @@ header {
 
                         }
                     }
+                }
 
+                .nav-right {
+                    margin-left: auto;
                 }
             }
         }

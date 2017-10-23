@@ -134,11 +134,11 @@ body {
 
                 }
 
-                .module-centered {
+                .module-center {
                     @include flexAxis(center, center);
                 }
 
-                .module-centered {
+                .module-right {
                     @include flexAxis(flex-end, center);
                 }
             }
