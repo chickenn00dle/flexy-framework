@@ -108,7 +108,7 @@ blockquote {
 }
 
 .hidden-mobile {
-    display: none;
+    display: none !important;
 }
 
 @include mediaQuery($mobile-lg) {

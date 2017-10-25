@@ -11,10 +11,10 @@
 }
 
 @mixin flexOnly() {
-    -webkit-display: -webkit-flex;
-     -webkit-display: -webkit-box;
-             display: -ms-flexbox;
-                    display: flex;
+    -webkit-display: -webkit-flex !important;
+     -webkit-display: -webkit-box !important;
+             display: -ms-flexbox !important;
+                    display: flex !important;
 }
 
 // Set a Flex container w/ wrap and direction.
@@ -130,4 +130,15 @@
     background: -o-repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
     background: -moz-repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
     background: -webkit-repeating-linear-gradient($direction, $color, $color $size / 2, darken($color, 10%) $size / 2, darken($color, 10%) $size * 2);
+}
+
+@mixin setAnimation($name, $duration) {
+    -webkit-animation-name: $name;
+       -moz-animation-name: $name;
+         -o-animation-name: $name;
+            animation-name: $name;
+-webkit-animation-duration: $duration;
+   -moz-animation-duration: $duration;
+     -o-animation-duration: $duration;
+        animation-duration: $duration;
 }

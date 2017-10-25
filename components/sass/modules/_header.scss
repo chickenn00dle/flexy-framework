@@ -16,24 +16,138 @@ header {
             width: 100%;
             padding: .5rem 1rem 0;
             box-sizing: border-box;
+            position: relative;
 
-            .nav-upper {
-                @include flexContainer(row, nowrap);
-                @include flexAxis(center, center);
-                @include flexItem(0, 1, auto);
-                margin-bottom: .5rem;
+            .nav-mobile {
+                list-style: none;
+                background: opacify($colorBgHeaderUpper, .15);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 3rem 1rem 0;
+                margin: 0;
+                border-bottom: 5px solid $colorBgHeaderLower;
+                box-sizing: border-box;
 
-                #logo {
+                .nav-sub-mobile {
+                    list-style: none;
+                    width: 100%;
+                    padding: 0 .5 0 0;
+                    margin: 0;
+                    box-sizing: border-box;
 
-                    img {
-                        @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
+                    li {
+                        border-bottom: none;
+                        background: $colorBgHeaderUpper;
+                    }
+                }
 
+                li {
+                    padding: 0;
+
+                    a {
+                        display: block;
+                        color: $colorLinkTwoDark;
+                        font-weight: 500;
+                        width: 100%;
+                        padding: 1rem .5rem;
+                        box-sizing: border-box;
                         &:hover {
-                            @include boxShadow(0, 0, 7px, 0, $colorShadowOne);
+                            background: $colorBgHeaderAlt;
+                            color: $colorTextInverse;
                         }
                     }
                 }
+
+                .nav-sns {
+                    @include flexContainer(row, nowrap);
+                    margin: 0 auto;
+
+                    & a:hover {
+                        background: $colorBgHeaderUpper;
+                    }
+                }
             }
+
+            .nav-upper {
+                @include flexContainer(column, nowrap);
+                @include flexAxis(flex-start, center);
+
+                #logo {
+                    margin: 0 0 .5rem 0;
+                }
+            }
+
+            .nav-links {
+                @include flexContainer(row, nowrap);
+                @include flexAxis(center, center);
+                @include flexItem(0, 1, auto);
+                margin: 0 0 .5rem 0;
+                padding: 0;
+
+                li {
+                    @include flexItem(0, 1, auto);
+                    list-style: none;
+                    font-weight: 500;
+                    margin: 0 1rem .5rem;
+
+                    a {
+                        color: $colorLinkTwo;
+
+                        &:hover {
+                            color: $colorLinkTwoDark;
+                        }
+                    }
+                }
+
+                .current a {
+                    color: $colorLinkTwoDark;
+                }
+            }
+
+            .nav-sns {
+                @include flexAxis(center, center);
+                @include flexItem(0, 1, auto);
+                width: 8.5rem;
+                margin: 0 0 .5rem;
+                padding: 0;
+
+                li {
+                    @include flexItem(0, 1, auto);
+                    list-style: none;
+                    text-align: center;
+                    margin: 0 auto;
+
+                    a {
+                        font-size: 1.5rem;
+
+                        &:hover {
+                            text-shadow: 0 0 2px $colorShadowOne;
+                        }
+
+                    }
+                }
+            }
+
+            .slide-in {
+                @include setAnimation(slideIn, .15s);
+            }
+
+            @keyframes slideIn {
+                from {left: 768px;}
+                to {left: 0;}
+            }
+
+            // .slide-out {
+            //     @include setAnimation(slideOut, .15s);
+            // }
+            //
+            // @keyframes slideOut {
+            //     from {left: 0;}
+            //     to {left: 768px;}
+            // }
+
         }
     }
 }
@@ -50,9 +164,19 @@ header {
                 .nav-upper {
                     @include flexContainer(row, nowrap);
                     @include flexAxis(flex-start, center);
+                    @include flexItem(0, 1, auto);
+                    margin-bottom: .5rem;
 
                     #logo {
                         margin: 0 1rem 0 0;
+
+                        img {
+                            @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
+
+                            &:hover {
+                                @include boxShadow(0, 0, 7px, 0, $colorShadowOne);
+                            }
+                        }
                     }
 
                     .nav-links {
