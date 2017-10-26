@@ -1,15 +1,13 @@
-let $;
+var $;
 
 $ = require('jquery');
-
-console.log('scripts ready');
 
 $('.hamburger-outer').click(function() {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
-        $('.nav-mobile').addClass('hidden').removeClass('slide-in');
+        $('.nav-links').addClass('slide-out').removeClass('slide-in').delay(3000).addClass('hidden-mobile').removeClass('slide-out');
     } else {
         $(this).addClass('active');
-        $('.nav-mobile').removeClass('hidden').addClass('slide-in');
+        $('.nav-links').removeClass('hidden-mobile').addClass('slide-in');
     }
 });

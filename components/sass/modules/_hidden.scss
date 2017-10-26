@@ -1,0 +1,17 @@
+.hidden {
+    display: none;
+}
+
+.hidden-mobile {
+    display: none !important;
+}
+
+@include mediaQuery($mobile-lg) {
+    .hidden-mobile {
+        @include flexOnly();
+    }
+
+    .hidden-desktop {
+        display: none;
+    }
+};
