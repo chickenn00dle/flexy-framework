@@ -1450,7 +1450,8 @@ footer .footer-module .footer-copyright {
 }
 
 .lock {
-  position: relative;
+  height: 100%;
+  position: fixed;
   overflow: hidden;
 }
 
