@@ -1,17 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-let $;
+var $;
 
 $ = require('jquery');
-
-console.log('scripts ready');
 
 $('.hamburger-outer').click(function() {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
-        $('.nav-mobile').addClass('hidden').removeClass('slide-in');
+        $('.nav-links').addClass('slide-out').removeClass('slide-in').delay(3000).addClass('hidden-mobile').removeClass('slide-out');
     } else {
         $(this).addClass('active');
-        $('.nav-mobile').removeClass('hidden').addClass('slide-in');
+        $('.nav-links').removeClass('hidden-mobile').addClass('slide-in');
     }
 });
 
