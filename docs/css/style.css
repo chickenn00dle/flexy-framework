@@ -1216,7 +1216,7 @@ header nav .nav-module .slide-out {
   }
 }
 .nav-hamburger {
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 5px;
   right: 5px;
@@ -1447,6 +1447,10 @@ footer .footer-module .footer-copyright {
 
 .hidden-mobile {
   display: none !important;
+}
+
+.overflow-h {
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {

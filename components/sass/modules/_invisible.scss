@@ -1,0 +1,21 @@
+.hidden {
+    display: none;
+}
+
+.hidden-mobile {
+    display: none !important;
+}
+
+.overflow-h {
+    overflow: hidden;
+}
+
+@include mediaQuery($mobile-lg) {
+    .hidden-mobile {
+        @include flexOnly();
+    }
+
+    .hidden-desktop {
+        display: none;
+    }
+};
