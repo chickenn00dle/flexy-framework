@@ -6,7 +6,9 @@
     display: none !important;
 }
 
-.overflow-h {
+.lock {
+    height: 100%;
+    position: fixed;
     overflow: hidden;
 }
 

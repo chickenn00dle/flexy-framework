@@ -936,7 +936,7 @@ header nav .nav-module .nav-links {
   height: 100vh;
   background: white;
   margin: 0;
-  padding: 2rem 0 0 0;
+  padding: 3rem 0 0 0;
   list-style: none;
   box-sizing: border-box;
 }
@@ -1449,7 +1449,9 @@ footer .footer-module .footer-copyright {
   display: none !important;
 }
 
-.overflow-h {
+.lock {
+  height: 100%;
+  position: fixed;
   overflow: hidden;
 }
 
