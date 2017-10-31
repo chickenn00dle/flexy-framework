@@ -968,7 +968,23 @@ header nav .nav-module .nav-links li a:hover {
   background: #3e4140;
   color: white;
 }
-header nav .nav-module .nav-sns {
+header nav .nav-module .nav-links li.nav-upper-secondary {
+  border-bottom: none;
+}
+header nav .nav-module .nav-links li.nav-upper-secondary a:hover {
+  background: none;
+}
+header nav .nav-module .nav-links .nav-sns {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -980,23 +996,26 @@ header nav .nav-module .nav-sns {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  width: 8.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   margin: 0 0 .5rem;
   padding: 0;
 }
-header nav .nav-module .nav-sns li {
+header nav .nav-module .nav-links .nav-sns li {
   -webkit-box-flex: 0 1 auto;
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
+  border-bottom: none;
   list-style: none;
   text-align: center;
   margin: 0 auto;
 }
-header nav .nav-module .nav-sns li a {
+header nav .nav-module .nav-links .nav-sns li a {
   font-size: 1.5rem;
 }
-header nav .nav-module .nav-sns li a:hover {
+header nav .nav-module .nav-links .nav-sns li a:hover {
   text-shadow: 0 0 2px #f2f3f2;
 }
 header nav .nav-module .slide-in {
@@ -1080,6 +1099,48 @@ header nav .nav-module .slide-out {
   }
   header nav .nav-module .nav-upper .nav-links li a {
     font-size: .9rem;
+  }
+  header nav .nav-module .nav-upper .nav-sns {
+    -webkit-display: -webkit-flex;
+    -webkit-display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-flex: 0 1 8.5rem;
+    -webkit-flex: 0 1 8.5rem;
+    -ms-flex: 0 1 8.5rem;
+    flex: 0 1 8.5rem;
+    width: 8.5rem;
+    margin: 0 0 0 auto;
+    padding: 0;
+    position: inherit;
+  }
+  header nav .nav-module .nav-upper .nav-sns li {
+    -webkit-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+  header nav .nav-module .nav-upper .nav-sns li a {
+    font-size: 1.5rem;
+  }
+  header nav .nav-module .nav-upper .nav-sns li a:hover {
+    text-shadow: 0 0 2px #f2f3f2;
   }
   header nav .nav-module .nav-lower {
     -webkit-display: -webkit-flex;
@@ -1171,48 +1232,8 @@ header nav .nav-module .slide-out {
   header nav .nav-module .nav-links .active a {
     color: #3e4140;
   }
-  header nav .nav-module .nav-sns {
-    margin: 0;
-    padding: 0;
-    -webkit-display: -webkit-flex;
-    -webkit-display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
-    -webkit-box-flex: 0 1 8.5rem;
-    -webkit-flex: 0 1 8.5rem;
-    -ms-flex: 0 1 8.5rem;
-    flex: 0 1 8.5rem;
-  }
-  header nav .nav-module .nav-sns li {
-    -webkit-box-flex: 0 1 auto;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    list-style: none;
-    text-align: center;
-    margin: 0 auto;
-  }
-  header nav .nav-module .nav-sns li a {
-    font-size: 1.5rem;
-  }
-  header nav .nav-module .nav-sns li a:hover {
-    text-shadow: 0 0 2px #f2f3f2;
-  }
-  header nav .nav-module .nav-right {
-    margin-left: auto;
+  header nav .nav-module .nav-upper-secondary {
+    margin-left: auto !important;
   }
 }
 .nav-hamburger {
