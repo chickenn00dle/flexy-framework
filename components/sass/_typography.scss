@@ -1,17 +1,17 @@
 html {
-    font-family: $globalFontOne;
+    font-family: $globalFont;
     font-size: $mobileFontSize;
 }
 
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
-    color: $colorTextOne;
+    color: $colorText;
     line-height: 1.5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $globalFontTwo;
-    color: $colorHeadingOne;
+    font-family: $globalFont;
+    color: $colorHeading;
     margin: 0 0 .5rem 0;
 }
 
@@ -47,7 +47,7 @@ h6 {
 
 a {
     text-decoration: none;
-    color: $colorLinkOne;
+    color: $colorLink;
 }
 
 p {
@@ -55,7 +55,7 @@ p {
 }
 
 a:hover {
-    color: $colorLinkOneDark;
+    color: $colorLinkDark;
 }
 
 ol, ul {
@@ -95,7 +95,7 @@ blockquote {
 
     cite {
         font-size: .9rem;
-        color: $colorTextTwo;
+        color: $colorTextAlt;
     }
 
     cite::before{
@@ -113,10 +113,6 @@ blockquote {
 
 .text-right {
     text-align: right;
-}
-
-.attention {
-    color: $colorAttention;
 }
 
 @include mediaQuery($mobile-lg){

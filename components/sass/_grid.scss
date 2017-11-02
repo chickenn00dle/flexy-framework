@@ -5,7 +5,7 @@ body {
     height: 100vh;
 
     .shell {
-        background: $colorBgBodyOne;
+        background: $colorBgBody;
         @include flexContainer(column, nowrap);
         @include flexAxis(flex-start, center);
         @include flexItem(1, 0, auto);

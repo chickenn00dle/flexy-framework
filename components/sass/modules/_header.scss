@@ -2,13 +2,13 @@ header {
     @include flexContainer(column, nowrap);
     @include flexAxis(center, center);
     @include flexItem(0, 0, auto);
-    background: $colorBgHeaderUpper;
+    background: $colorBgHeader;
 
     nav {
         @include flexContainer(row, nowrap);
         @include flexAxis(center, center);
         width: 100vw;
-        @include boxShadow(0, 1px, 10px, 2px, $colorShadowTwo);
+        @include boxShadow(0, 1px, 10px, 2px, $colorShadowDark);
 
         .nav-module {
             @include flexContainer(column, nowrap);
@@ -34,7 +34,7 @@ header {
                 left: 0;
                 width: 100%;
                 height: 100vh;
-                background: opacify($colorBgHeaderUpper, .25);
+                background: opacify($colorBgHeader, .25);
                 margin: 0;
                 padding: 3rem 0 0 0;
                 list-style: none;
@@ -55,11 +55,11 @@ header {
                     font-weight: 500;
                     margin: 0 1rem 0;
                     padding: 0;
-                    border-bottom: 1px solid $colorBorderOne;
+                    border-bottom: 1px solid $colorBorder;
 
                     a {
                         display: block;
-                        color: $colorLinkTwo;
+                        color: $colorLinkAlt;
                         font-weight: 500;
                         width: 100%;
                         padding: .5rem .5rem;
@@ -106,7 +106,7 @@ header {
                             font-size: 1.5rem;
 
                             &:hover {
-                                text-shadow: 0 0 2px $colorShadowOne;
+                                text-shadow: 0 0 2px $colorShadow;
                             }
 
                         }
@@ -158,10 +158,10 @@ header {
                         margin: 0;
 
                         img {
-                            @include boxShadow(0, 0, 1px, 0, $colorShadowOne);
+                            @include boxShadow(0, 0, 1px, 0, $colorShadow);
 
                             &:hover {
-                                @include boxShadow(0, 0, 7px, 0, $colorShadowOne);
+                                @include boxShadow(0, 0, 7px, 0, $colorShadow);
                             }
                         }
                     }
@@ -191,7 +191,7 @@ header {
                                 font-size: 1.5rem;
 
                                 &:hover {
-                                    text-shadow: 0 0 2px $colorShadowOne;
+                                    text-shadow: 0 0 2px $colorShadow;
                                 }
 
                             }
@@ -207,7 +207,7 @@ header {
 
                     .nav-links {
                         li a {
-                            color: $colorLinkOne;
+                            color: $colorLink;
                             padding: .25rem;
 
                             &:hover {
@@ -241,21 +241,21 @@ header {
 
                         a {
                             display: inherit;
-                            color: $colorLinkTwo;
+                            color: $colorLinkAlt;
                             font-weight: 500;
                             padding: 0;
                             margin: 0;
                             box-sizing: border-box;
 
                             &:hover {
-                                background: $colorBgHeaderUpper;
-                                color: $colorLinkTwoDark;
+                                background: $colorBgHeader;
+                                color: $colorLinkAltDark;
                             }
                         }
                     }
 
                     .active a {
-                        color: $colorLinkTwoDark;
+                        color: $colorLinkAltDark;
                     }
                 }
 

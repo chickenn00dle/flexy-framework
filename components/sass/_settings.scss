@@ -1,10 +1,9 @@
-// Colors
+// Palette
 $white: hsl(0, 0%, 100%);
 $light-gray: hsl(120, 4%, 95%);
 $gray: hsl(156, 2%, 55%);
 $dark-gray: hsl(160, 2%, 25%);
 $black: hsl(0, 0%, 10%);
-
 $yellow: hsl(46, 90%, 65%);
 $orange: hsl(25, 75%, 47%);
 $red: hsl(2, 68%, 57%);
@@ -12,39 +11,48 @@ $green: hsl(83, 39%, 53%);
 $blue: hsl(213, 50%, 54%);
 $purple: hsl(316, 35%, 57%);
 
-$colorBgBodyOne: $white;
-$colorBgBodyTwo: $red;
+// Color Options
+$brand: $red;
+$info: $blue;
+$action: $green;
+$attention: $purple;
+$hazard: $yellow;
+$neutral: $gray;
+$void: $black;
+$clean: $white;
 
-$colorBgFullOne: $red;
-$colorBgFullTwo: $dark-gray;
+$colorBgBody: $white;
+$colorBgBodyAlt: $red;
 
-$colorBgHeaderUpper: $white;
-$colorBgHeaderLower: $red;
+$colorBgFull: $red;
+$colorBgFullAlt: $yellow;
+
+$colorBgHeader: $white;
 $colorBgHeaderAlt: $dark-gray;
+$colorBgHeaderLower: $red;
 
-$colorBgFooterOne: $dark-gray;
-$colorBgFooterTwo: $gray;
-$colorBgFooterThree: $green;
+$colorBgFooter: $dark-gray;
+$colorBgFooterAlt: $gray;
 
-$colorHeadingOne: $dark-gray;
+$colorHeading: $dark-gray;
+$colorHeadingInverse: $white;
 
-$colorTextOne: $dark-gray;
-$colorTextTwo: $light-gray;
+$colorText: $dark-gray;
+$colorTextAlt: $light-gray;
 $colorTextInverse: $white;
 
-$colorLinkOne: $red;
-$colorLinkOneDark: darken($red, 15%);
-$colorLinkTwo: $gray;
-$colorLinkTwoDark: $dark-gray;
+$colorLink: $red;
+$colorLinkDark: darken($red, 15%);
+$colorLinkAlt: $gray;
+$colorLinkAltDark: $dark-gray;
 
-$colorBorderOne: $light-gray;
+$colorBorder: $light-gray;
+$colorBorderDark: $gray;
 
-$colorShadowOne: $light-gray;
-$colorShadowTwo: $gray;
+$colorShadow: $light-gray;
+$colorShadowDark: $dark-gray;
 
-$colorAttention: $blue;
-
-// Brand Colors
+// Social Colors
 $colorTwitter: #00aced;
 $colorTwitterDark: #0084b4;
 $colorGithub: #333;
@@ -53,8 +61,8 @@ $colorCodepen: #212121;
 $colorCodepenDark: darken($colorCodepen, 15%);
 
 // Fonts
-$globalFontOne: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$globalFontTwo: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$globalFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$globalFontAlt: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $globalFontSize: 20px;
 $mobileFontSize: 18px;
 

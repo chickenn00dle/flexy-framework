@@ -564,10 +564,6 @@ blockquote cite::before {
   text-align: right;
 }
 
-.attention {
-  color: #4f84c4;
-}
-
 @media screen and (min-width: 768px) {
   html {
     font-size: 20px;
@@ -878,9 +874,9 @@ header nav {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
-  -webkit-box-shadow: 0 1px 10px 2px #8a8f8d;
-  -moz-box-shadow: 0 1px 10px 2px #8a8f8d;
-  box-shadow: 0 1px 10px 2px #8a8f8d;
+  -webkit-box-shadow: 0 1px 10px 2px #3e4140;
+  -moz-box-shadow: 0 1px 10px 2px #3e4140;
+  box-shadow: 0 1px 10px 2px #3e4140;
 }
 header nav .nav-module {
   -webkit-display: -webkit-flex;
@@ -1327,6 +1323,7 @@ header .codepen:hover {
 
 .bg-full, .bg-half, .bg-fourth, .bg-secondary {
   margin-bottom: 1rem;
+  background: #dc4c47;
 }
 .bg-full .module, .bg-half .module, .bg-fourth .module, .bg-secondary .module {
   -webkit-align-items: center;
@@ -1342,43 +1339,40 @@ header .codepen:hover {
 }
 
 .bg-full {
-  background: #dc4c47;
   height: 100vh;
 }
 
 .bg-half {
-  background: #dc4c47;
   height: 50vh;
 }
 
 .bg-fourth {
-  background: #dc4c47;
   height: 30vh;
 }
 
 .bg-secondary {
-  background: #3e4140;
+  background: #f6d155;
 }
 
 .bg-gradient {
-  background: -webkit-linear-gradient(to bottom right, #575b5a 0%, #252727 100%);
-  background: -moz-linear-gradient(to bottom right, #575b5a 0%, #252727 100%);
-  background: -ms-linear-gradient(to bottom right, #575b5a 0%, #252727 100%);
-  background: -o-linear-gradient(to bottom right, #575b5a 0%, #252727 100%);
-  background: -webkit-gradient(linear, to bottom right, color-stop(0%, #575b5a), color-stop(100%, #252727));
-  background: linear-gradient(to bottom right, #575b5a 0%, #252727 100%);
+  background: -webkit-linear-gradient(to bottom right, #f9de86 0%, #f4c325 100%);
+  background: -moz-linear-gradient(to bottom right, #f9de86 0%, #f4c325 100%);
+  background: -ms-linear-gradient(to bottom right, #f9de86 0%, #f4c325 100%);
+  background: -o-linear-gradient(to bottom right, #f9de86 0%, #f4c325 100%);
+  background: -webkit-gradient(linear, to bottom right, color-stop(0%, #f9de86), color-stop(100%, #f4c325));
+  background: linear-gradient(to bottom right, #f9de86 0%, #f4c325 100%);
 }
 
 .bg-polkadots {
-  background: -moz-radial-gradient(#3e4140 10%, transparent 10%), -moz-radial-gradient(#3e4140 20%, transparent 20%), #252727;
-  background: -webkit-radial-gradient(#3e4140 10%, transparent 10%), -webkit-radial-gradient(#3e4140 20%, transparent 20%), #252727;
-  background: radial-gradient(#3e4140 10%, rgba(0, 0, 0, 0) 10%), radial-gradient(#3e4140 20%, rgba(0, 0, 0, 0) 20%), #252727;
+  background: -moz-radial-gradient(#f6d155 10%, transparent 10%), -moz-radial-gradient(#f6d155 20%, transparent 20%), #f4c325;
+  background: -webkit-radial-gradient(#f6d155 10%, transparent 10%), -webkit-radial-gradient(#f6d155 20%, transparent 20%), #f4c325;
+  background: radial-gradient(#f6d155 10%, rgba(0, 0, 0, 0) 10%), radial-gradient(#f6d155 20%, rgba(0, 0, 0, 0) 20%), #f4c325;
   background-size: 12.5px 12.5px;
 }
 
 .bg-checkered {
-  background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, #3e4140), color-stop(0.25, transparent)), gradient(linear, 0 0, 100% 100%, color-stop(0.25, #3e4140), color-stop(0.25, transparent)), gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #3e4140)), gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #3e4140));
-  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #3e4140), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #3e4140), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #3e4140)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, #252727), color-stop(0.75, #3e4140));
+  background-image: gradient(linear, 0 100%, 100% 0, color-stop(0.25, #f6d155), color-stop(0.25, transparent)), gradient(linear, 0 0, 100% 100%, color-stop(0.25, #f6d155), color-stop(0.25, transparent)), gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #f6d155)), gradient(linear, 0 0, 100% 100%, color-stop(0.75, transparent), color-stop(0.75, #f6d155));
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, #f6d155), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, #f6d155), color-stop(0.25, transparent)), -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.75, transparent), color-stop(0.75, #f6d155)), -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.75, #f4c325), color-stop(0.75, #f6d155));
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
   background-size: 50px 50px;
@@ -1386,10 +1380,10 @@ header .codepen:hover {
 }
 
 .bg-striped {
-  background: repeating-linear-gradient(315deg, #3e4140, #3e4140 2.5px, #252727 2.5px, #252727 10px);
-  background: -o-repeating-linear-gradient(315deg, #3e4140, #3e4140 2.5px, #252727 2.5px, #252727 10px);
-  background: -moz-repeating-linear-gradient(315deg, #3e4140, #3e4140 2.5px, #252727 2.5px, #252727 10px);
-  background: -webkit-repeating-linear-gradient(315deg, #3e4140, #3e4140 2.5px, #252727 2.5px, #252727 10px);
+  background: repeating-linear-gradient(315deg, #f6d155, #f6d155 2.5px, #f4c325 2.5px, #f4c325 10px);
+  background: -o-repeating-linear-gradient(315deg, #f6d155, #f6d155 2.5px, #f4c325 2.5px, #f4c325 10px);
+  background: -moz-repeating-linear-gradient(315deg, #f6d155, #f6d155 2.5px, #f4c325 2.5px, #f4c325 10px);
+  background: -webkit-repeating-linear-gradient(315deg, #f6d155, #f6d155 2.5px, #f4c325 2.5px, #f4c325 10px);
 }
 
 footer {
