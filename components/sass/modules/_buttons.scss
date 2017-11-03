@@ -1,0 +1,147 @@
+%btn {
+    font-weight: 500;
+    text-align: center;
+    color: $colorLinkInverse;
+    padding: .5rem 1rem;
+    display: block;
+    background: $brand;
+    @include borderRadius(5px);
+    @include boxShadow(0, 0, 5px, 0, $colorShadow);
+    box-sizing: border-box;
+    cursor: pointer;
+
+    margin: 1rem 0;
+
+    &:hover {
+        background: lighten($brand, 5%);
+        color: $colorLinkInverse;
+    }
+
+    &:active {
+        @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
+        margin: 1.1rem 0 .9rem 0 !important;
+    }
+}
+
+.btn {
+    @extend %btn;
+}
+
+.btn-info {
+    background: $info;
+
+    &:hover {
+        background: lighten($info, 5%);
+    }
+}
+
+.btn-action {
+    background: $action;
+
+    &:hover {
+        background: lighten($action, 5%);
+    }
+}
+
+.btn-attention {
+    background: $attention;
+
+    &:hover {
+        background: lighten($attention, 5%);
+    }
+}
+
+.btn-hazard {
+    background: $hazard;
+
+    &:hover {
+        background: lighten($hazard, 5%);
+    }
+}
+
+.btn-neutral {
+    background: $neutral;
+
+    &:hover {
+        background: lighten($neutral, 5%);
+    }
+}
+
+.btn-void {
+    background: $void;
+
+    &:hover {
+        background: lighten($void, 5%);
+    }
+}
+
+.btn-clean {
+    background: $clean;
+    color: $colorLinkAlt;
+
+
+    &:hover {
+        color: $colorLinkAlt;
+
+        &:hover {
+            background: $light-gray;
+        }
+    }
+}
+
+@include mediaQuery($mobile-lg) {
+    %btn {
+        display: inline-block;
+        margin: .5rem 100% .5rem 0;
+
+        &:active {
+            margin: .6rem 100% .4rem 0 !important;
+        }
+    }
+
+    .btn-center {
+        margin: .5rem 50%;
+
+        &:active {
+            margin: .6rem 50% .4rem !important;
+        }
+    }
+
+    .btn-right {
+        margin: .5rem 0 .5rem 100%;
+
+        &:active {
+            margin: .6rem 0 .4rem 100% !important;
+        }
+    }
+
+    .btn-group {
+        @include flexContainer(row, nowrap);
+        @include flexAxis(flex-start, center);
+
+        .btn {
+            margin: .5rem;
+
+            &:first-child {
+                margin-left: 0;
+
+                &:active {
+                    margin: .6rem .5rem .4rem 0 !important;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+
+                &:active {
+                    margin: .6rem 0 .4rem .5rem !important;
+                }
+            }
+
+            &:active {
+                margin: .6rem .5rem .4rem !important;
+            }
+
+        }
+    }
+}
