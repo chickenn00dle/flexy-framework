@@ -3,14 +3,14 @@
     text-align: center;
     color: $colorLinkInverse;
     padding: .5rem 1rem;
-    display: block;
+    display: inline-block;
     background: $brand;
     @include borderRadius(5px);
     @include boxShadow(0, 0, 5px, 0, $colorShadow);
     box-sizing: border-box;
+    width: 100%;
+    margin: 0 0 1rem 0;
     cursor: pointer;
-
-    margin: 1rem 0;
 
     &:hover {
         background: lighten($brand, 5%);
@@ -19,7 +19,7 @@
 
     &:active {
         @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
-        margin: 1.1rem 0 .9rem 0 !important;
+        margin: .1rem 0 .95rem !important;
     }
 }
 
@@ -91,27 +91,27 @@
 
 @include mediaQuery($mobile-lg) {
     %btn {
-        display: inline-block;
-        margin: .5rem 100% .5rem 0;
+        width: auto;
+        margin: 0 100% 1rem 0;
 
         &:active {
-            margin: .6rem 100% .4rem 0 !important;
+            margin: .1rem 100% .9rem 0 !important;
         }
     }
 
     .btn-center {
-        margin: .5rem 50%;
+        margin: 0 50% 1rem;
 
         &:active {
-            margin: .6rem 50% .4rem !important;
+            margin: .1rem 50% .9rem !important;
         }
     }
 
     .btn-right {
-        margin: .5rem 0 .5rem 100%;
+        margin: 0 0 1rem 100%;
 
         &:active {
-            margin: .6rem 0 .4rem 100% !important;
+            margin: .1rem 0 .9rem 100% !important;
         }
     }
 
@@ -120,13 +120,13 @@
         @include flexAxis(flex-start, center);
 
         .btn {
-            margin: .5rem;
+            margin: 0 .5rem 1rem;
 
             &:first-child {
                 margin-left: 0;
 
                 &:active {
-                    margin: .6rem .5rem .4rem 0 !important;
+                    margin: .1rem .5rem .9rem 0 !important;
                 }
             }
 
@@ -134,12 +134,12 @@
                 margin-right: 0;
 
                 &:active {
-                    margin: .6rem 0 .4rem .5rem !important;
+                    margin: .1rem 0 .9rem .5rem !important;
                 }
             }
 
             &:active {
-                margin: .6rem .5rem .4rem !important;
+                margin: .1rem .5rem .9rem !important;
             }
 
         }
