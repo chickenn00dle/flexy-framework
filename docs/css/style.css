@@ -434,7 +434,7 @@ template {
 
 html {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
@@ -1427,7 +1427,7 @@ footer .footer-module .footer-copyright {
   -moz-box-shadow: 0 0 5px 0 #a6a6a6;
   box-shadow: 0 0 5px 0 #a6a6a6;
   box-sizing: border-box;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
   width: 100%;
   cursor: pointer;
 }
@@ -1439,7 +1439,7 @@ footer .footer-module .footer-copyright {
   -webkit-box-shadow: 0 0 2px 0 #595959;
   -moz-box-shadow: 0 0 2px 0 #595959;
   box-shadow: 0 0 2px 0 #595959;
-  margin: .1rem 0 .95rem 0 !important;
+  margin: .1rem 0 1.95rem 0 !important;
 }
 
 .btn-info {
@@ -1498,25 +1498,25 @@ footer .footer-module .footer-copyright {
 @media screen and (min-width: 768px) {
   .btn {
     display: inline-block;
-    margin: 0 100% 1rem 0;
-    width: auto;
+    margin: 0 100% 2rem 0;
+    width: max-content;
   }
   .btn:active {
-    margin: .1rem 100% .9rem 0 !important;
+    margin: .1rem 100% 1.9rem 0 !important;
   }
 
   .btn-center {
-    margin: 0 50% 1rem;
+    margin: 0 50% 2rem;
   }
   .btn-center:active {
-    margin: .1rem 50% .9rem !important;
+    margin: .1rem 50% 1.9rem !important;
   }
 
   .btn-right {
-    margin: 0 0 1rem 100%;
+    margin: 0 0 2rem 100%;
   }
   .btn-right:active {
-    margin: .1rem 0 .9rem 100% !important;
+    margin: .1rem 0 1.9rem 100% !important;
   }
 
   .btn-group {
@@ -1539,22 +1539,22 @@ footer .footer-module .footer-copyright {
     -ms-flex-pack: flex-start;
   }
   .btn-group .btn {
-    margin: 0 .5rem 1rem .5rem;
+    margin: 0 .5rem 2rem .5rem;
   }
   .btn-group .btn:first-child {
     margin-left: 0;
   }
   .btn-group .btn:first-child:active {
-    margin: .1rem .5rem .9rem 0 !important;
+    margin: .1rem .5rem 1.9rem 0 !important;
   }
   .btn-group .btn:last-child {
     margin-right: 0;
   }
   .btn-group .btn:last-child:active {
-    margin: .1rem 0 .9rem .5rem !important;
+    margin: .1rem 0 1.9rem .5rem !important;
   }
   .btn-group .btn:active {
-    margin: .1rem .5rem .9rem !important;
+    margin: .1rem .5rem 1.9rem !important;
   }
 }
 .icon {
