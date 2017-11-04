@@ -1,0 +1,100 @@
+.icon {
+    color: $colorIcon;
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+}
+
+.icon-inverse {
+    color: $colorIconInverse;
+}
+
+.fa-twitter {
+
+    &:hover {
+        color: $colorTwitter;
+    }
+}
+
+.fa-github {
+
+    &:hover {
+        color: $colorGithub;
+    }
+}
+
+.fa-codepen {
+
+    &:hover {
+        color: $colorCodepen;
+    }
+}
+
+.fa-linkedin {
+
+    &:hover {
+        color: $colorLinkedin;
+    }
+}
+
+.fa-facebook {
+
+    &:hover {
+        color: $colorFacebook;
+    }
+}
+
+.fa-instagram {
+
+    &:hover {
+        color: $colorInstagram;
+    }
+}
+
+.fa-youtube {
+
+    &:hover {
+        color: $colorYouTube;
+    }
+}
+
+.fa-pinterest {
+
+    &:hover {
+        color: $colorPinterest;
+    }
+}
+
+.fa-tumblr {
+
+    &:hover {
+        color: $colorTumblr;
+    }
+}
+
+.fa-google-plus {
+
+    &:hover {
+        color: $colorGooglePlus;
+    }
+}
+
+.fa-meetup {
+
+    &:hover {
+        color: $colorMeetup;
+    }
+}
+
+.fa-flickr {
+
+    &:hover {
+        color: $colorFlickr;
+    }
+}
+
+.fa-reddit {
+
+    &:hover {
+        color: $colorReddit;
+    }
+}

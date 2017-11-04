@@ -26,12 +26,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
@@ -48,6 +48,7 @@ h6 {
 a {
     text-decoration: none;
     color: $colorLink;
+    cursor: pointer;
 }
 
 a:hover {

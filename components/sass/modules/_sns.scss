@@ -1,25 +1,14 @@
-header {
-    .twitter {
-        color: $colorTwitter;
+.nav-sns {
+    @include flexContainer(row, nowrap);
+    @include flexAxis(center, center);
+    margin: 0 .5rem .5rem;
+    padding: 0;
+    width: 100%;
 
-        &:hover {
-            color: $colorTwitterDark;
-        }
-    }
-
-    .github {
-        color: $colorGithub;
-
-        &:hover {
-            color: $colorGithubDark;
-        }
-    }
-
-    .codepen {
-        color: $colorCodepen;
-
-        &:hover {
-            color: $colorCodepenDark;
-        }
+    li {
+        @include flexItem(0, 1, auto);
+        list-style: none;
+        text-align: center;
+        margin: 0 auto;
     }
 }

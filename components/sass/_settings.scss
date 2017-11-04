@@ -1,8 +1,8 @@
 // Palette
 $white: hsl(0, 0%, 100%);
-$light-gray: hsl(120, 4%, 95%);
-$gray: hsl(156, 2%, 55%);
-$dark-gray: hsl(160, 2%, 25%);
+$light-gray: hsl(0, 0%, 85%);
+$gray: hsl(0, 0%, 65%);
+$dark-gray: hsl(0, 0%, 35%);
 $black: hsl(0, 0%, 10%);
 $yellow: hsl(46, 90%, 65%);
 $orange: hsl(25, 75%, 47%);
@@ -47,6 +47,10 @@ $colorLinkAlt: $gray;
 $colorLinkAltDark: $dark-gray;
 $colorLinkInverse: $white;
 
+$colorIcon: $dark-gray;
+$colorIconAlt: $gray;
+$colorIconInverse: $white;
+
 $colorBorder: $light-gray;
 $colorBorderDark: $gray;
 
@@ -55,11 +59,18 @@ $colorShadowDark: $dark-gray;
 
 // Social Colors
 $colorTwitter: #00aced;
-$colorTwitterDark: #0084b4;
 $colorGithub: #333;
-$colorGithubDark: darken($colorGithub, 15%);
 $colorCodepen: #212121;
-$colorCodepenDark: darken($colorCodepen, 15%);
+$colorLinkedin: #0077b5;
+$colorFacebook: #3b5998;
+$colorInstagram: #833ab4;
+$colorYouTube: #ff0000;
+$colorPinterest: #bd081c;
+$colorTumblr: #35465c;
+$colorGooglePlus: #dd4b39;
+$colorMeetup: #e0393e;
+$colorFlickr: #ff0084;
+$colorReddit: #5f99cf;
 
 // Fonts
 $globalFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
