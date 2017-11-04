@@ -93,11 +93,15 @@
     %btn {
         display: inline-block;
         margin: 0 100% 1rem 0;
-        width: auto;
+        width: max-content;
 
         &:active {
             margin: .1rem 100% .9rem 0 !important;
         }
+    }
+
+    .btn {
+        @extend %btn;
     }
 
     .btn-center {
