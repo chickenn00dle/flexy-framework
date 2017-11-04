@@ -90,7 +90,7 @@ gulp.task('compass2', function(){
             image: outputDir + 'img'
         })
             .on('error', gutil.log))
-        .pipe(gulp.dest(ghPages + 'css'))
+        .pipe(gulp.dest('docs/css'))
         .pipe(connect.reload())
 });
 
@@ -104,7 +104,7 @@ gulp.task('html', function(){
 gulp.task('html2', function(){
     gulp.src(htmlSources)
         .pipe(gulpif(env === 'production', HTMLminify()))
-        .pipe(gulpif(env === 'production', gulp.dest(ghPages)))
+        .pipe(gulpif(env === 'production', gulp.dest('docs/')))
         .pipe(connect.reload())
 });
 

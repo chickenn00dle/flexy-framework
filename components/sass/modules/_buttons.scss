@@ -89,6 +89,18 @@
     }
 }
 
+.btn-group {
+
+    .btn {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+
+    }
+}
+
 @include mediaQuery($mobile-lg) {
     %btn {
         display: inline-block;

@@ -1495,6 +1495,13 @@ footer .footer-module .footer-copyright {
   background: #d9d9d9;
 }
 
+.btn-group .btn {
+  margin-bottom: 1rem;
+}
+.btn-group .btn:last-child {
+  margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 768px) {
   .btn {
     display: inline-block;
