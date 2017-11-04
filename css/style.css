@@ -1561,6 +1561,7 @@ footer .footer-module .footer-copyright {
   color: #595959;
   font-size: 1.25rem;
   margin: 0 0 1rem 0;
+  cursor: pointer;
 }
 
 .icon-inverse {
