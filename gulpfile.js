@@ -24,11 +24,9 @@ env = process.env.NODE_ENV || 'development';
 
 if (env === 'development'){
     outputDir = 'builds/development/';
-    ghPages = 'docs/';
     sassStyle = 'expanded';
 } else {
     outputDir = 'builds/production/';
-    ghPages = 'docs/'
     sassStyle = 'compressed';
 }
 
@@ -54,15 +52,6 @@ gulp.task('js', function(){
         .pipe(connect.reload())
 });
 
-gulp.task('js2', function(){
-    gulp.src(jsSources)
-        .pipe(concat('script.js'))
-        .pipe(browserify())
-        .pipe(gulpif(env === 'production', uglify()))
-        .pipe(gulp.dest(ghPages + 'js'))
-        .pipe(connect.reload())
-});
-
 gulp.task('json', function(){
     gulp.src(jsonSources)
         .pipe(gulpif(env === 'production', jsonminify()))
@@ -82,29 +71,10 @@ gulp.task('compass', function(){
         .pipe(connect.reload())
 });
 
-gulp.task('compass2', function(){
-    gulp.src('components/sass/style.scss')
-        .pipe(compass({
-            sass: 'components/sass',
-            style: sassStyle,
-            image: outputDir + 'img'
-        })
-            .on('error', gutil.log))
-        .pipe(gulp.dest('docs/css'))
-        .pipe(connect.reload())
-});
-
 gulp.task('html', function(){
     gulp.src(htmlSources)
         .pipe(gulpif(env === 'production', HTMLminify()))
         .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
-        .pipe(connect.reload())
-});
-
-gulp.task('html2', function(){
-    gulp.src(htmlSources)
-        .pipe(gulpif(env === 'production', HTMLminify()))
-        .pipe(gulpif(env === 'production', gulp.dest('docs/')))
         .pipe(connect.reload())
 });
 
@@ -129,11 +99,11 @@ gulp.task('connect', function(){
 
 gulp.task('watch', function(){
     gulp.watch(coffeeSources, ['coffee']);
-    gulp.watch(jsSources, ['js', 'js2']);
-    gulp.watch(sassSources, ['compass', 'compass2']);
-    gulp.watch(htmlSources, ['html', 'html2']);
+    gulp.watch(jsSources, ['js']);
+    gulp.watch(sassSources, ['compass']);
+    gulp.watch(htmlSources, ['html']);
     gulp.watch(jsonSources, ['json']);
     gulp.watch('builds/development/img/**/*.*', ['imagemin']);
 });
 
-gulp.task('default', ['coffee', 'js', 'js2', 'json', 'compass', 'compass2', 'html', 'html2', 'imagemin', 'connect', 'watch']);
+gulp.task('default', ['coffee', 'js', 'json', 'compass', 'html', 'imagemin', 'connect', 'watch']);
