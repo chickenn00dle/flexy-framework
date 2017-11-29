@@ -79,6 +79,27 @@ dl {
     }
 }
 
+pre, code {
+    font-size: .875rem;
+    background: $colorBgCode;
+    @include borderRadius(5px);
+}
+
+code {
+    line-height: 1.5rem;
+    padding: .15rem .25rem;
+    color: $colorTextCode;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+pre {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+}
+
 blockquote {
     margin: 0;
     text-align: center;

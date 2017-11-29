@@ -34,12 +34,16 @@ $colorBgHeaderLower: $brand;
 $colorBgFooter: $dark-gray;
 $colorBgFooterAlt: $gray;
 
+$colorBgCode: lighten($light-gray, 10%);
+
 $colorHeading: $dark-gray;
 $colorHeadingInverse: $white;
 
 $colorText: $dark-gray;
 $colorTextAlt: $light-gray;
 $colorTextInverse: $white;
+
+$colorTextCode: darken($brand, 5%);
 
 $colorLink: $brand;
 $colorLinkDark: darken($colorLink, 15%);
@@ -51,7 +55,7 @@ $colorIcon: $dark-gray;
 $colorIconAlt: $gray;
 $colorIconInverse: $white;
 
-$colorFormFocus: lighten($brand, 15%);
+$colorFormFocus: lighten($brand, 25%);
 
 $colorBorder: $light-gray;
 $colorBorderDark: $gray;

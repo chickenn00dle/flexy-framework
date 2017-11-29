@@ -532,6 +532,29 @@ dl dd {
   margin: 0 0 .5rem 0;
 }
 
+pre, code {
+  font-size: .875rem;
+  background: #f2f2f2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+code {
+  line-height: 1.5rem;
+  padding: .15rem .25rem;
+  color: #d83731;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+pre {
+  display: block;
+  width: 100%;
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+}
+
 blockquote {
   margin: 0;
   text-align: center;
@@ -1681,10 +1704,10 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset input:focus {
   outline: none;
-  border: 2px solid #e88a87;
-  -webkit-box-shadow: 0 0 1px 0 #e88a87;
-  -moz-box-shadow: 0 0 1px 0 #e88a87;
-  box-shadow: 0 0 1px 0 #e88a87;
+  border: 2px solid #f0b4b2;
+  -webkit-box-shadow: 0 0 1px 0 #f0b4b2;
+  -moz-box-shadow: 0 0 1px 0 #f0b4b2;
+  box-shadow: 0 0 1px 0 #f0b4b2;
 }
 .form .fieldset select {
   height: 2rem;
@@ -1698,10 +1721,10 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset select:focus {
   outline: none;
-  border: 2px solid #e88a87;
-  -webkit-box-shadow: 0 0 1px 0 #e88a87;
-  -moz-box-shadow: 0 0 1px 0 #e88a87;
-  box-shadow: 0 0 1px 0 #e88a87;
+  border: 2px solid #f0b4b2;
+  -webkit-box-shadow: 0 0 1px 0 #f0b4b2;
+  -moz-box-shadow: 0 0 1px 0 #f0b4b2;
+  box-shadow: 0 0 1px 0 #f0b4b2;
 }
 .form .fieldset textarea {
   width: 100%;
@@ -1716,10 +1739,10 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset textarea:focus {
   outline: none;
-  border: 2px solid #e88a87;
-  -webkit-box-shadow: 0 0 1px 0 #e88a87;
-  -moz-box-shadow: 0 0 1px 0 #e88a87;
-  box-shadow: 0 0 1px 0 #e88a87;
+  border: 2px solid #f0b4b2;
+  -webkit-box-shadow: 0 0 1px 0 #f0b4b2;
+  -moz-box-shadow: 0 0 1px 0 #f0b4b2;
+  box-shadow: 0 0 1px 0 #f0b4b2;
 }
 .form .fieldset .input-group {
   -webkit-display: -webkit-flex;
