@@ -22,14 +22,14 @@ $void: $black;
 $clean: $white;
 
 $colorBgBody: $white;
-$colorBgBodyAlt: $red;
+$colorBgBodyAlt: $brand;
 
-$colorBgFull: $red;
+$colorBgFull: $brand;
 $colorBgFullAlt: $yellow;
 
 $colorBgHeader: $white;
 $colorBgHeaderAlt: $dark-gray;
-$colorBgHeaderLower: $red;
+$colorBgHeaderLower: $brand;
 
 $colorBgFooter: $dark-gray;
 $colorBgFooterAlt: $gray;
@@ -41,8 +41,8 @@ $colorText: $dark-gray;
 $colorTextAlt: $light-gray;
 $colorTextInverse: $white;
 
-$colorLink: $red;
-$colorLinkDark: darken($red, 15%);
+$colorLink: $brand;
+$colorLinkDark: darken($colorLink, 15%);
 $colorLinkAlt: $gray;
 $colorLinkAltDark: $dark-gray;
 $colorLinkInverse: $white;
@@ -51,8 +51,11 @@ $colorIcon: $dark-gray;
 $colorIconAlt: $gray;
 $colorIconInverse: $white;
 
+$colorFormFocus: lighten($brand, 15%);
+
 $colorBorder: $light-gray;
 $colorBorderDark: $gray;
+$colorBorderInverse: darken($white, 5%);
 
 $colorShadow: $gray;
 $colorShadowDark: $dark-gray;

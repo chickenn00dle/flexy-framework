@@ -1,0 +1,93 @@
+.form {
+    @include flexContainer(column, no-wrap);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+
+    .fieldset {
+        @include flexContainer(column, no-wrap);
+        width: 100%;
+        border: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+
+        .legend {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: .5rem;
+        }
+
+        label {
+            width: 100%;
+            margin-bottom: .25rem;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: .5rem .25rem;
+            margin-bottom: .5rem;
+            border: 2px solid $colorBorderInverse;
+            @include borderRadius(5px);
+            background: transparent;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $colorFormFocus;
+                @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
+            }
+        }
+
+        select {
+            height: 2rem;
+            margin-bottom: .5rem;
+            border: 2px solid $colorBorderInverse;
+            @include borderRadius(5px);
+            background: transparent;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $colorFormFocus;
+                @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
+            }
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 5rem;
+            padding: .5rem .25rem;
+            resize: none;
+            border: 2px solid $colorBorderInverse;
+            @include borderRadius(5px);
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $colorFormFocus;
+                @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
+            }
+        }
+
+        .input-group {
+            @include flexContainer(row, no-wrap);
+            @include flexAxis(flex-start, center);
+
+            input {
+                width: auto;
+                margin: 0 .5rem 0 0;
+
+                &:focus {
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+
+            .input-label {
+                margin-right: 1rem;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Flexy | Typography</title>
+        <title>Flexy | Interface</title>
         <link rel="stylesheet" href="css/style.css" />
         <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
     </head>
@@ -100,7 +100,76 @@
                 </div>
             </section>
 
-            
+            <section>
+                <div class="module">
+                    <div class="unit-6">
+                        <h2>Forms</h2>
+                        <form class="form">
+                            <fieldset class="fieldset">
+                                <legend class="legend">
+                                    Standard Fields
+                                </legend>
+                                <label for="field1">Name:</label>
+                                <input type="text" name="field1" placeholder="Sachie Iwata" required/>
+                                <label for="field2">Email:</label>
+                                <input type="email" name="field2" placeholder="flexy@example.com" required/>
+                                <label for="field3">Password:</label>
+                                <input type="password" name="field3" placeholder="*******" required/>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="legend">
+                                    Select Field
+                                </legend>
+                                <label for="field4">Select:</label>
+                                <select name="field4">
+                                    <option value="option1">
+                                        Option 1
+                                    </option>
+                                    <option value="option2">
+                                        Option 2
+                                    </option>
+                                    <option value="option3">
+                                        Option 3
+                                    </option>
+                                </select>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="legend">
+                                    Radios
+                                </legend>
+                                <label for="field5">Radio:</label>
+                                <div class="input-group">
+                                    <input type="radio" name="field5" value="radio1" checked /> <span class="input-label">Radio 1</span>
+                                    <input type="radio" name="field5" value="radio2" checked /> <span class="input-label">Radio 2</span>
+                                    <input type="radio" name="field5" value="radio3" checked /> <span class="input-label">Radio 3</span>
+                                </div>
+                            </fieldset>
+                            <fieldset class="fieldset">
+                                <legend class="legend">
+                                    Checkboxes
+                                </legend>
+                                <label for="field6">Checkbox:</label>
+                                <div class="input-group">
+                                    <input type="checkbox" name="field6" value="checkbox1"/> <span class="input-label">Checkbox 1</span>
+                                    <input type="checkbox" name="field6" value="checkbox2"/> <span class="input-label">Checkbox 2</span>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="legend">
+                                    Textarea
+                                </legend>
+                                <label for="field7">Text:</label>
+                                <textarea name="field7" placeholder="Your text here..."></textarea>
+                            </fieldset>
+
+                            <input type="submit" class="btn btn-action" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </section>
 
         </main>
         <footer>
