@@ -22,9 +22,9 @@ body {
 
                 .unit, .unit-1, .unit-2, .unit-3, .unit-4, .unit-5, .unit-6, .unit-7, .unit-8, .unit-9, .unit-10 {
                     @include flexItem(1, 1, 100%);
-                    padding: .5rem;
+                    padding: .5rem .5rem 0;
                     box-sizing: border-box;
-                    margin: 0 .5rem .5rem;
+                    margin: 0 .5rem 0;
                 }
             }
         }
