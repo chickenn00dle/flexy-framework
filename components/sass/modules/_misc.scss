@@ -1,0 +1,12 @@
+.sample {
+    display: block;
+    width: 100%;
+    background: $brand;
+    color: $colorTextInverse;
+    text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    @include borderRadius(5px);
+    font-size: 1.5rem;
+    font-weight: 700;
+}

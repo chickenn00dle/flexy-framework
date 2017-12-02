@@ -74,38 +74,21 @@
             <section>
                 <div class="module">
                     <div class="unit">
-                        <h2>The System</h2>
+                        <h2>The Flexy System</h2>
                         <p>The Flexy grid was designed to make life simple. First, we establish a flexy shell through which other flexible units can be placed.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="module">
-                    <div class="unit">
-                        <h3>The Shell</h3>
-                        <p>All page content is placed into a Flexy <b>Shell</b>. As the name implies, it serves as an empty "shell" within which you will place all modules and units. You should only need one shell per page and for semantics sake, shells should be applied to your pages main tag.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="module">
-                    <div class="unit">
-                        <h3>The Module</h3>
-                        <p>
-                            Modules house groups of similar units. A module serves as the second layer of structure after a pages shell. Place your module divs within section tags.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="module">
-                    <div class="unit">
-                        <h3>The Unit</h3>
+                        <p>All page content is placed into the Flexy <b>Shell</b>. As the name implies, it serves as an empty "shell" within which you will place all modules and units. You should only need one shell per page and for semantics sake, shells should be applied to your pages main tag.</p>
+                        <p>Modules house groups of similar units. A module serves as the second layer of structure after a pages shell. Place your module divs within section tags.</p>
                         <p>Units are where we place actual content. All headings, paragraphs, anchor tags, and etc.</p>
-                        <p>On smaller viewports, units will take up 100% of the width, while on larger screens the unit will behave as follows:</p>
+
+                        <pre><code>&lt;main class="shell"&gt;
+    &lt;section&gt;
+        &lt;div class="module"&gt;
+            &lt;div class="unit"&gt;
+                // Your Code Here
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;</code></pre>
                     </div>
                 </div>
             </section>
@@ -113,32 +96,110 @@
             <section>
                 <div class="module">
                     <div class="unit">
-                        <h4>Unit</h4>
-                        <p>By default, units will take up even amounts of space across the width of the viewport.</p>
+                        <h3>Units</h3>
+                        <p>By default, units will take up even amounts of space across the width of the viewport. All units placed within a module will grow evenly as the page width increases and will shrink evenly as the page width decreases.</p>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="unit">
+                        <span class="sample">Unit</span>
                     </div>
                     <div class="unit">
-                        <h4>Unit</h4>
-                        <p>All units placed within a module will grow evenly as the page width increases.</p>
+                        <span class="sample">Unit</span>
                     </div>
                     <div class="unit">
-                        <h4>Unit</h4>
-                        <p>And will shrink evenly as the page width decreases.</p>
+                        <span class="sample">Unit</span>
+                    </div>
+                    <div class="unit">
+                        <span class="sample">Unit</span>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="unit">
+                        <pre><code>&lt;div class="unit">
+    &lt;span>Unit 1&lt;/span>
+&lt;/div>
+&lt;div class="unit">
+    &lt;span>Unit 2&lt;/span>
+&lt;/div>
+&lt;div class="unit">
+    &lt;span>Unit 3&lt;/span>
+&lt;/div>
+&lt;div class="unit">
+    &lt;span>Unit 4&lt;/span>
+&lt;/div></code></pre>
                     </div>
                 </div>
             </section>
 
             <section>
+                <div class="module">
+                    <div class="unit">
+                        <p>If you'd like to specify the width of a unit, simply add 1-10 to the unit in question. (Units within a single module should total to less than 10.) Adjacent units may also be left unspecified to simply take up the remaining space.</p>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="unit-7">
+                        <span class="sample">Unit</span>
+                    </div>
+                    <div class="unit">
+                        <span class="sample">Unit</span>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="unit">
+                        <pre><code>&lt;div class="unit-8">
+    &lt;span>Unit 1&lt;/span>
+&lt;/div>
+&lt;div class="unit">
+    &lt;span>Unit 2&lt;/span>
+&lt;/div></code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="module">
+                    <div class="unit">
+                        <p>Or if you'd like to center or right-justify a unit, simply add module-center / module-right to the parent module:</p>
+                    </div>
+                </div>
                 <div class="module">
                     <div class="unit-6">
-                        <h4>Unit-6</h4>
-                        <p>If you'd like to specify the width of a unit, simply add 1-10 to the unit in question. (Units within a single module should total to less than 10.)</p>
+                        <span class="sample">Unit</span>
                     </div>
+                </div>
+                <div class="module module-center">
+                    <div class="unit-6">
+                        <span class="sample">Unit</span>
+                    </div>
+                </div>
+                <div class="module module-right">
+                    <div class="unit-6">
+                        <span class="sample">Unit</span>
+                    </div>
+                </div>
+                <div class="module">
                     <div class="unit">
-                        <h4>Unit</h4>
-                        <p>Adjacent units may also be left unspecified to simply take up the remaining space.</p>
+                        <pre><code>&lt;div class="module">
+    &lt;div class="unit-6">
+        Unit
+    &lt;/div>
+&lt;/div>
+&lt;div class="module module-center">
+    &lt;div class="unit-6">
+        Unit
+    &lt;/div>
+&lt;/div>
+&lt;div class="module module-right">
+    &lt;div class="unit-6">
+        Unit
+    &lt;/div>
+&lt;/div></code></pre>
                     </div>
                 </div>
             </section>
+
         </main>
         <footer>
             <div class="footer-module">
