@@ -2,19 +2,21 @@ body {
     @include flexContainer(column, nowrap);
     @include flexAxis(center, center);
     width: 100vw;
+    min-height: 100vh;
+    overflow: scroll;
 
     .shell {
         background: $colorBgBody;
         @include flexContainer(column, nowrap);
-        @include flexAxis(center, center);
+        @include flexAxis(flex-start, center);
         @include flexItem(1, 0, auto);
         width: 100%;
 
         section {
             @include flexContainer(column, nowrap);
             @include flexAxis(flex-start, stretch);
-            width: 100%;
             margin-bottom: 1rem;
+            width: 100%;
 
             .module {
                 @include flexContainer(row, wrap);
@@ -29,9 +31,12 @@ body {
                 }
             }
         }
+
+        section.pre-footer {
+            margin-bottom: 0;
+        }
     }
 }
-
 
 @include mediaQuery($mobile-lg){
     body {

@@ -12,37 +12,43 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
 h1, h2, h3, h4, h5, h6 {
     font-family: $globalFont;
     color: $colorHeading;
-    margin: 0 0 .5rem 0;
+    margin: 0;
 }
 
 h1 {
     font-size: 3rem;
     font-weight: 900;
+    margin-bottom: .5rem;
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 h3 {
     font-size: 1.25rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 h4 {
     font-size: 1.1rem;
     font-weight: 700;
+    margin-bottom: .5rem;
 }
 
 h5 {
     font-size: 1rem;
     font-weight: 500;
+    margin-bottom: .25rem;
 }
 
 h6 {
     font-size: .9rem;
     font-weight: 500;
+    margin-bottom: .25rem;
 }
 
 a {
