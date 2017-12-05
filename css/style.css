@@ -1302,15 +1302,15 @@ header nav .nav-module .slide-out {
 }
 
 .bg-full {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bg-half {
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .bg-fourth {
-  height: 30vh;
+  min-height: 30vh;
 }
 
 .bg-secondary {
@@ -1708,9 +1708,6 @@ footer .footer-module .footer-copyright {
 .form .fieldset input:focus {
   outline: none;
   border: 2px solid #595959;
-  -webkit-box-shadow: 0 0 1px 0 #595959;
-  -moz-box-shadow: 0 0 1px 0 #595959;
-  box-shadow: 0 0 1px 0 #595959;
 }
 .form .fieldset select {
   height: 2rem;
@@ -1725,9 +1722,6 @@ footer .footer-module .footer-copyright {
 .form .fieldset select:focus {
   outline: none;
   border: 2px solid #595959;
-  -webkit-box-shadow: 0 0 1px 0 #595959;
-  -moz-box-shadow: 0 0 1px 0 #595959;
-  box-shadow: 0 0 1px 0 #595959;
 }
 .form .fieldset textarea {
   width: 100%;
@@ -1743,9 +1737,6 @@ footer .footer-module .footer-copyright {
 .form .fieldset textarea:focus {
   outline: none;
   border: 2px solid #595959;
-  -webkit-box-shadow: 0 0 1px 0 #595959;
-  -moz-box-shadow: 0 0 1px 0 #595959;
-  box-shadow: 0 0 1px 0 #595959;
 }
 .form .fieldset .input-group {
   -webkit-display: -webkit-flex;

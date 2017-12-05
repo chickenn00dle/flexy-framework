@@ -14,17 +14,17 @@
 
 .bg-full {
     @extend %bg;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .bg-half {
     @extend %bg;
-    height: 50vh;
+    min-height: 50vh;
 }
 
 .bg-fourth {
     @extend %bg;
-    height: 30vh;
+    min-height: 30vh;
 }
 
 .bg-secondary {
