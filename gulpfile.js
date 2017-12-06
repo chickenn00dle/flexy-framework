@@ -22,11 +22,11 @@ var env,
 
 env = process.env.NODE_ENV || 'development';
 
-if (env === 'development'){
-    outputDir = 'builds/development/';
+if (env === 'production'){
+    outputDir = 'builds/production/';
     sassStyle = 'expanded';
 } else {
-    outputDir = 'builds/production/';
+    outputDir = 'builds/development/';
     sassStyle = 'compressed';
 }
 

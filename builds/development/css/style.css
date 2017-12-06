@@ -1698,7 +1698,7 @@ footer .footer-module .footer-copyright {
   width: 100%;
   padding: .5rem .25rem;
   margin-bottom: .5rem;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #d9d9d9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1712,7 +1712,7 @@ footer .footer-module .footer-copyright {
 .form .fieldset select {
   height: 2rem;
   margin-bottom: .5rem;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #d9d9d9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1728,7 +1728,7 @@ footer .footer-module .footer-copyright {
   min-height: 5rem;
   padding: .5rem .25rem;
   resize: none;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #d9d9d9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1767,6 +1767,74 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset .input-group .input-label {
   margin-right: 1rem;
+}
+
+.cardset {
+  width: 100%;
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+@media screen and (min-width: 600px) {
+  .cardset {
+    -webkit-align-items: stretch;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: space-between;
+  }
+}
+.cardset .card {
+  width: 100%;
+  background: white;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 1px 0 #595959;
+  -moz-box-shadow: 0 0 1px 0 #595959;
+  box-shadow: 0 0 1px 0 #595959;
+}
+.cardset .card:hover {
+  border: 1px solid #a6a6a6;
+  -webkit-box-shadow: 0 0 4px 0 #a6a6a6;
+  -moz-box-shadow: 0 0 4px 0 #a6a6a6;
+  box-shadow: 0 0 4px 0 #a6a6a6;
+}
+@media screen and (min-width: 768px) {
+  .cardset .card {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardset .card {
+    width: 32%;
+  }
+}
+.cardset .card .card-image {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .sample {

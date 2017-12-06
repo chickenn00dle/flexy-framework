@@ -1,0 +1,49 @@
+.cardset {
+    width: 100%;
+    @include flexContainer(row, wrap);
+    @include flexAxis(center, stretch);
+
+    @include mediaQuery(600px) {
+        & {
+            @include flexAxis(space-between, stretch);
+        }
+    }
+
+    .card {
+        width: 100%;
+        background: $white;
+        margin-bottom: 1rem;
+        padding: .5rem;
+        box-sizing: border-box;
+        @include borderRadius(5px);
+
+        border: 2px solid $colorBorderDark;
+        @include boxShadow(0, 0, 4px, 0, $colorShadow);
+
+        &:hover {
+            border: 2px solid $colorshadowDark;
+            @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
+        }
+
+        @include mediaQuery($mobile-lg) {
+            & {
+                width: 48%;
+            }
+        }
+
+        @include mediaQuery($mobile-xl) {
+            & {
+                width: 32%;
+            }
+        }
+
+        .card-image {
+            @include borderRadius(5px);
+            width: 100%;
+        }
+
+        .card-title {
+            font-size: 1rem;
+        }
+    }
+}

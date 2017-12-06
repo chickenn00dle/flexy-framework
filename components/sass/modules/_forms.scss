@@ -28,7 +28,7 @@
             width: 100%;
             padding: .5rem .25rem;
             margin-bottom: .5rem;
-            border: 2px solid $colorBorderInverse;
+            border: 2px solid $colorBorder;
             @include borderRadius(5px);
             background: transparent;
             box-sizing: border-box;
@@ -43,7 +43,7 @@
         select {
             height: 2rem;
             margin-bottom: .5rem;
-            border: 2px solid $colorBorderInverse;
+            border: 2px solid $colorBorder;
             @include borderRadius(5px);
             background: transparent;
             box-sizing: border-box;
@@ -60,7 +60,7 @@
             min-height: 5rem;
             padding: .5rem .25rem;
             resize: none;
-            border: 2px solid $colorBorderInverse;
+            border: 2px solid $colorBorder;
             @include borderRadius(5px);
             box-sizing: border-box;
 
