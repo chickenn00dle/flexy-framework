@@ -1,5 +1,7 @@
 .cardset {
     width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
     @include flexContainer(row, wrap);
     @include flexAxis(center, stretch);
 
@@ -10,19 +12,19 @@
     }
 
     .card {
+        @include flexContainer(column, no-wrap);
         width: 100%;
         background: $white;
         margin-bottom: 1rem;
         padding: .5rem;
         box-sizing: border-box;
         @include borderRadius(5px);
-
-        border: 2px solid $colorBorderDark;
+        position: relative;
+        border: 1px solid $colorBorder;
         @include boxShadow(0, 0, 4px, 0, $colorShadow);
 
         &:hover {
-            border: 2px solid $colorshadowDark;
-            @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
+            @include boxShadow(0, 0, 1px, 0, $colorShadowDark);
         }
 
         @include mediaQuery($mobile-lg) {
@@ -37,13 +39,29 @@
             }
         }
 
-        .card-image {
-            @include borderRadius(5px);
-            width: 100%;
+        .card-body {
+            @include flexItem(1, 0, auto);
+            .card-image {
+                @include borderRadius(5px);
+                width: 100%;
+                margin-bottom: .5rem;
+            }
+
+            .card-title {
+                font-size: 1.25rem;
+                margin-bottom: .1rem;
+            }
         }
 
-        .card-title {
-            font-size: 1rem;
+        .card-footer {
+            .card-btn {
+                width: 100%;
+                margin-bottom: .5rem;
+
+                &:active {
+                    margin: .1rem 0 .4rem 0 !important;
+                }
+            }
         }
     }
 }
