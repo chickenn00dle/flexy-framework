@@ -98,7 +98,7 @@ gulp.task('connect', function(){
 });
 
 gulp.task('watch', function(){
-    gulp.watch(coffeeSources, ['coffee']);
+    // gulp.watch(coffeeSources, ['coffee']);
     gulp.watch(jsSources, ['js']);
     gulp.watch(sassSources, ['compass']);
     gulp.watch(htmlSources, ['html']);
@@ -106,4 +106,4 @@ gulp.task('watch', function(){
     gulp.watch('builds/development/img/**/*.*', ['imagemin']);
 });
 
-gulp.task('default', ['coffee', 'js', 'json', 'compass', 'html', 'imagemin', 'connect', 'watch']);
+gulp.task('default', ['js', 'json', 'compass', 'html', 'imagemin', 'connect', 'watch']);
