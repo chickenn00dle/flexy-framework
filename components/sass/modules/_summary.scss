@@ -1,0 +1,76 @@
+.summary-grid {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    @include flexContainer(row, wrap);
+    @include flexAxis(center, center);
+
+    @include mediaQuery(600px) {
+        & {
+            @include flexAxis(space-between, flex-end);
+        }
+    }
+
+    .summary {
+        width: 100%;
+        @include flexItem(0, 1, auto);
+        @include borderRadius(5px);
+        margin-bottom: 1rem;
+        position: relative;
+        padding: 0;
+
+        @include mediaQuery($mobile-lg) {
+            & {
+                width: 48%;
+            }
+        }
+
+        @include mediaQuery($mobile-xl) {
+            & {
+                width: 32%;
+            }
+        }
+
+        img {
+            @include borderRadius(5px);
+        }
+
+        h2, h3, h4, h5, h6 {
+            font-size: 1.1rem;
+            display: block;
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            @include borderRadius(5px);
+            padding: .25rem 1rem;
+            box-sizing: border-box;
+            color: $colorTextInverse;
+            background: $colorBgTint;
+        }
+    }
+
+    .feature {
+        h2, h3, h4, h5, h6 {
+            font-size: 1.25rem;
+            padding: .5rem 1rem;
+        }
+    }
+
+    @include mediaQuery($mobile-lg) {
+        .feature {
+            width: 100%;
+
+            h2, h3, h4, h5, h6 {
+                font-size: 1.5rem;
+                padding: .75rem 1.25rem;
+            }
+        }
+    }
+
+    @include mediaQuery($mobile-xl) {
+        .feature {
+            width: 66%;
+        }
+    }
+
+}

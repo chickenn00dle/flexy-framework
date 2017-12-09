@@ -1,9 +1,9 @@
-.cardset {
+.card-grid {
     width: 100%;
     margin-bottom: 0;
     padding-bottom: 0;
     @include flexContainer(row, wrap);
-    @include flexAxis(center, stretch);
+    @include flexAxis(center, center);
 
     @include mediaQuery(600px) {
         & {
@@ -20,11 +20,10 @@
         box-sizing: border-box;
         @include borderRadius(5px);
         position: relative;
-        border: 1px solid $colorBorder;
-        @include boxShadow(0, 0, 4px, 0, $colorShadow);
+        @include boxShadow(0, 0, 5px, 0, $colorShadow);
 
         &:hover {
-            @include boxShadow(0, 0, 1px, 0, $colorShadowDark);
+            @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
         }
 
         @include mediaQuery($mobile-lg) {
@@ -56,10 +55,10 @@
         .card-footer {
             .card-btn {
                 width: 100%;
-                margin-bottom: .5rem;
+                margin-bottom: .25rem;
 
                 &:active {
-                    margin: .1rem 0 .4rem 0 !important;
+                    margin: .1rem 0 .15rem 0 !important;
                 }
             }
         }

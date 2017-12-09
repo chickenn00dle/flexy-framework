@@ -77,8 +77,83 @@
             <section>
                 <div class="module module-center">
                     <div class="unit">
+                        <h2>Post Summary</h2>
+                        <p>The following can be used to display summary links for posts and such. The <strong>summary component</strong> is comprised of an image and heading (h2-6). Furthermore, a class of <code>feature</code> can be added to make a single post stand out.</p>
+                        <div class="summary-grid">
+                            <div class="summary feature">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/443333/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/ff00ff/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/000000/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/44ffff/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/ff4444/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/ffa500/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/ffb6c1/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                            <div class="summary">
+                                <a href="#">
+                                    <img src="http://placehold.it/600x400/31698a/ffffff?text=Thumbnail" alt="Preview Image" />
+                                    <h2>Post Title Goes Here</h2>
+                                </a>
+                            </div>
+                        </div>
+                        <pre><code>&lt;div class="summary-grid">
+    &lt;div class="summary feature">
+        &lt;a href="url">
+            &lt;img src="image-src" alt="image description" />
+            &lt;h2>Feature Post Title Goes Here&lt;/h2>
+        &lt;/a>
+    &lt;/div>
+    &lt;div class="summary">
+        &lt;a href="url">
+            &lt;img src="image-src" alt="image description" />
+            &lt;h2>Post Title Goes Here&lt;/h2>
+        &lt;/a>
+    &lt;/div>
+    ...
+&lt;/div></code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="module module-center">
+                    <div class="unit">
                         <h2>Cards</h2>
-                        <div class="cardset">
+                        <p>Cards serve a similar purpose as post summaries, however they allow for snippets of text to be added for a more in depth explanation of linked content. the <strong>card component</strong> is comprised of an image, title, and button. Optionally, you can add a date and author using the <code>date</code> or <code>author</code> classes.</p>
+                        <div class="card-grid">
                             <div class="card">
                                 <div class="card-body">
                                     <img class="card-image" src="http://placehold.it/300x200/dc4c47/ffffff?text=Thumb" atl="image" />
@@ -181,13 +256,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="module module-center">
-                    <div class="unit">
-                        <pre><code>&lt;div class="cardset">
+                        <pre><code>&lt;div class="cards-grid">
     &lt;div class="card">
         &lt;div class="card-body">
             &lt;img class="card-image" src="YourImageSrc" atl="image alt" />
@@ -198,10 +267,13 @@
         &lt;div class="card-footer">
             &lt;a class="btn card-btn">Button&lt;/a>
         &lt;/div>
-    &lt;/div></code></pre>
+    &lt;/div>
+    ...
+&lt;/div></code></pre>
                     </div>
                 </div>
             </section>
+
             <section class="bg-fourth bg-secondary pre-footer">
                 <div class="module module-center">
                     <div class="unit-6">
