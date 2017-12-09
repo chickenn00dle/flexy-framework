@@ -163,6 +163,10 @@ img {
     text-align: right;
 }
 
+.attention {
+    color: $info;
+}
+
 @include mediaQuery($mobile-lg){
     html {
         font-size: $globalFontSize;

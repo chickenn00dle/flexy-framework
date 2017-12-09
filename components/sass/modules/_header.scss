@@ -110,7 +110,7 @@ header {
             }
 
             .slide-out {
-                @include setAnimation(slideOut, 5s);
+                @include setAnimation(slideOut, .25s);
             }
 
             @keyframes slideIn {

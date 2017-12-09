@@ -27,7 +27,7 @@ if (env === 'production'){
     sassStyle = 'compressed';
 } else {
     outputDir = 'builds/development/';
-    sassStyle = 'compressed';
+    sassStyle = 'expanded';
 }
 
 // coffeeSources = ['components/coffee/*.coffee'];
