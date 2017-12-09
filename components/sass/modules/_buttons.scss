@@ -106,11 +106,11 @@
 @include mediaQuery($mobile-lg) {
     %btn {
         display: inline-block;
-        margin: 0 100% 1rem 0;
+        margin: 0 0 1rem 0;
         width: max-content;
 
         &:active {
-            margin: .1rem 100% .9rem 0 !important;
+            margin: .1rem 0 .9rem 0 !important;
         }
     }
 
@@ -124,10 +124,10 @@
     }
 
     .btn-right {
-        margin: 0 0 1rem 100%;
+        margin: 0 0 1rem 85% !important;
 
         &:active {
-            margin: .1rem 0 .9rem 100% !important;
+            margin: .1rem 0 .9rem 85% !important;
         }
     }
 

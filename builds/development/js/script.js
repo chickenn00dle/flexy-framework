@@ -3,6 +3,10 @@ var $;
 
 $ = require('jquery');
 
+$(function(){
+    var Mustache = require('mustache');
+});
+
 $('.hamburger-outer').click(function() {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -15,10 +19,6 @@ $('.hamburger-outer').click(function() {
         $('body').addClass('lock');
         $('.nav-links').removeClass('hidden-mobile').addClass('slide-in');
     }
-});
-
-$(function(){
-    var Mustache = require('mustache');
 });
 
 },{"jquery":2,"mustache":3}],2:[function(require,module,exports){
