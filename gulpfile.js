@@ -30,18 +30,18 @@ if (env === 'production'){
     sassStyle = 'compressed';
 }
 
-coffeeSources = ['components/coffee/*.coffee'];
+// coffeeSources = ['components/coffee/*.coffee'];
 jsSources = ['components/scripts/*.js'];
 sassSources = ['components/sass/**/*.scss'];
 htmlSources = ['builds/development/*.html'];
 jsonSources = ['builds/development/js/*.json'];
 
-gulp.task('coffee', function(){
-    gulp.src(coffeeSources)
-        .pipe(coffee({bare: true})
-            .on('error', gutil.log))
-        .pipe(gulp.dest('components/scripts'))
-});
+// gulp.task('coffee', function(){
+//     gulp.src(coffeeSources)
+//         .pipe(coffee({bare: true})
+//             .on('error', gutil.log))
+//         .pipe(gulp.dest('components/scripts'))
+// });
 
 gulp.task('js', function(){
     gulp.src(jsSources)

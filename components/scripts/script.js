@@ -2,10 +2,6 @@ var $;
 
 $ = require('jquery');
 
-$(function(){
-    var Mustache = require('mustache');
-});
-
 $('.hamburger-outer').click(function() {
     if ($(this).hasClass('active')) {
         $(this).removeClass('active');
