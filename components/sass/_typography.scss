@@ -9,46 +9,51 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     line-height: 1.5rem;
 }
 
+p, a, ul, ol, dl, table, form, fieldset, blockquote, pre {
+    margin-bottom: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: $globalFont;
+    font-family: $globalFontAlt;
     color: $colorHeading;
     margin: 0;
+    padding: 0;
 }
 
 h1 {
     font-size: 3rem;
     font-weight: 900;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: .25rem;
 }
 
 h4 {
     font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: .5rem;
+    margin-bottom: .1rem;
 }
 
 h5 {
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: .25rem;
+    margin-bottom: .1rem;
 }
 
 h6 {
     font-size: .9rem;
     font-weight: 500;
-    margin-bottom: .25rem;
+    margin-bottom: .1rem;
 }
 
 a {
@@ -69,6 +74,17 @@ ol, ul {
     padding: 0 0 0 1.1rem;
 }
 
+ul.list-icons {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+
+    .list-icon {
+        font-size: .75rem;
+        margin-right: .5rem;
+    }
+}
+
 dl {
     width: 100%;
     @include flexContainer(row, wrap);
@@ -82,6 +98,17 @@ dl {
     dd {
         @include flexItem(1, 1, 100%);
         margin: 0 0 .5rem 0;
+    }
+}
+
+.submenu {
+    background: $colorBgCode;
+    @include borderRadius(5px);
+    padding: 1rem;
+    box-sizing: border-box;
+
+    h2, h3, h4, h5, h6 {
+        color: $colorHeadingLink;
     }
 }
 
@@ -110,7 +137,8 @@ pre {
 }
 
 blockquote {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
 
     &::before {
@@ -164,7 +192,7 @@ img {
 }
 
 .attention {
-    color: $info;
+    color: $info !important;
 }
 
 @include mediaQuery($mobile-lg){
@@ -181,11 +209,11 @@ img {
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     h4 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     dl {
