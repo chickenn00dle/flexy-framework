@@ -28,7 +28,6 @@ img {
             margin-bottom: 0;
         }
     }
-
 }
 
 @include mediaQuery($mobile-lg) {
@@ -36,6 +35,5 @@ img {
         .hero-text {
             padding: 1rem;
         }
-
     }
 };
