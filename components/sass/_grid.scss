@@ -138,6 +138,16 @@ body {
                     }
                 }
 
+                .module-full {
+                    @include flexAxis(center, center);
+                    max-width: 100%;
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
                 .module-center {
                     @include flexAxis(center, center);
                 }

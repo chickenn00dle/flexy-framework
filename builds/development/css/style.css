@@ -621,10 +621,6 @@ blockquote cite::before {
   content: "\2014 ";
 }
 
-img {
-  width: 100%;
-}
-
 .date {
   color: #d9d9d9;
   font-size: .75rem;
@@ -649,8 +645,36 @@ img {
   text-align: right;
 }
 
-.attention {
+.brand {
+  color: #dc4c47 !important;
+}
+
+.info {
   color: #4f84c4 !important;
+}
+
+.action {
+  color: #92b658 !important;
+}
+
+.attention {
+  color: #b86ba3 !important;
+}
+
+.hazard {
+  color: #f6d155 !important;
+}
+
+.neutral {
+  color: #a6a6a6 !important;
+}
+
+.void {
+  color: #1a1a1a !important;
+}
+
+.clean {
+  color: white !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -907,6 +931,20 @@ body .shell section.pre-footer {
     -webkit-flex: 0 0 100%;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
+  }
+  body .shell section .module-full {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    max-width: 100%;
+    width: 100%;
+  }
+  body .shell section .module-full img {
+    width: 100%;
   }
   body .shell section .module-center {
     -webkit-align-items: center;
@@ -1253,6 +1291,42 @@ header nav .nav-module .slide-out {
     color: #595959;
   }
 }
+figure {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+figure img {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+img {
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+}
+.hero .hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: .5rem;
+  box-sizing: border-box;
+  margin: 0;
+}
+.hero .hero-text h2, .hero .hero-text h3, .hero .hero-text h4, .hero .hero-text h5, .hero .hero-text h6 {
+  color: white;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .hero .hero-text {
+    padding: 1rem;
+  }
+}
 .nav-hamburger {
   position: absolute;
   z-index: 2;
@@ -1525,7 +1599,7 @@ footer .footer-module .footer-copyright {
   -webkit-box-shadow: 0 0 2px 0 #595959;
   -moz-box-shadow: 0 0 2px 0 #595959;
   box-shadow: 0 0 2px 0 #595959;
-  margin: .1rem 0 .95rem 0 !important;
+  margin: .1rem 0 .9rem !important;
 }
 
 .btn-info {
@@ -1592,7 +1666,6 @@ footer .footer-module .footer-copyright {
 
 @media screen and (min-width: 768px) {
   .btn {
-    display: inline-block;
     margin: 0 0 1rem 0;
     width: max-content;
   }

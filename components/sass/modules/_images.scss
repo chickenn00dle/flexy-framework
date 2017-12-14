@@ -1,0 +1,41 @@
+figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    img {
+        @include borderRadius(5px);
+    }
+}
+
+img {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+
+    .hero-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: .5rem;
+        box-sizing: border-box;
+        margin: 0;
+
+        h2, h3, h4, h5, h6 {
+            color: $colorTextInverse;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+@include mediaQuery($mobile-lg) {
+    .hero {
+        .hero-text {
+            padding: 1rem;
+        }
+
+    }
+};

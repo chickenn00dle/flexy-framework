@@ -172,10 +172,6 @@ blockquote {
     }
 }
 
-img {
-    width: 100%;
-}
-
 .date {
     color: $colorTextAlt;
     font-size: .75rem;
@@ -201,8 +197,36 @@ img {
     text-align: right;
 }
 
-.attention {
+.brand {
+    color: $brand !important;
+}
+
+.info {
     color: $info !important;
+}
+
+.action {
+    color: $action !important;
+}
+
+.attention {
+    color: $attention !important;
+}
+
+.hazard {
+    color: $hazard !important;
+}
+
+.neutral {
+    color: $neutral !important;
+}
+
+.void {
+    color: $void !important;
+}
+
+.clean {
+    color: $clean !important;
 }
 
 @include mediaQuery($mobile-lg){
@@ -236,4 +260,5 @@ img {
             @include flexItem(1, 1, 85%);
         }
     }
+
 }
