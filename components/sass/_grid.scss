@@ -15,7 +15,7 @@ body {
         section {
             @include flexContainer(column, nowrap);
             @include flexAxis(flex-start, stretch);
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             width: 100%;
 
             .module {
