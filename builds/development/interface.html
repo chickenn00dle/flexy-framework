@@ -77,7 +77,7 @@
 
             <section>
                 <div class="module">
-                    <div class="unit-6">
+                    <div class="unit-8">
                         <h2>Buttons</h2>
                         <a class="btn">Button</a>
                         <a class="btn btn-info">Button</a>
@@ -87,11 +87,17 @@
                         <a class="btn btn-neutral">Button</a>
                         <a class="btn btn-void">Button</a>
                         <a class="btn btn-clean">Button</a>
-
+                        <pre>&lt;a class="btn">Button&lt;/a>
+&lt;a class="btn btn-info">Button&lt;/a>
+&lt;a class="btn btn-action">Button&lt;/a>
+&lt;a class="btn btn-attention">Button&lt;/a>
+...</pre>
                         <h3>Button Alignment</h3>
                         <a class="btn">Button</a>
                         <a class="btn btn-center">Button</a>
-                        <a class="btn btn-right">Button</a>
+                        <!-- <a class="btn btn-right">Button</a> -->
+                        <pre>&lt;a class="btn">Button&lt;/a>
+&lt;a class="btn btn-center">Button&lt;/a></pre>
 
                         <h3>Button Group</h3>
                         <div class="btn-group">
@@ -99,13 +105,18 @@
                             <a class="btn btn-void">Button</a>
                             <a class="btn btn-clean">Button</a>
                         </div>
+                        <pre>&lt;div class="btn-group">
+    &lt;a class="btn btn-neutral">Button&lt;/a>
+    &lt;a class="btn btn-void">Button&lt;/a>
+    &lt;a class="btn btn-clean">Button&lt;/a>
+&lt;/div></pre>
                     </div>
                 </div>
             </section>
 
             <section>
                 <div class="module">
-                    <div class="unit-6">
+                    <div class="unit-8">
                         <h2>Forms</h2>
                         <form class="form">
                             <fieldset class="fieldset">
@@ -170,6 +181,69 @@
 
                             <input type="submit" class="btn btn-action" value="Submit">
                         </form>
+                        <pre>&lt;form class="form">
+    &lt;fieldset class="fieldset">
+        &lt;legend class="legend">
+            Standard Fields
+        &lt;/legend>
+        &lt;label for="field1">Name:&lt;/label>
+        &lt;input type="text" name="field1" placeholder="Sachie Iwata" required/>
+        &lt;label for="field2">Email:&lt;/label>
+        &lt;input type="email" name="field2" placeholder="flexy@example.com" required/>
+        &lt;label for="field3">Password:&lt;/label>
+        &lt;input type="password" name="field3" placeholder="*******" required/>
+    &lt;/fieldset>
+
+    &lt;fieldset class="fieldset">
+        &lt;legend class="legend">
+            Select Field
+        &lt;/legend>
+        &lt;label for="field4">Select:&lt;/label>
+        &lt;select name="field4">
+            &lt;option value="option1">
+                Option 1
+            &lt;/option>
+            &lt;option value="option2">
+                Option 2
+            &lt;/option>
+            &lt;option value="option3">
+                Option 3
+            &lt;/option>
+        &lt;/select>
+    &lt;/fieldset>
+
+    &lt;fieldset class="fieldset">
+        &lt;legend class="legend">
+            Radios
+        &lt;/legend>
+        &lt;label for="field5">Radio:&lt;/label>
+        &lt;div class="input-group">
+            &lt;input type="radio" name="field5" value="radio1" checked /> <span class="input-label">Radio 1</span>
+            &lt;input type="radio" name="field5" value="radio2" checked /> <span class="input-label">Radio 2</span>
+            &lt;input type="radio" name="field5" value="radio3" checked /> <span class="input-label">Radio 3</span>
+        &lt;/div>
+    &lt;/fieldset>
+    &lt;fieldset class="fieldset">
+        &lt;legend class="legend">
+            Checkboxes
+        &lt;/legend>
+        &lt;label for="field6">Checkbox:&lt;/label>
+        &lt;div class="input-group">
+            &lt;input type="checkbox" name="field6" value="checkbox1"/> <span class="input-label">Checkbox 1</span>
+            &lt;input type="checkbox" name="field6" value="checkbox2"/> <span class="input-label">Checkbox 2</span>
+        &lt;/div>
+    &lt;/fieldset>
+
+    &lt;fieldset class="fieldset">
+        &lt;legend class="legend">
+            Textarea
+        &lt;/legend>
+        &lt;label for="field7">Text:&lt;/label>
+        &lt;textarea name="field7" placeholder="Your text here...">&lt;/textarea>
+    &lt;/fieldset>
+
+    &lt;input type="submit" class="btn btn-action" value="Submit">
+&lt;/form></pre>
                     </div>
                 </div>
             </section>

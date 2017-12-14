@@ -123,13 +123,13 @@
         }
     }
 
-    .btn-right {
-        margin: 0 0 1rem 85% !important;
-
-        &:active {
-            margin: .1rem 0 .9rem 85% !important;
-        }
-    }
+    // .btn-right {
+    //     margin: 0 0 1rem 90% !important;
+    //
+    //     &:active {
+    //         margin: .1rem 0 .9rem 90% !important;
+    //     }
+    // }
 
     .btn-group {
         @include flexContainer(row, nowrap);

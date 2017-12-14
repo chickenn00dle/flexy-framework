@@ -463,13 +463,13 @@ h1 {
 h2 {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: .75rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: .25rem;
+  margin-bottom: .5rem;
 }
 
 h4 {
@@ -595,7 +595,7 @@ pre {
   width: 100%;
   padding: .5rem 1rem;
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 0 1rem 0;
   overflow-y: scroll;
 }
 
@@ -1606,13 +1606,6 @@ footer .footer-module .footer-copyright {
   }
   .btn-center:active {
     margin: .1rem auto .9rem !important;
-  }
-
-  .btn-right {
-    margin: 0 0 1rem 85% !important;
-  }
-  .btn-right:active {
-    margin: .1rem 0 .9rem 85% !important;
   }
 
   .btn-group {
