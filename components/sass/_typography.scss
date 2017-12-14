@@ -72,6 +72,7 @@ p {
 
 ol, ul {
     padding: 0 0 0 1.1rem;
+    margin: 0 0 1rem;
 }
 
 ul.list-icons {
@@ -105,10 +106,19 @@ dl {
     background: $colorBgCode;
     @include borderRadius(5px);
     padding: 1rem;
+    margin-bottom: 1rem;
     box-sizing: border-box;
 
     h2, h3, h4, h5, h6 {
         color: $colorHeadingLink;
+    }
+
+    .submenu-title {
+        margin-bottom: .25rem;
+    }
+
+    .submenu-last {
+        margin-bottom: 0;
     }
 }
 

@@ -506,6 +506,7 @@ p {
 
 ol, ul {
   padding: 0 0 0 1.1rem;
+  margin: 0 0 1rem;
 }
 
 ul.list-icons {
@@ -559,10 +560,17 @@ dl dd {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 1rem;
+  margin-bottom: 1rem;
   box-sizing: border-box;
 }
 .submenu h2, .submenu h3, .submenu h4, .submenu h5, .submenu h6 {
   color: #dc4c47;
+}
+.submenu .submenu-title {
+  margin-bottom: .25rem;
+}
+.submenu .submenu-last {
+  margin-bottom: 0;
 }
 
 pre, code {
