@@ -150,6 +150,10 @@ body {
 
                 .module-center {
                     @include flexAxis(center, center);
+
+                    li {
+                        margin-right: 1rem;
+                    }
                 }
 
                 .module-right {

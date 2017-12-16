@@ -1,0 +1,7 @@
+.block {
+    background: $colorBgBlock;
+    @include borderRadius(5px);
+    padding: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}

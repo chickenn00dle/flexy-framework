@@ -75,7 +75,7 @@ ol, ul {
     margin: 0 0 1rem;
 }
 
-ul.list-icons {
+.list-icons {
     list-style: none;
     padding-left: 0;
     margin-left: 0;
@@ -83,6 +83,20 @@ ul.list-icons {
     .list-icon {
         font-size: .75rem;
         margin-right: .5rem;
+    }
+}
+
+.list-horizontal {
+    @include flexContainer(row, nowrap);
+    @include flexAxis(flex-start, center);
+    width: 100%;
+
+    li {
+        margin: 0 2rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
     }
 }
 
