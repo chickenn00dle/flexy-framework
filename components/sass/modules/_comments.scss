@@ -14,8 +14,14 @@
     .comment {
         list-style: none;
         width: 100%;
+        margin-bottom: 0;
 
         .comment-block {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
 
             .comment-author {
                 @include flexContainer(row, nowrap);
@@ -34,6 +40,17 @@
                         font-size: 1rem;
                         margin-bottom: 0;
                     }
+
+                    p, a {
+                        font-size: .9rem;
+                    }
+                }
+            }
+
+            .comment-details {
+                p, a {
+                    margin-bottom: 0;
+                    font-size: .9rem;
                 }
             }
         }

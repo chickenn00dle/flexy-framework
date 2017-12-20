@@ -1523,6 +1523,8 @@ img {
 footer {
   width: 100vw;
   background: #595959;
+  padding: 2rem 0 1rem 0;
+  box-sizing: border-box;
 }
 footer .footer-module {
   -webkit-display: -webkit-flex;
@@ -1546,6 +1548,40 @@ footer .footer-module {
   padding: 1rem;
   margin: auto;
   box-sizing: border-box;
+}
+footer .footer-module .footer-nav {
+  -webkit-box-flex: 1 1 100%;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  width: 100%;
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+footer .footer-module .footer-nav h2, footer .footer-module .footer-nav h3, footer .footer-module .footer-nav h4, footer .footer-module .footer-nav h5, footer .footer-module .footer-nav h6 {
+  color: white;
+}
+footer .footer-module .footer-nav ul {
+  margin: 0 2rem;
+}
+footer .footer-module .footer-nav ul li, footer .footer-module .footer-nav ul li a {
+  color: white;
+  font-size: .8rem;
 }
 footer .footer-module .nav-sns {
   -webkit-display: -webkit-flex;
@@ -2225,6 +2261,13 @@ footer .footer-module .footer-copyright {
 .comment-grid .comment {
   list-style: none;
   width: 100%;
+  margin-bottom: 0;
+}
+.comment-grid .comment .comment-block {
+  margin-bottom: 1rem;
+}
+.comment-grid .comment .comment-block:last-child {
+  margin-bottom: 0;
 }
 .comment-grid .comment .comment-block .comment-author {
   -webkit-display: -webkit-flex;
@@ -2265,6 +2308,13 @@ footer .footer-module .footer-copyright {
 .comment-grid .comment .comment-block .comment-author .comment-title h2, .comment-grid .comment .comment-block .comment-author .comment-title h3, .comment-grid .comment .comment-block .comment-author .comment-title h4, .comment-grid .comment .comment-block .comment-author .comment-title h5, .comment-grid .comment .comment-block .comment-author .comment-title h6 {
   font-size: 1rem;
   margin-bottom: 0;
+}
+.comment-grid .comment .comment-block .comment-author .comment-title p, .comment-grid .comment .comment-block .comment-author .comment-title a {
+  font-size: .9rem;
+}
+.comment-grid .comment .comment-block .comment-details p, .comment-grid .comment .comment-block .comment-details a {
+  margin-bottom: 0;
+  font-size: .9rem;
 }
 
 .sample {

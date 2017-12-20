@@ -308,7 +308,7 @@
                 <div class="module module-center">
                     <div class="unit">
                         <h2>Comments</h2>
-                        <p>The following is a basic template for comments. A class of <code>reply</code> can be added to a comment for additional left padding to follow the traditional comment/reply structure.</p>
+                        <p>The following is a basic template for comments. <Strong>Comments</Strong> are essentially <code>ul</code> tags while replies are nested lists within <code>li</code> tags.</p>
                         <div class="comment-grid">
                             <ul class="comment">
                                 <li class="comment-block">
@@ -351,17 +351,47 @@
                                 </li>
                             </ul>
                         </div>
-                        <pre><code>&lt;div class="media-card">
-&lt;img class="media-img" src="" />
-&lt;div class="media-details">
-    &lt;h3 class="media-title">Media Card Title&lt;/h3>
-    &lt;p class="date">
-        December 22, 2017
-    &lt;/p>
-    &lt;p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    &lt;/p>
-&lt;/div>
+                        <pre><code>&lt;div class="comment-grid">
+    &lt;ul class="comment">
+        &lt;li class="comment-block">
+            &lt;div class="comment-author">
+                &lt;img class="comment-avatar" src="http://placehold.it/50x50/dc4c47/ffffff?text=Img" />
+                &lt;div class="comment-title">
+                    &lt;h3>Name&lt;/h3>
+                    &lt;p>Website&lt;/p>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="comment-details">
+                &lt;p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                &lt;/p>
+                &lt;p>
+                    &lt;time>December 22, 2017&lt;/time>
+                &lt;/p>
+            &lt;/div>
+        &lt;/li>
+        &lt;li>
+            &lt;ul class="comment">
+                &lt;li class="comment-block">
+                    &lt;div class="comment-author">
+                        &lt;img class="comment-avatar" src="http://placehold.it/50x50/dc4c47/ffffff?text=Img" />
+                        &lt;div class="comment-title">
+                            &lt;h3>Name&lt;/h3>
+                            &lt;p>Website&lt;/p>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="comment-details">
+                        &lt;p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        &lt;/p>
+                        &lt;p>
+                            &lt;time>December 22, 2017&lt;/time>
+                        &lt;/p>
+                    &lt;/div>
+                &lt;/li>
+            &lt;/ul>
+        &lt;/li>
+    &lt;/ul>
 &lt;/div></code></pre>
                     </div>
                 </div>
