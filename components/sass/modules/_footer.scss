@@ -1,6 +1,8 @@
 footer {
     width: 100vw;
     background: $colorBgFooter;
+    padding: 2rem 0 1rem 0;
+    box-sizing: border-box;
 
     .footer-module {
         @include flexContainer(column, nowrap);
@@ -9,6 +11,26 @@ footer {
         padding: 1rem;
         margin: auto;
         box-sizing: border-box;
+
+        .footer-nav {
+            @include flexItem(1, 1, 100%);
+            width: 100%;
+            @include flexContainer(row, nowrap);
+            @include flexAxis(center, center);
+
+            h2, h3, h4, h5, h6 {
+                color: $colorLinkInverse;
+            }
+
+            ul {
+                margin: 0 2rem;
+
+                li, li a {
+                    color: $colorLinkInverse;
+                    font-size: .8rem;
+                }
+            }
+        }
 
         .nav-sns {
             @include flexContainer(row, nowrap);
