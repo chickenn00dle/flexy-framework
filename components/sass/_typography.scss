@@ -100,6 +100,13 @@ ol, ul {
     }
 }
 
+.pagination {
+    @include flexContainer(row, nowrap);
+    @include flexAxis(space-between, center);
+    list-style: none;
+    padding: 0;
+}
+
 dl {
     width: 100%;
     @include flexContainer(row, wrap);
