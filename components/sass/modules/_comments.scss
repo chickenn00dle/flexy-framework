@@ -1,0 +1,41 @@
+.comment-grid {
+    @include flexContainer(column, nowrap);
+    @include flexAxis(flex-start, flex-start);
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    box-sizing: border-box;
+    border: 1px solid $colorBorder;
+    @include borderRadius(5px);
+
+    @include mediaQuery($laptop) {
+        max-width: 80%;
+    };
+
+    .comment {
+        list-style: none;
+        width: 100%;
+
+        .comment-block {
+
+            .comment-author {
+                @include flexContainer(row, nowrap);
+                @include flexAxis(flex-start, flex-end);
+                margin-bottom: .5rem;
+
+                .comment-avatar {
+                    @include flexItem(1, 4, 10%);
+                    @include borderRadius(5px);
+                    margin-right: 1rem;
+                }
+
+                .comment-title {
+                    @include flexItem(4, 1, 80%);
+                    h2, h3, h4, h5, h6 {
+                        font-size: 1rem;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

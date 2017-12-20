@@ -186,9 +186,15 @@ blockquote {
     }
 }
 
+time {
+    color: $colorTextAlt;
+    font-size: .9rem;
+    margin-bottom: 0;
+}
+
 .date {
     color: $colorTextAlt;
-    font-size: .75rem;
+    font-size: .9rem;
     margin-bottom: 0;
 }
 

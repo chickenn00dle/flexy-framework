@@ -648,9 +648,15 @@ blockquote cite::before {
   content: "\2014 ";
 }
 
+time {
+  color: #d9d9d9;
+  font-size: .9rem;
+  margin-bottom: 0;
+}
+
 .date {
   color: #d9d9d9;
-  font-size: .75rem;
+  font-size: .9rem;
   margin-bottom: 0;
 }
 
@@ -1812,6 +1818,17 @@ footer .footer-module .footer-copyright {
   color: #5f99cf;
 }
 
+.block {
+  background: #f2f2f2;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
 .form {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -2119,7 +2136,7 @@ footer .footer-module .footer-copyright {
   }
 }
 
-.media-card {
+.profile {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
   display: -ms-flexbox;
@@ -2143,17 +2160,12 @@ footer .footer-module .footer-copyright {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-@media screen and (min-width: 768px) {
-  .media-card {
-    max-width: 75%;
-  }
-}
 @media screen and (min-width: 1280px) {
-  .media-card {
-    max-width: 50%;
+  .profile {
+    max-width: 80%;
   }
 }
-.media-card .media-img {
+.profile .profile-img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -2161,29 +2173,98 @@ footer .footer-module .footer-copyright {
   padding: 1rem;
   margin: 0;
 }
-.media-card .media-details {
+.profile .profile-details {
   padding: .5rem .5rem .5rem 0;
   box-sizing: border-box;
 }
-.media-card .media-details h2, .media-card .media-details h3, .media-card .media-details h4, .media-card .media-details h5, .media-card .media-details h6 {
+.profile .profile-details h2, .profile .profile-details h3, .profile .profile-details h4, .profile .profile-details h5, .profile .profile-details h6 {
   font-size: 1rem;
 }
-.media-card .media-details p {
+.profile .profile-details h2 a, .profile .profile-details h3 a, .profile .profile-details h4 a, .profile .profile-details h5 a, .profile .profile-details h6 a {
+  font-size: 1rem;
+}
+.profile .profile-details p {
   font-size: .9rem;
   margin-bottom: 0;
 }
-.media-card .media-details .media-title {
+.profile .profile-details .profile-title {
   margin-bottom: .25rem;
 }
 
-.block {
-  background: #f2f2f2;
+.comment-grid {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 1rem 0;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 1rem;
-  box-sizing: border-box;
-  margin-bottom: 1rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-grid {
+    max-width: 80%;
+  }
+}
+.comment-grid .comment {
+  list-style: none;
+  width: 100%;
+}
+.comment-grid .comment .comment-block .comment-author {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  margin-bottom: .5rem;
+}
+.comment-grid .comment .comment-block .comment-author .comment-avatar {
+  -webkit-box-flex: 1 4 10%;
+  -webkit-flex: 1 4 10%;
+  -ms-flex: 1 4 10%;
+  flex: 1 4 10%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+.comment-grid .comment .comment-block .comment-author .comment-title {
+  -webkit-box-flex: 4 1 80%;
+  -webkit-flex: 4 1 80%;
+  -ms-flex: 4 1 80%;
+  flex: 4 1 80%;
+}
+.comment-grid .comment .comment-block .comment-author .comment-title h2, .comment-grid .comment .comment-block .comment-author .comment-title h3, .comment-grid .comment .comment-block .comment-author .comment-title h4, .comment-grid .comment .comment-block .comment-author .comment-title h5, .comment-grid .comment .comment-block .comment-author .comment-title h6 {
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 .sample {
