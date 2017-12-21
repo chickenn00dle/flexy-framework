@@ -1,56 +1,66 @@
 .comment-grid {
     @include flexContainer(column, nowrap);
     @include flexAxis(flex-start, flex-start);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem 1rem 1rem 0;
     box-sizing: border-box;
     border: 1px solid $colorBorder;
     @include borderRadius(5px);
 
-    @include mediaQuery($laptop) {
-        max-width: 80%;
-    };
-
-    .comment {
+    .comment-list {
         list-style: none;
         width: 100%;
         margin-bottom: 0;
+        margin-bottom: 1rem;
 
-        .comment-block {
-            margin-bottom: 1rem;
+        .comment {
+
+            ul, li {
+                list-style: none;
+            }
 
             &:last-child {
                 margin-bottom: 0;
             }
 
-            .comment-author {
-                @include flexContainer(row, nowrap);
-                @include flexAxis(flex-start, flex-end);
-                margin-bottom: .5rem;
+            .comment-body {
 
-                .comment-avatar {
-                    @include flexItem(1, 4, 10%);
-                    @include borderRadius(5px);
-                    margin-right: 1rem;
-                }
+                .comment-author {
+                    @include flexContainer(row, nowrap);
+                    @include flexAxis(flex-start, center);
 
-                .comment-title {
-                    @include flexItem(4, 1, 80%);
-                    h2, h3, h4, h5, h6 {
-                        font-size: 1rem;
-                        margin-bottom: 0;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 .5rem .25rem 0;
+                        @include borderRadius(5px);
                     }
 
+                    cite, span {
+                        margin: 0 5px 0 0;
+                    }
+
+                }
+
+                .comment-meta {
                     p, a {
+                        margin-bottom: 0;
                         font-size: .9rem;
+                        color: $colorTextAlt;
                     }
                 }
-            }
 
-            .comment-details {
                 p, a {
                     margin-bottom: 0;
-                    font-size: .9rem;
+                    font-size: 1rem;
+                }
+
+                .reply {
+                    margin-bottom: 1rem;
+
+                    a {
+                        font-size: .9rem;
+                    }
                 }
             }
         }

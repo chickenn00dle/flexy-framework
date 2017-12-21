@@ -5,11 +5,8 @@
     border: 1px solid $colorBorder;
     @include borderRadius(5px);
 
-    @include mediaQuery($laptop) {
-        max-width: 80%;
-    };
 
-    .profile-img {
+    img {
         @include borderRadius(50%);
         max-width: 100px;
         padding: 1rem;

@@ -7,6 +7,7 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
     font-size: 1rem;
     color: $colorText;
     line-height: 1.5rem;
+    width: auto;
 }
 
 p, a, ul, ol, dl, table, form, fieldset, blockquote, pre {
@@ -127,7 +128,7 @@ dl {
     background: $colorBgCode;
     @include borderRadius(5px);
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem;
     box-sizing: border-box;
 
     h2, h3, h4, h5, h6 {
@@ -207,8 +208,12 @@ time {
 
 .author {
     font-style: italic;
-    font-size: .75rem;
+    font-size: .9rem;
     margin-bottom: 0;
+}
+
+.tiny-text {
+    font-size: .8rem;
 }
 
 // Alignment

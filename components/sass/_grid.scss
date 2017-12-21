@@ -20,7 +20,7 @@ body {
 
             .module {
                 @include flexContainer(row, wrap);
-                @include flexAxis(space-between, center);
+                @include flexAxis(space-between, flex-start);
                 @include flexItem(1, 1, 100%);
 
                 .unit, .unit-1, .unit-2, .unit-3, .unit-4, .unit-5, .unit-6, .unit-7, .unit-8, .unit-9, .unit-10 {
@@ -45,6 +45,7 @@ body {
             section {
                 @include flexAxis(center, center);
                 .module {
+                    @include flexContainer(row, nowrap);
                     max-width: $laptop;
                     width: 100%;
 
@@ -55,7 +56,7 @@ body {
 
                     .unit-1 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 10%);
+                        @include flexItem(0, 0, 10%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -64,7 +65,7 @@ body {
 
                     .unit-2 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 20%);
+                        @include flexItem(0, 0, 20%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -73,7 +74,7 @@ body {
 
                     .unit-3 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 30%);
+                        @include flexItem(0, 0, 30%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -82,7 +83,7 @@ body {
 
                     .unit-4 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 40%);
+                        @include flexItem(0, 0, 40%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -91,7 +92,7 @@ body {
 
                     .unit-5 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 50%);
+                        @include flexItem(0, 0, 50%);
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
                         }
@@ -99,7 +100,7 @@ body {
 
                     .unit-6 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 60%);
+                        @include flexItem(0, 0, 60%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -108,7 +109,7 @@ body {
 
                     .unit-7 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 70%);
+                        @include flexItem(0, 0, 70%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -117,7 +118,7 @@ body {
 
                     .unit-8 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 80%);
+                        @include flexItem(0, 0, 80%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -126,7 +127,7 @@ body {
 
                     .unit-9 {
                         margin: 0 .5rem .5rem 0;
-                        @include flexItem(0, 1, 90%);
+                        @include flexItem(0, 0, 90%);
 
                         &:first-child {
                             margin: 0 .5rem .5rem .5rem;
@@ -158,6 +159,10 @@ body {
 
                 .module-right {
                     @include flexAxis(flex-end, center);
+                }
+
+                .module-hero {
+                    @include flexAxis(space-between, center);
                 }
             }
         }

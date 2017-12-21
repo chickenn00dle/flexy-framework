@@ -81,27 +81,6 @@ header {
                         }
                     }
 
-                    &.nav-upper-secondary {
-                        border-bottom: none;
-                        position: fixed;
-                        bottom: .5rem;
-                        width: 100%;
-                        margin: 0 0 .5rem 0;
-
-                        .nav-sns {
-
-                            li {
-                                border-bottom: none;
-                            }
-                        }
-
-                        a {
-                            &:hover {
-                                background: none;
-                            }
-                        }
-
-                    }
                 }
             }
 
@@ -211,16 +190,20 @@ header {
                             }
                         }
 
-                        &.nav-upper-secondary {
-                            margin-left: auto !important;
-                            position: inherit;
-                            width: auto;
-                            margin: 1rem 0 0;
-                        }
                     }
 
                     .active a {
                         color: $colorLinkAltDark;
+                    }
+                }
+
+                .nav-sns {
+                    @include flexContainer(row, nowrap);
+                    @include flexAxis(flex-end, center);
+
+
+                    li {
+                        margin: auto 0 1rem 2rem;
                     }
                 }
             }
