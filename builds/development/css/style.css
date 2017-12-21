@@ -2322,7 +2322,7 @@ form a, form p {
   justify-content: flex-start;
   -ms-flex-pack: flex-start;
   margin-bottom: 2rem;
-  padding: 1rem 1rem 1rem 0;
+  padding: 1rem 1rem 0 0;
   box-sizing: border-box;
   border: 1px solid #d9d9d9;
   -webkit-border-radius: 5px;
@@ -2333,13 +2333,15 @@ form a, form p {
   list-style: none;
   width: 100%;
   margin-bottom: 0;
-  margin-bottom: 1rem;
+}
+.comment-grid .comment-list .comment {
+  margin-bottom: 2rem;
 }
 .comment-grid .comment-list .comment ul, .comment-grid .comment-list .comment li {
   list-style: none;
 }
 .comment-grid .comment-list .comment:last-child {
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 .comment-grid .comment-list .comment .comment-body .comment-author {
   -webkit-display: -webkit-flex;
@@ -2359,32 +2361,65 @@ form a, form p {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -ms-flex-pack: flex-start;
+  margin-bottom: .25rem;
 }
 .comment-grid .comment-list .comment .comment-body .comment-author img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   margin: 0 .5rem .25rem 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.comment-grid .comment-list .comment .comment-body .comment-author cite, .comment-grid .comment-list .comment .comment-body .comment-author span {
+.comment-grid .comment-list .comment .comment-body .comment-author cite {
   margin: 0 5px 0 0;
+  font-style: normal;
+}
+.comment-grid .comment-list .comment .comment-body .comment-author cite, .comment-grid .comment-list .comment .comment-body .comment-author span {
+  font-weight: bold;
 }
 .comment-grid .comment-list .comment .comment-body .comment-meta p, .comment-grid .comment-list .comment .comment-body .comment-meta a {
   margin-bottom: 0;
-  font-size: .9rem;
+  font-size: .8rem;
   color: #d9d9d9;
 }
 .comment-grid .comment-list .comment .comment-body p, .comment-grid .comment-list .comment .comment-body a {
-  margin-bottom: 0;
+  margin-bottom: .5rem;
   font-size: 1rem;
 }
-.comment-grid .comment-list .comment .comment-body .reply {
-  margin-bottom: 1rem;
-}
 .comment-grid .comment-list .comment .comment-body .reply a {
-  font-size: .9rem;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  padding: .25rem 1.25rem;
+  display: inline-block;
+  background: #dc4c47;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 0 #a6a6a6;
+  -moz-box-shadow: 0 0 5px 0 #a6a6a6;
+  box-shadow: 0 0 5px 0 #a6a6a6;
+  box-sizing: border-box;
+  margin: 0 0 .15rem;
+  width: max-content;
+  cursor: pointer;
+}
+.comment-grid .comment-list .comment .comment-body .reply a:hover {
+  background: #e0615c;
+  color: white;
+}
+.comment-grid .comment-list .comment .comment-body .reply a:active {
+  -webkit-box-shadow: 0 0 2px 0 #595959;
+  -moz-box-shadow: 0 0 2px 0 #595959;
+  box-shadow: 0 0 2px 0 #595959;
+  margin: .1rem 0 .9rem !important;
+}
+@media screen and (min-width: 768px) {
+  .comment-grid .comment-list .comment .comment-body .reply a {
+    font-size: .8rem;
+    padding: .1rem .5rem;
+  }
 }
 
 .sample {

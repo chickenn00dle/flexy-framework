@@ -2,7 +2,7 @@
     @include flexContainer(column, nowrap);
     @include flexAxis(flex-start, flex-start);
     margin-bottom: 2rem;
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 1rem 0 0;
     box-sizing: border-box;
     border: 1px solid $colorBorder;
     @include borderRadius(5px);
@@ -11,16 +11,16 @@
         list-style: none;
         width: 100%;
         margin-bottom: 0;
-        margin-bottom: 1rem;
 
         .comment {
+            margin-bottom: 2rem;
 
             ul, li {
                 list-style: none;
             }
 
             &:last-child {
-                margin-bottom: 0;
+                margin-bottom: 1rem;
             }
 
             .comment-body {
@@ -28,16 +28,22 @@
                 .comment-author {
                     @include flexContainer(row, nowrap);
                     @include flexAxis(flex-start, center);
+                    margin-bottom: .25rem;
 
                     img {
-                        width: 50px;
-                        height: 50px;
+                        width: 75px;
+                        height: 75px;
                         margin: 0 .5rem .25rem 0;
                         @include borderRadius(5px);
                     }
 
-                    cite, span {
+                    cite {
                         margin: 0 5px 0 0;
+                        font-style: normal;
+                    }
+
+                    cite, span {
+                        font-weight: bold;
                     }
 
                 }
@@ -45,21 +51,47 @@
                 .comment-meta {
                     p, a {
                         margin-bottom: 0;
-                        font-size: .9rem;
+                        font-size: .8rem;
                         color: $colorTextAlt;
                     }
                 }
 
                 p, a {
-                    margin-bottom: 0;
+                    margin-bottom: .5rem;;
                     font-size: 1rem;
                 }
 
                 .reply {
-                    margin-bottom: 1rem;
 
                     a {
-                        font-size: .9rem;
+                        font-weight: 500;
+                        text-align: center;
+                        color: $colorLinkInverse;
+                        padding: .25rem 1.25rem;
+                        display: inline-block;
+                        background: $brand;
+                        @include borderRadius(5px);
+                        @include boxShadow(0, 0, 5px, 0, $colorShadow);
+                        box-sizing: border-box;
+                        margin: 0 0 .15rem;
+                        width: max-content;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: lighten($brand, 5%);
+                            color: $colorLinkInverse;
+                        }
+
+                        &:active {
+                            @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
+                            margin: .1rem 0 .9rem !important;
+                        }
+
+                        @include mediaQuery($mobile-lg) {
+                            font-size: .8rem;
+                            padding: .1rem .5rem;
+                        };
+
                     }
                 }
             }
