@@ -23,12 +23,16 @@ header {
                 position: relative;
 
                 #logo {
-                    margin: 0 0 .5rem 0;
+                    margin: 0 0 1rem 0;
+                    width: auto;
 
                     img {
+                        height: auto;
+                        min-width: 75px;
+                        max-width: 100px;
 
                         &:hover {
-                            @include boxShadow(0, 0, 5px, 0, $colorShadow);
+                            transform: scale(1.01, 1.01);
                         }
                     }
                 }
@@ -117,14 +121,13 @@ header {
                     @include flexContainer(row, nowrap);
                     @include flexAxis(flex-start, center);
                     @include flexItem(0, 1, auto);
-                    padding: 0 1rem;
+                    padding: 0 1rem 1rem 1rem;
                     box-sizing: border-box;
                     position: inherit;
 
                     #logo {
-
                         margin: 0;
-
+                        width: auto;
                     }
 
                     .nav-links {

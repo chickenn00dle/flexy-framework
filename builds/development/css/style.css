@@ -450,7 +450,7 @@ p, a, ul, ol, dl, table, form, fieldset, blockquote, pre {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #595959;
+  color: #404040;
   margin: 0;
   padding: 0;
 }
@@ -1097,9 +1097,6 @@ header nav {
   justify-content: center;
   -ms-flex-pack: center;
   width: 100vw;
-  -webkit-box-shadow: 0 1px 10px 2px #595959;
-  -moz-box-shadow: 0 1px 10px 2px #595959;
-  box-shadow: 0 1px 10px 2px #595959;
 }
 header nav .nav-module {
   -webkit-display: -webkit-flex;
@@ -1145,17 +1142,16 @@ header nav .nav-module .nav-upper {
   position: relative;
 }
 header nav .nav-module .nav-upper #logo {
-  margin: 0 0 .5rem 0;
+  margin: 0 0 1rem 0;
+  width: auto;
 }
 header nav .nav-module .nav-upper #logo img {
-  -webkit-box-shadow: 0 0 1px 0 #a6a6a6;
-  -moz-box-shadow: 0 0 1px 0 #a6a6a6;
-  box-shadow: 0 0 1px 0 #a6a6a6;
+  height: auto;
+  min-width: 75px;
+  max-width: 100px;
 }
 header nav .nav-module .nav-upper #logo img:hover {
-  -webkit-box-shadow: 0 0 7px 0 #a6a6a6;
-  -moz-box-shadow: 0 0 7px 0 #a6a6a6;
-  box-shadow: 0 0 7px 0 #a6a6a6;
+  transform: scale(1.05, 1.05);
 }
 header nav .nav-module .nav-links {
   position: fixed;
@@ -1260,12 +1256,13 @@ header nav .nav-module .slide-out {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    padding: 0 1rem;
+    padding: 0 1rem 1rem 1rem;
     box-sizing: border-box;
     position: inherit;
   }
   header nav .nav-module .nav-upper #logo {
     margin: 0;
+    width: auto;
   }
   header nav .nav-module .nav-upper .nav-links li a {
     font-size: .9rem;
@@ -1385,17 +1382,14 @@ header nav .nav-module .slide-out {
 }
 figure {
   width: 100%;
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 0;
-}
-figure img {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 
 img {
-  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .hero {
@@ -1422,7 +1416,7 @@ img {
 .nav-hamburger {
   position: absolute;
   z-index: 2;
-  top: 5px;
+  top: 10px;
   right: 5px;
   display: inline-block;
   padding: 0 .5rem;
@@ -1578,7 +1572,7 @@ img {
 
 footer {
   width: 100vw;
-  background: #595959;
+  background: #dc4c47;
   padding: 2rem 0 1rem 0;
   box-sizing: border-box;
 }
@@ -1711,23 +1705,21 @@ footer .footer-module .footer-copyright {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0 5px 0 #a6a6a6;
-  -moz-box-shadow: 0 0 5px 0 #a6a6a6;
-  box-shadow: 0 0 5px 0 #a6a6a6;
   box-sizing: border-box;
-  margin: 0 0 1rem;
+  margin: 0 0 1rem 0;
   width: 100%;
   cursor: pointer;
 }
 .submit:hover, .btn:hover {
   background: #e0615c;
   color: white;
+  -webkit-box-shadow: 0 0 5px 0 #a6a6a6;
+  -moz-box-shadow: 0 0 5px 0 #a6a6a6;
+  box-shadow: 0 0 5px 0 #a6a6a6;
+  margin: .1rem 0 .9rem 0;
 }
 .submit:active, .btn:active {
-  -webkit-box-shadow: 0 0 2px 0 #595959;
-  -moz-box-shadow: 0 0 2px 0 #595959;
-  box-shadow: 0 0 2px 0 #595959;
-  margin: .1rem 0 .9rem !important;
+  margin: 0 0 1rem !important;
 }
 
 .btn-info {
@@ -2241,9 +2233,12 @@ input[type=submit] {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   position: relative;
   padding: 0;
+}
+.summary-grid .summary:hover {
+  transform: scale(1.01, 1.01);
 }
 @media screen and (min-width: 768px) {
   .summary-grid .summary {
@@ -2260,12 +2255,11 @@ input[type=submit] {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-.summary-grid .summary h2, .summary-grid .summary h3, .summary-grid .summary h4, .summary-grid .summary h5, .summary-grid .summary h6 {
+.summary-grid .summary .summary-title {
   font-size: 1.1rem;
   display: block;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -2274,17 +2268,16 @@ input[type=submit] {
   color: white;
   background: #1a1a1a;
 }
-.summary-grid .feature h2, .summary-grid .feature h3, .summary-grid .feature h4, .summary-grid .feature h5, .summary-grid .feature h6 {
+.summary-grid .summary .summary-tiny {
+  font-size: .85rem;
+}
+.summary-grid .feature .summary-title {
   font-size: 1.25rem;
   padding: .5rem 1rem;
 }
 @media screen and (min-width: 768px) {
   .summary-grid .feature {
     width: 100%;
-  }
-  .summary-grid .feature h2, .summary-grid .feature h3, .summary-grid .feature h4, .summary-grid .feature h5, .summary-grid .feature h6 {
-    font-size: 1.5rem;
-    padding: .75rem 1.25rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2465,6 +2458,10 @@ input[type=submit] {
     font-size: .8rem;
     padding: .1rem .5rem;
   }
+}
+
+.comment-form .logged-in-as {
+  margin-bottom: 0;
 }
 
 .sample {

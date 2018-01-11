@@ -7,7 +7,7 @@
     background: $brand;
     @include borderRadius(5px);
     box-sizing: border-box;
-    margin: 0 0 1rem;
+    margin: 0 0 1rem 0;
     width: 100%;
     cursor: pointer;
 
@@ -15,10 +15,11 @@
         background: lighten($brand, 5%);
         color: $colorLinkInverse;
         @include boxShadow(0, 0, 5px, 0, $colorShadow);
+        margin: .1rem 0 .9rem 0;
     }
 
     &:active {
-        margin: .1rem 0 .9rem !important;
+        margin: 0 0 1rem !important;
     }
 }
 

@@ -31,15 +31,15 @@ $colorBgHeader: $white;
 $colorBgHeaderAlt: $dark-gray;
 $colorBgHeaderLower: $brand;
 
-$colorBgFooter: $dark-gray;
-$colorBgFooterAlt: $gray;
+$colorBgFooter: $brand;
+$colorBgFooterAlt: $white;
 
 $colorBgBlock: lighten($light-gray, 10%);
 $colorBgCode: lighten($light-gray, 10%);
 
 $colorBgTint: $black;
 
-$colorHeading: $dark-gray;
+$colorHeading: darken($dark-gray, 10%);
 $colorHeadingInverse: $white;
 $colorHeadingLink: $brand;
 
