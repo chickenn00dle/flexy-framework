@@ -13,7 +13,6 @@
         margin-bottom: 0;
 
         .comment {
-            margin-bottom: 2rem;
 
             ul, li {
                 list-style: none;
@@ -24,6 +23,14 @@
             }
 
             .comment-body {
+                margin-bottom: 2rem;
+                padding: 0 .5rem;
+                box-sizing: border-box;
+
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
 
                 .comment-author {
                     @include flexContainer(row, nowrap);
