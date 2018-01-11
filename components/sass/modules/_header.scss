@@ -8,7 +8,6 @@ header {
         @include flexContainer(row, nowrap);
         @include flexAxis(center, center);
         width: 100vw;
-        @include boxShadow(0, 1px, 10px, 2px, $colorShadowDark);
 
         .nav-module {
             @include flexContainer(column, nowrap);
@@ -27,10 +26,9 @@ header {
                     margin: 0 0 .5rem 0;
 
                     img {
-                        @include boxShadow(0, 0, 1px, 0, $colorShadow);
 
                         &:hover {
-                            @include boxShadow(0, 0, 7px, 0, $colorShadow);
+                            @include boxShadow(0, 0, 5px, 0, $colorShadow);
                         }
                     }
                 }

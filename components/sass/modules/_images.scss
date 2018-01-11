@@ -1,15 +1,14 @@
 figure {
     width: 100%;
-    margin: 0;
+    margin: 0 0 1rem 0;
     padding: 0;
-
-    img {
-        @include borderRadius(5px);
-    }
 }
 
 img {
-    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    @include borderRadius(5px);
 }
 
 .hero {

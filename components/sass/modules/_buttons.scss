@@ -6,7 +6,6 @@
     display: inline-block;
     background: $brand;
     @include borderRadius(5px);
-    @include boxShadow(0, 0, 5px, 0, $colorShadow);
     box-sizing: border-box;
     margin: 0 0 1rem;
     width: 100%;
@@ -15,10 +14,10 @@
     &:hover {
         background: lighten($brand, 5%);
         color: $colorLinkInverse;
+        @include boxShadow(0, 0, 5px, 0, $colorShadow);
     }
 
     &:active {
-        @include boxShadow(0, 0, 2px, 0, $colorShadowDark);
         margin: .1rem 0 .9rem !important;
     }
 }

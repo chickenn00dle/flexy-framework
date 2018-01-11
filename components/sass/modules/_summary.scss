@@ -35,7 +35,7 @@
             @include borderRadius(5px);
         }
 
-        h2, h3, h4, h5, h6 {
+        .summary-title {
             font-size: 1.1rem;
             display: block;
             position: absolute;
