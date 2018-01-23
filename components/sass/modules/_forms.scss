@@ -2,7 +2,7 @@
     @include flexContainer(column, no-wrap);
     width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 0 0 2rem 0;
 
 
     .fieldset {
@@ -27,15 +27,15 @@
         input {
             width: 100%;
             padding: .5rem .25rem;
-            margin-bottom: .5rem;
-            border: 2px solid $colorBorderInverse;
+            margin-bottom: 1rem;
+            border: 2px solid $colorBorderDark;
             @include borderRadius(5px);
             background: transparent;
             box-sizing: border-box;
 
             &:focus {
                 outline: none;
-                border: 2px solid $colorFormFocus;
+                border: 2px solid $colorBorderInverse;
                 // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
             }
         }
@@ -43,14 +43,14 @@
         select {
             height: 2rem;
             margin-bottom: .5rem;
-            border: 2px solid $colorBorderInverse;
+            border: 2px solid $colorBorderDark;
             @include borderRadius(5px);
             background: transparent;
             box-sizing: border-box;
 
             &:focus {
                 outline: none;
-                border: 2px solid $colorFormFocus;
+                border: 2px solid $colorBorderInverse;
                 // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
             }
         }
@@ -59,14 +59,15 @@
             width: 100%;
             min-height: 5rem;
             padding: .5rem .25rem;
+            margin-bottom: 1rem;
             resize: none;
-            border: 2px solid $colorBorderInverse;
+            border: 2px solid $colorBorderDark;
             @include borderRadius(5px);
             box-sizing: border-box;
 
             &:focus {
                 outline: none;
-                border: 2px solid $colorFormFocus;
+                border: 2px solid $colorBorderInverse;
                 // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
             }
         }
@@ -87,64 +88,6 @@
 
             .input-label {
                 margin-right: 1rem;
-            }
-        }
-    }
-}
-
-input[type=submit] {
-    margin-top: .5rem;
-}
-
-.comment-form {
-    a {
-        font-size: .9rem;
-        margin-bottom: 0;
-    }
-
-    .comment-form-comment,
-    .comment-form-author,
-    .comment-form-email,
-    .comment-form-url {
-        font-size: 1rem;
-        margin-bottom: 0;
-
-        label {
-            display: block;
-            width: 100%;
-            margin-bottom: .25rem;
-            font-weight: 500;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 5rem;
-            padding: .5rem .25rem;
-            resize: none;
-            border: 2px solid $colorBorderInverse;
-            @include borderRadius(5px);
-            box-sizing: border-box;
-
-            &:focus {
-                outline: none;
-                border: 2px solid $colorFormFocus;
-                // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
-            }
-        }
-
-        input {
-            width: 100%;
-            padding: .5rem .25rem;
-            margin-bottom: .5rem;
-            border: 2px solid $colorBorderInverse;
-            @include borderRadius(5px);
-            background: transparent;
-            box-sizing: border-box;
-
-            &:focus {
-                outline: none;
-                border: 2px solid $colorFormFocus;
-                // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
             }
         }
     }

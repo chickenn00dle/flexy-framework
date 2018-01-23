@@ -15,7 +15,7 @@ body {
         section {
             @include flexContainer(column, nowrap);
             @include flexAxis(flex-start, stretch);
-            margin-bottom: 2rem;
+            margin: 1rem 0;
             width: 100%;
 
             .module {
@@ -29,6 +29,21 @@ body {
                     box-sizing: border-box;
                     margin: 0 .5rem 0;
                     overflow: hidden;
+
+                    .module {
+                        margin: 0 !important;
+                        padding: 0 !important;
+
+                        .unit, .unit-1, .unit-2, .unit-3, .unit-4, .unit-5, .unit-6, .unit-7, .unit-8, .unit-9, .unit-10 {
+                            margin: 0 !important;
+                            padding: 0 !important;
+
+                            &:first-child {
+                                margin-right: .5rem !important;
+                                padding-right: .5rem !important;
+                            }
+                        }
+                    }
                 }
             }
         }

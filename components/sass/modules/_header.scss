@@ -11,203 +11,238 @@ header {
 
         .nav-module {
             @include flexContainer(column, nowrap);
-            @include flexAxis(center, stretch);
+            @include flexAxis(center, center);
             width: 100%;
             padding: 1rem 0 0 0;
             box-sizing: border-box;
 
-            .nav-upper {
-                @include flexContainer(column, nowrap);
-                @include flexAxis(flex-start, center);
-                width: 100%;
-                position: relative;
+            #logo {
+                margin: 0;
+                width: auto;
 
-                #logo {
-                    margin: 0 0 1rem 0;
-                    width: auto;
+                img {
+                    height: auto;
+                    min-width: 75px;
+                    max-width: 100px;
 
-                    img {
-                        height: auto;
-                        min-width: 75px;
-                        max-width: 100px;
-
-                        &:hover {
-                            transform: scale(1.01, 1.01);
-                        }
+                    &:hover {
+                        transform: scale(1.05, 1.05);
                     }
                 }
             }
 
-            .nav-links {
+            .nav-slider {
+                @include flexContainer(column, nowrap);
+                @include flexAxis(flex-start, flex-start);
+                height: 100vh;
+                min-height: 100vh;
+                width: 100%;
+                padding-top: 3rem;
+                background: $colorBgHeader;
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100vh;
-                background: opacify($colorBgHeader, .25);
-                margin: 0;
-                padding: 3rem 0 0 0;
-                list-style: none;
-                box-sizing: border-box;
+                overflow: scroll;
                 z-index: 1;
 
-                .subnav-mobile {
-                    list-style: none;
+                .nav-upper, .nav-lower {
+                    @include flexContainer(column, nowrap);
+                    @include flexAxis(flex-start, center);
                     width: 100%;
+                    background: none;
+
+                    .nav-sns {
+                        position: fixed;
+                        bottom: 0;
+                        padding: 0 0 1rem;
+                        margin: 0;
+                        background: $colorBgHeader;
+                        z-index: 2;
+                    }
+                }
+
+
+                .nav-lower {
+                    padding-left: .5rem;
+                    padding-bottom: 2rem;
+                }
+
+                .nav-links {
+                    width: 100%;
+                    background: transparent;
                     margin: 0;
+                    padding: 0;
+                    list-style: none;
                     box-sizing: border-box;
+                    z-index: 1;
 
                     li {
-                        border-bottom: none;
-                    }
-                }
-
-                li {
-                    font-weight: 500;
-                    margin: 0 1rem 0;
-                    padding: 0;
-                    border-bottom: 1px solid $colorBorder;
-
-                    a {
-                        display: block;
-                        color: $colorLinkAlt;
                         font-weight: 500;
-                        width: 100%;
-                        padding: .5rem .5rem;
-                        margin: .5rem 0;
-                        box-sizing: border-box;
+                        margin: 0 1rem 0;
+                        padding: 0;
 
-                        &:hover {
-                            background: $colorBgHeaderAlt;
-                            color: $colorTextInverse;
+                        a {
+                            display: block;
+                            color: $colorLinkAlt;
+                            font-weight: 500;
+                            width: 100%;
+                            padding: .5rem .5rem;
+                            margin: .5rem 0;
+                            box-sizing: border-box;
+
+                            &:hover {
+                                background: $colorBgHeaderAlt;
+                                color: $colorTextInverse;
+                            }
                         }
-                    }
 
+                    }
                 }
             }
-
-            .slide-in {
-                @include setAnimation(slideIn, .25s);
-            }
-
-            .slide-out {
-                @include setAnimation(slideOut, .25s);
-            }
-
-            @keyframes slideIn {
-                from {left: 768px;}
-                to {left: 0;}
-            }
-
-            @keyframes slideOut {
-                from {left: 0;}
-                to {left: 768px;}
-            }
-
         }
     }
 }
 
+// Animations for mobile nav
+
+.slide-in {
+    @include setAnimation(slideIn, .25s);
+}
+
+.slide-out {
+    @include setAnimation(slideOut, .25s);
+}
+
+@keyframes slideIn {
+    from {left: 768px;}
+    to {left: 0;}
+}
+
+@keyframes slideOut {
+    from {left: 0;}
+    to {left: 768px;}
+}
 
 
 @include mediaQuery($mobile-lg) {
     header {
         nav {
-
             .nav-module {
                 max-width: $laptop;
+                @include flexContainer(row, nowrap);
+                @include flexAxis(flex-start, flex-start);
+                padding: 1rem 0 0 1rem;
 
-                .nav-upper {
-                    @include flexContainer(row, nowrap);
-                    @include flexAxis(flex-start, center);
-                    @include flexItem(0, 1, auto);
-                    padding: 0 1rem 1rem 1rem;
-                    box-sizing: border-box;
-                    position: inherit;
-
-                    #logo {
-                        margin: 0;
-                        width: auto;
-                    }
-
-                    .nav-links {
-                        li a {
-                            font-size: .9rem;
-                        }
-                    }
+                .nav-hamburger {
+                    display: none;
                 }
 
-                .nav-lower {
-                    @include flexContainer(row, nowrap);
-                    @include flexAxis(flex-start, center);
-                    @include flexItem(0, 1, 100%);
-                    padding: 0 0 .5rem 0;
-
-                    .nav-links {
-                        li a {
-                            color: $colorLink;
-                            padding: .25rem;
-
-                            &:hover {
-                                color: $colorTextInverse;
-                                background: $colorBgHeaderLower;
-                                @include borderRadius(5px);
-                            }
-                        }
-                    }
-                }
-
-                .nav-links {
-                    @include flexContainer(row, nowrap);
-                    @include flexAxis(flex-start, center);
-                    @include flexItem(0, 1, auto);
-                    position: inherit;
-                    width: 100%;
-                    height: auto;
+                #logo {
                     margin: 0;
-                    padding: 0;
-                    list-style: none;
-                    box-sizing: border-box;
+                    position: inherit;
+                    padding: 0 0 1rem;
+                    margin: 0;
+                }
 
+                .nav-slider {
+                    height: auto;
+                    min-height: auto;
+                    padding: 1rem 1rem 0 1.5rem;
+                    position: initial;
+                    background: none;
 
-                    li {
+                    .nav-upper {
+                        @include flexContainer(row, nowrap);
+                        @include flexAxis(flex-start, flex-start);
                         @include flexItem(0, 1, auto);
-                        font-weight: 500;
-                        margin: 0 1rem 0;
                         padding: 0;
-                        border-bottom: none;
+                        box-sizing: border-box;
 
-                        a {
-                            display: inherit;
-                            color: $colorLinkAlt;
-                            font-weight: 500;
-                            padding: 0;
-                            margin: 0;
-                            box-sizing: border-box;
+                        .nav-links {
+                            li {
 
-                            &:hover {
-                                background: $colorBgHeader;
-                                color: $colorLinkAltDark;
+                                margin-right: 1.5rem !important;
+
+                                a {
+                                    font-size: .9rem;
+                                }
                             }
                         }
 
+                        .nav-sns {
+                            position: initial;
+                            background: transparent;
+                            @include flexContainer(row, nowrap);
+                            @include flexAxis(flex-end, flex-end);
+
+
+                            li {
+                                margin: auto 0 1rem 2rem;
+                            }
+                        }
                     }
 
-                    .active a {
-                        color: $colorLinkAltDark;
+                    .nav-lower {
+                        @include flexContainer(row, nowrap);
+                        @include flexAxis(flex-start, center);
+                        @include flexItem(0, 1, 100%);
+                        padding: 0;
+
+                        .nav-links {
+                            li a {
+                                color: $colorLink;
+                                padding: .25rem;
+
+                                &:hover {
+                                    color: $colorTextInverse;
+                                    background: $colorBgHeaderLower;
+                                    @include borderRadius(5px);
+                                }
+                            }
+                        }
+                    }
+
+                    .nav-links {
+                        @include flexContainer(row, nowrap);
+                        @include flexAxis(flex-start, center);
+                        @include flexItem(0, 1, auto);
+                        width: 100%;
+                        height: auto;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        box-sizing: border-box;
+
+
+                        li {
+                            @include flexItem(0, 1, auto);
+                            font-weight: 500;
+                            margin: 0 1rem 0 0;
+                            padding: 0;
+                            border-bottom: none;
+
+                            a {
+                                display: inherit;
+                                color: $colorLinkAlt;
+                                font-weight: 500;
+                                padding: 0;
+                                margin: 0;
+                                box-sizing: border-box;
+
+                                &:hover {
+                                    background: $colorBgHeader;
+                                    color: $colorLinkAltDark;
+                                }
+                            }
+
+                        }
+
+                        .active a {
+                            color: $colorLinkAltDark;
+                        }
                     }
                 }
-
-                .nav-sns {
-                    @include flexContainer(row, nowrap);
-                    @include flexAxis(flex-end, center);
-
-
-                    li {
-                        margin: auto 0 1rem 2rem;
-                    }
-                }
-            }
+            } 
         }
     }
 }

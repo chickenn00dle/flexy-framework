@@ -445,7 +445,8 @@ p, a, ul, ol, li, dl, dt, dd, table, thead, tbody, tr, td, form {
 }
 
 p, a, ul, ol, dl, table, form, fieldset, blockquote, pre {
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -458,37 +459,37 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3rem;
   font-weight: 900;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: .5rem;
 }
 
-h4 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: .25rem;
-}
-
 h5 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 500;
-  margin-bottom: .1rem;
+  margin-bottom: .5rem;
 }
 
 h6 {
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 500;
-  margin-bottom: .1rem;
+  margin-bottom: .25rem;
 }
 
 a {
@@ -501,13 +502,9 @@ a:hover {
   color: #b42722;
 }
 
-p {
-  margin: 0 0 1rem 0;
-}
-
 ol, ul {
   padding: 0 0 0 1.1rem;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
 }
 
 .list-icons {
@@ -604,27 +601,8 @@ dl dd {
   margin: 0 0 .5rem 0;
 }
 
-.submenu {
-  background: #f2f2f2;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  padding: 1rem;
-  margin: 0 0 1rem;
-  box-sizing: border-box;
-}
-.submenu h2, .submenu h3, .submenu h4, .submenu h5, .submenu h6 {
-  color: #dc4c47;
-}
-.submenu .submenu-title {
-  margin-bottom: .25rem;
-}
-.submenu .submenu-last {
-  margin-bottom: 0;
-}
-
 pre, code {
-  font-size: .875rem;
+  font-size: .9rem;
   background: #f2f2f2;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -645,7 +623,7 @@ pre {
   width: 100%;
   padding: .5rem 1rem;
   box-sizing: border-box;
-  margin: 0 0 1rem 0;
+  margin: 0 0 2rem 0;
   overflow-y: scroll;
 }
 
@@ -659,12 +637,11 @@ blockquote::before {
   font-size: 5rem;
 }
 blockquote p {
-  font-size: 1.1rem;
   font-weight: 400;
-  margin: -3rem 0 0 0;
+  margin: 0;
 }
 blockquote cite {
-  font-size: .9rem;
+  font-size: .8rem;
   color: #d9d9d9;
 }
 blockquote cite::before {
@@ -674,23 +651,36 @@ blockquote cite::before {
 time {
   color: #d9d9d9;
   font-size: .9rem;
-  margin-bottom: 0;
 }
 
 .date {
   color: #d9d9d9;
   font-size: .9rem;
-  margin-bottom: 0;
 }
 
 .author {
   font-style: italic;
   font-size: .9rem;
-  margin-bottom: 0;
 }
 
-.tiny-text {
-  font-size: .8rem;
+.tiny-text, .tiny-text a {
+  font-size: .9rem;
+  color: #a6a6a6;
+}
+
+.more-link {
+  margin-bottom: 0 !important;
+  padding: 0;
+  list-style: none;
+}
+.more-link li a, .more-link li p {
+  margin-bottom: 0;
+  padding: 0;
+  font-size: .9rem;
+}
+
+.giant-text {
+  font-size: 25rem;
 }
 
 .text-center {
@@ -771,6 +761,12 @@ time {
     flex: 1 1 85%;
   }
 }
+hr {
+  border-bottom: none;
+  border-top: 1px solid #d9d9d9;
+  margin: 1rem 0 2rem;
+}
+
 body {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -836,7 +832,7 @@ body .shell section {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -ms-flex-pack: flex-start;
-  margin-bottom: 2rem;
+  margin: 1rem 0;
   width: 100%;
 }
 body .shell section .module {
@@ -871,6 +867,18 @@ body .shell section .module .unit, body .shell section .module .unit-1, body .sh
   box-sizing: border-box;
   margin: 0 .5rem 0;
   overflow: hidden;
+}
+body .shell section .module .unit .module, body .shell section .module .unit-1 .module, body .shell section .module .unit-2 .module, body .shell section .module .unit-3 .module, body .shell section .module .unit-4 .module, body .shell section .module .unit-5 .module, body .shell section .module .unit-6 .module, body .shell section .module .unit-7 .module, body .shell section .module .unit-8 .module, body .shell section .module .unit-9 .module, body .shell section .module .unit-10 .module {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body .shell section .module .unit .module .unit, body .shell section .module .unit .module .unit-1, body .shell section .module .unit .module .unit-2, body .shell section .module .unit .module .unit-3, body .shell section .module .unit .module .unit-4, body .shell section .module .unit .module .unit-5, body .shell section .module .unit .module .unit-6, body .shell section .module .unit .module .unit-7, body .shell section .module .unit .module .unit-8, body .shell section .module .unit .module .unit-9, body .shell section .module .unit .module .unit-10, body .shell section .module .unit-1 .module .unit, body .shell section .module .unit-1 .module .unit-1, body .shell section .module .unit-1 .module .unit-2, body .shell section .module .unit-1 .module .unit-3, body .shell section .module .unit-1 .module .unit-4, body .shell section .module .unit-1 .module .unit-5, body .shell section .module .unit-1 .module .unit-6, body .shell section .module .unit-1 .module .unit-7, body .shell section .module .unit-1 .module .unit-8, body .shell section .module .unit-1 .module .unit-9, body .shell section .module .unit-1 .module .unit-10, body .shell section .module .unit-2 .module .unit, body .shell section .module .unit-2 .module .unit-1, body .shell section .module .unit-2 .module .unit-2, body .shell section .module .unit-2 .module .unit-3, body .shell section .module .unit-2 .module .unit-4, body .shell section .module .unit-2 .module .unit-5, body .shell section .module .unit-2 .module .unit-6, body .shell section .module .unit-2 .module .unit-7, body .shell section .module .unit-2 .module .unit-8, body .shell section .module .unit-2 .module .unit-9, body .shell section .module .unit-2 .module .unit-10, body .shell section .module .unit-3 .module .unit, body .shell section .module .unit-3 .module .unit-1, body .shell section .module .unit-3 .module .unit-2, body .shell section .module .unit-3 .module .unit-3, body .shell section .module .unit-3 .module .unit-4, body .shell section .module .unit-3 .module .unit-5, body .shell section .module .unit-3 .module .unit-6, body .shell section .module .unit-3 .module .unit-7, body .shell section .module .unit-3 .module .unit-8, body .shell section .module .unit-3 .module .unit-9, body .shell section .module .unit-3 .module .unit-10, body .shell section .module .unit-4 .module .unit, body .shell section .module .unit-4 .module .unit-1, body .shell section .module .unit-4 .module .unit-2, body .shell section .module .unit-4 .module .unit-3, body .shell section .module .unit-4 .module .unit-4, body .shell section .module .unit-4 .module .unit-5, body .shell section .module .unit-4 .module .unit-6, body .shell section .module .unit-4 .module .unit-7, body .shell section .module .unit-4 .module .unit-8, body .shell section .module .unit-4 .module .unit-9, body .shell section .module .unit-4 .module .unit-10, body .shell section .module .unit-5 .module .unit, body .shell section .module .unit-5 .module .unit-1, body .shell section .module .unit-5 .module .unit-2, body .shell section .module .unit-5 .module .unit-3, body .shell section .module .unit-5 .module .unit-4, body .shell section .module .unit-5 .module .unit-5, body .shell section .module .unit-5 .module .unit-6, body .shell section .module .unit-5 .module .unit-7, body .shell section .module .unit-5 .module .unit-8, body .shell section .module .unit-5 .module .unit-9, body .shell section .module .unit-5 .module .unit-10, body .shell section .module .unit-6 .module .unit, body .shell section .module .unit-6 .module .unit-1, body .shell section .module .unit-6 .module .unit-2, body .shell section .module .unit-6 .module .unit-3, body .shell section .module .unit-6 .module .unit-4, body .shell section .module .unit-6 .module .unit-5, body .shell section .module .unit-6 .module .unit-6, body .shell section .module .unit-6 .module .unit-7, body .shell section .module .unit-6 .module .unit-8, body .shell section .module .unit-6 .module .unit-9, body .shell section .module .unit-6 .module .unit-10, body .shell section .module .unit-7 .module .unit, body .shell section .module .unit-7 .module .unit-1, body .shell section .module .unit-7 .module .unit-2, body .shell section .module .unit-7 .module .unit-3, body .shell section .module .unit-7 .module .unit-4, body .shell section .module .unit-7 .module .unit-5, body .shell section .module .unit-7 .module .unit-6, body .shell section .module .unit-7 .module .unit-7, body .shell section .module .unit-7 .module .unit-8, body .shell section .module .unit-7 .module .unit-9, body .shell section .module .unit-7 .module .unit-10, body .shell section .module .unit-8 .module .unit, body .shell section .module .unit-8 .module .unit-1, body .shell section .module .unit-8 .module .unit-2, body .shell section .module .unit-8 .module .unit-3, body .shell section .module .unit-8 .module .unit-4, body .shell section .module .unit-8 .module .unit-5, body .shell section .module .unit-8 .module .unit-6, body .shell section .module .unit-8 .module .unit-7, body .shell section .module .unit-8 .module .unit-8, body .shell section .module .unit-8 .module .unit-9, body .shell section .module .unit-8 .module .unit-10, body .shell section .module .unit-9 .module .unit, body .shell section .module .unit-9 .module .unit-1, body .shell section .module .unit-9 .module .unit-2, body .shell section .module .unit-9 .module .unit-3, body .shell section .module .unit-9 .module .unit-4, body .shell section .module .unit-9 .module .unit-5, body .shell section .module .unit-9 .module .unit-6, body .shell section .module .unit-9 .module .unit-7, body .shell section .module .unit-9 .module .unit-8, body .shell section .module .unit-9 .module .unit-9, body .shell section .module .unit-9 .module .unit-10, body .shell section .module .unit-10 .module .unit, body .shell section .module .unit-10 .module .unit-1, body .shell section .module .unit-10 .module .unit-2, body .shell section .module .unit-10 .module .unit-3, body .shell section .module .unit-10 .module .unit-4, body .shell section .module .unit-10 .module .unit-5, body .shell section .module .unit-10 .module .unit-6, body .shell section .module .unit-10 .module .unit-7, body .shell section .module .unit-10 .module .unit-8, body .shell section .module .unit-10 .module .unit-9, body .shell section .module .unit-10 .module .unit-10 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body .shell section .module .unit .module .unit:first-child, body .shell section .module .unit .module .unit-1:first-child, body .shell section .module .unit .module .unit-2:first-child, body .shell section .module .unit .module .unit-3:first-child, body .shell section .module .unit .module .unit-4:first-child, body .shell section .module .unit .module .unit-5:first-child, body .shell section .module .unit .module .unit-6:first-child, body .shell section .module .unit .module .unit-7:first-child, body .shell section .module .unit .module .unit-8:first-child, body .shell section .module .unit .module .unit-9:first-child, body .shell section .module .unit .module .unit-10:first-child, body .shell section .module .unit-1 .module .unit:first-child, body .shell section .module .unit-1 .module .unit-1:first-child, body .shell section .module .unit-1 .module .unit-2:first-child, body .shell section .module .unit-1 .module .unit-3:first-child, body .shell section .module .unit-1 .module .unit-4:first-child, body .shell section .module .unit-1 .module .unit-5:first-child, body .shell section .module .unit-1 .module .unit-6:first-child, body .shell section .module .unit-1 .module .unit-7:first-child, body .shell section .module .unit-1 .module .unit-8:first-child, body .shell section .module .unit-1 .module .unit-9:first-child, body .shell section .module .unit-1 .module .unit-10:first-child, body .shell section .module .unit-2 .module .unit:first-child, body .shell section .module .unit-2 .module .unit-1:first-child, body .shell section .module .unit-2 .module .unit-2:first-child, body .shell section .module .unit-2 .module .unit-3:first-child, body .shell section .module .unit-2 .module .unit-4:first-child, body .shell section .module .unit-2 .module .unit-5:first-child, body .shell section .module .unit-2 .module .unit-6:first-child, body .shell section .module .unit-2 .module .unit-7:first-child, body .shell section .module .unit-2 .module .unit-8:first-child, body .shell section .module .unit-2 .module .unit-9:first-child, body .shell section .module .unit-2 .module .unit-10:first-child, body .shell section .module .unit-3 .module .unit:first-child, body .shell section .module .unit-3 .module .unit-1:first-child, body .shell section .module .unit-3 .module .unit-2:first-child, body .shell section .module .unit-3 .module .unit-3:first-child, body .shell section .module .unit-3 .module .unit-4:first-child, body .shell section .module .unit-3 .module .unit-5:first-child, body .shell section .module .unit-3 .module .unit-6:first-child, body .shell section .module .unit-3 .module .unit-7:first-child, body .shell section .module .unit-3 .module .unit-8:first-child, body .shell section .module .unit-3 .module .unit-9:first-child, body .shell section .module .unit-3 .module .unit-10:first-child, body .shell section .module .unit-4 .module .unit:first-child, body .shell section .module .unit-4 .module .unit-1:first-child, body .shell section .module .unit-4 .module .unit-2:first-child, body .shell section .module .unit-4 .module .unit-3:first-child, body .shell section .module .unit-4 .module .unit-4:first-child, body .shell section .module .unit-4 .module .unit-5:first-child, body .shell section .module .unit-4 .module .unit-6:first-child, body .shell section .module .unit-4 .module .unit-7:first-child, body .shell section .module .unit-4 .module .unit-8:first-child, body .shell section .module .unit-4 .module .unit-9:first-child, body .shell section .module .unit-4 .module .unit-10:first-child, body .shell section .module .unit-5 .module .unit:first-child, body .shell section .module .unit-5 .module .unit-1:first-child, body .shell section .module .unit-5 .module .unit-2:first-child, body .shell section .module .unit-5 .module .unit-3:first-child, body .shell section .module .unit-5 .module .unit-4:first-child, body .shell section .module .unit-5 .module .unit-5:first-child, body .shell section .module .unit-5 .module .unit-6:first-child, body .shell section .module .unit-5 .module .unit-7:first-child, body .shell section .module .unit-5 .module .unit-8:first-child, body .shell section .module .unit-5 .module .unit-9:first-child, body .shell section .module .unit-5 .module .unit-10:first-child, body .shell section .module .unit-6 .module .unit:first-child, body .shell section .module .unit-6 .module .unit-1:first-child, body .shell section .module .unit-6 .module .unit-2:first-child, body .shell section .module .unit-6 .module .unit-3:first-child, body .shell section .module .unit-6 .module .unit-4:first-child, body .shell section .module .unit-6 .module .unit-5:first-child, body .shell section .module .unit-6 .module .unit-6:first-child, body .shell section .module .unit-6 .module .unit-7:first-child, body .shell section .module .unit-6 .module .unit-8:first-child, body .shell section .module .unit-6 .module .unit-9:first-child, body .shell section .module .unit-6 .module .unit-10:first-child, body .shell section .module .unit-7 .module .unit:first-child, body .shell section .module .unit-7 .module .unit-1:first-child, body .shell section .module .unit-7 .module .unit-2:first-child, body .shell section .module .unit-7 .module .unit-3:first-child, body .shell section .module .unit-7 .module .unit-4:first-child, body .shell section .module .unit-7 .module .unit-5:first-child, body .shell section .module .unit-7 .module .unit-6:first-child, body .shell section .module .unit-7 .module .unit-7:first-child, body .shell section .module .unit-7 .module .unit-8:first-child, body .shell section .module .unit-7 .module .unit-9:first-child, body .shell section .module .unit-7 .module .unit-10:first-child, body .shell section .module .unit-8 .module .unit:first-child, body .shell section .module .unit-8 .module .unit-1:first-child, body .shell section .module .unit-8 .module .unit-2:first-child, body .shell section .module .unit-8 .module .unit-3:first-child, body .shell section .module .unit-8 .module .unit-4:first-child, body .shell section .module .unit-8 .module .unit-5:first-child, body .shell section .module .unit-8 .module .unit-6:first-child, body .shell section .module .unit-8 .module .unit-7:first-child, body .shell section .module .unit-8 .module .unit-8:first-child, body .shell section .module .unit-8 .module .unit-9:first-child, body .shell section .module .unit-8 .module .unit-10:first-child, body .shell section .module .unit-9 .module .unit:first-child, body .shell section .module .unit-9 .module .unit-1:first-child, body .shell section .module .unit-9 .module .unit-2:first-child, body .shell section .module .unit-9 .module .unit-3:first-child, body .shell section .module .unit-9 .module .unit-4:first-child, body .shell section .module .unit-9 .module .unit-5:first-child, body .shell section .module .unit-9 .module .unit-6:first-child, body .shell section .module .unit-9 .module .unit-7:first-child, body .shell section .module .unit-9 .module .unit-8:first-child, body .shell section .module .unit-9 .module .unit-9:first-child, body .shell section .module .unit-9 .module .unit-10:first-child, body .shell section .module .unit-10 .module .unit:first-child, body .shell section .module .unit-10 .module .unit-1:first-child, body .shell section .module .unit-10 .module .unit-2:first-child, body .shell section .module .unit-10 .module .unit-3:first-child, body .shell section .module .unit-10 .module .unit-4:first-child, body .shell section .module .unit-10 .module .unit-5:first-child, body .shell section .module .unit-10 .module .unit-6:first-child, body .shell section .module .unit-10 .module .unit-7:first-child, body .shell section .module .unit-10 .module .unit-8:first-child, body .shell section .module .unit-10 .module .unit-9:first-child, body .shell section .module .unit-10 .module .unit-10:first-child {
+  margin-right: .5rem !important;
+  padding-right: .5rem !important;
 }
 body .shell section.pre-footer {
   margin-bottom: 0;
@@ -1109,10 +1117,10 @@ header nav .nav-module {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
@@ -1120,7 +1128,48 @@ header nav .nav-module {
   padding: 1rem 0 0 0;
   box-sizing: border-box;
 }
-header nav .nav-module .nav-upper {
+header nav .nav-module #logo {
+  margin: 0;
+  width: auto;
+}
+header nav .nav-module #logo img {
+  height: auto;
+  min-width: 75px;
+  max-width: 100px;
+}
+header nav .nav-module #logo img:hover {
+  transform: scale(1.05, 1.05);
+}
+header nav .nav-module .nav-slider {
+  -webkit-display: -webkit-flex;
+  -webkit-display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 3rem;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: scroll;
+  z-index: 1;
+}
+header nav .nav-module .nav-slider .nav-upper, header nav .nav-module .nav-slider .nav-lower {
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
   display: -ms-flexbox;
@@ -1139,49 +1188,35 @@ header nav .nav-module .nav-upper {
   justify-content: flex-start;
   -ms-flex-pack: flex-start;
   width: 100%;
-  position: relative;
+  background: none;
 }
-header nav .nav-module .nav-upper #logo {
-  margin: 0 0 1rem 0;
-  width: auto;
-}
-header nav .nav-module .nav-upper #logo img {
-  height: auto;
-  min-width: 75px;
-  max-width: 100px;
-}
-header nav .nav-module .nav-upper #logo img:hover {
-  transform: scale(1.05, 1.05);
-}
-header nav .nav-module .nav-links {
+header nav .nav-module .nav-slider .nav-upper .nav-sns, header nav .nav-module .nav-slider .nav-lower .nav-sns {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: white;
+  bottom: 0;
+  padding: 0 0 1rem;
   margin: 0;
-  padding: 3rem 0 0 0;
+  background: white;
+  z-index: 2;
+}
+header nav .nav-module .nav-slider .nav-lower {
+  padding-left: .5rem;
+  padding-bottom: 2rem;
+}
+header nav .nav-module .nav-slider .nav-links {
+  width: 100%;
+  background: transparent;
+  margin: 0;
+  padding: 0;
   list-style: none;
   box-sizing: border-box;
   z-index: 1;
 }
-header nav .nav-module .nav-links .subnav-mobile {
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  box-sizing: border-box;
-}
-header nav .nav-module .nav-links .subnav-mobile li {
-  border-bottom: none;
-}
-header nav .nav-module .nav-links li {
+header nav .nav-module .nav-slider .nav-links li {
   font-weight: 500;
   margin: 0 1rem 0;
   padding: 0;
-  border-bottom: 1px solid #d9d9d9;
 }
-header nav .nav-module .nav-links li a {
+header nav .nav-module .nav-slider .nav-links li a {
   display: block;
   color: #a6a6a6;
   font-weight: 500;
@@ -1190,11 +1225,12 @@ header nav .nav-module .nav-links li a {
   margin: .5rem 0;
   box-sizing: border-box;
 }
-header nav .nav-module .nav-links li a:hover {
+header nav .nav-module .nav-slider .nav-links li a:hover {
   background: #595959;
   color: white;
 }
-header nav .nav-module .slide-in {
+
+.slide-in {
   -webkit-animation-name: slideIn;
   -moz-animation-name: slideIn;
   -o-animation-name: slideIn;
@@ -1204,7 +1240,8 @@ header nav .nav-module .slide-in {
   -o-animation-duration: 0.25s;
   animation-duration: 0.25s;
 }
-header nav .nav-module .slide-out {
+
+.slide-out {
   -webkit-animation-name: slideOut;
   -moz-animation-name: slideOut;
   -o-animation-name: slideOut;
@@ -1214,6 +1251,7 @@ header nav .nav-module .slide-out {
   -o-animation-duration: 0.25s;
   animation-duration: 0.25s;
 }
+
 @keyframes slideIn {
   from {
     left: 768px;
@@ -1233,8 +1271,6 @@ header nav .nav-module .slide-out {
 @media screen and (min-width: 768px) {
   header nav .nav-module {
     max-width: 1280px;
-  }
-  header nav .nav-module .nav-upper {
     -webkit-display: -webkit-flex;
     -webkit-display: -webkit-box;
     display: -ms-flexbox;
@@ -1245,10 +1281,46 @@ header nav .nav-module .slide-out {
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    padding: 1rem 0 0 1rem;
+  }
+  header nav .nav-module .nav-hamburger {
+    display: none;
+  }
+  header nav .nav-module #logo {
+    margin: 0;
+    position: inherit;
+    padding: 0 0 1rem;
+    margin: 0;
+  }
+  header nav .nav-module .nav-slider {
+    height: auto;
+    min-height: auto;
+    padding: 1rem 1rem 0 1.5rem;
+    position: initial;
+    background: none;
+  }
+  header nav .nav-module .nav-slider .nav-upper {
+    -webkit-display: -webkit-flex;
+    -webkit-display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-start;
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
     -webkit-justify-content: flex-start;
     justify-content: flex-start;
     -ms-flex-pack: flex-start;
@@ -1256,18 +1328,40 @@ header nav .nav-module .slide-out {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0;
     box-sizing: border-box;
-    position: inherit;
   }
-  header nav .nav-module .nav-upper #logo {
-    margin: 0;
-    width: auto;
+  header nav .nav-module .nav-slider .nav-upper .nav-links li {
+    margin-right: 1.5rem !important;
   }
-  header nav .nav-module .nav-upper .nav-links li a {
+  header nav .nav-module .nav-slider .nav-upper .nav-links li a {
     font-size: .9rem;
   }
-  header nav .nav-module .nav-lower {
+  header nav .nav-module .nav-slider .nav-upper .nav-sns {
+    position: initial;
+    background: transparent;
+    -webkit-display: -webkit-flex;
+    -webkit-display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: flex-end;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+  }
+  header nav .nav-module .nav-slider .nav-upper .nav-sns li {
+    margin: auto 0 1rem 2rem;
+  }
+  header nav .nav-module .nav-slider .nav-lower {
     -webkit-display: -webkit-flex;
     -webkit-display: -webkit-box;
     display: -ms-flexbox;
@@ -1289,20 +1383,20 @@ header nav .nav-module .slide-out {
     -webkit-flex: 0 1 100%;
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
-    padding: 0 0 .5rem 0;
+    padding: 0;
   }
-  header nav .nav-module .nav-lower .nav-links li a {
+  header nav .nav-module .nav-slider .nav-lower .nav-links li a {
     color: #dc4c47;
     padding: .25rem;
   }
-  header nav .nav-module .nav-lower .nav-links li a:hover {
+  header nav .nav-module .nav-slider .nav-lower .nav-links li a:hover {
     color: white;
     background: #dc4c47;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
   }
-  header nav .nav-module .nav-links {
+  header nav .nav-module .nav-slider .nav-links {
     -webkit-display: -webkit-flex;
     -webkit-display: -webkit-box;
     display: -ms-flexbox;
@@ -1324,7 +1418,6 @@ header nav .nav-module .slide-out {
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
-    position: inherit;
     width: 100%;
     height: auto;
     margin: 0;
@@ -1332,17 +1425,17 @@ header nav .nav-module .slide-out {
     list-style: none;
     box-sizing: border-box;
   }
-  header nav .nav-module .nav-links li {
+  header nav .nav-module .nav-slider .nav-links li {
     -webkit-box-flex: 0 1 auto;
     -webkit-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     font-weight: 500;
-    margin: 0 1rem 0;
+    margin: 0 1rem 0 0;
     padding: 0;
     border-bottom: none;
   }
-  header nav .nav-module .nav-links li a {
+  header nav .nav-module .nav-slider .nav-links li a {
     display: inherit;
     color: #a6a6a6;
     font-weight: 500;
@@ -1350,34 +1443,12 @@ header nav .nav-module .slide-out {
     margin: 0;
     box-sizing: border-box;
   }
-  header nav .nav-module .nav-links li a:hover {
+  header nav .nav-module .nav-slider .nav-links li a:hover {
     background: white;
     color: #595959;
   }
-  header nav .nav-module .nav-links .active a {
+  header nav .nav-module .nav-slider .nav-links .active a {
     color: #595959;
-  }
-  header nav .nav-module .nav-sns {
-    -webkit-display: -webkit-flex;
-    -webkit-display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-    -ms-flex-pack: flex-end;
-  }
-  header nav .nav-module .nav-sns li {
-    margin: auto 0 1rem 2rem;
   }
 }
 figure {
@@ -1390,6 +1461,7 @@ img {
   height: auto;
   max-width: 100%;
   display: block;
+  margin-bottom: .5rem;
 }
 
 .hero {
@@ -1615,13 +1687,14 @@ footer .footer-module .footer-nav {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
   -webkit-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
+  margin-bottom: 2rem;
 }
 footer .footer-module .footer-nav h2, footer .footer-module .footer-nav h3, footer .footer-module .footer-nav h4, footer .footer-module .footer-nav h5, footer .footer-module .footer-nav h6 {
   color: white;
@@ -1631,7 +1704,7 @@ footer .footer-module .footer-nav ul {
 }
 footer .footer-module .footer-nav ul li, footer .footer-module .footer-nav ul li a {
   color: white;
-  font-size: .8rem;
+  font-size: .9rem;
 }
 footer .footer-module .nav-sns {
   -webkit-display: -webkit-flex;
@@ -1659,6 +1732,9 @@ footer .footer-module .nav-sns {
   margin: 1rem 0;
   padding: 0;
 }
+footer .footer-module .nav-sns .icon {
+  color: white;
+}
 footer .footer-module .footer-copyright {
   color: #d9d9d9;
   font-size: .75rem;
@@ -1679,7 +1755,6 @@ footer .footer-module .footer-copyright {
 
 .lock {
   height: 100%;
-  position: fixed;
   overflow: hidden;
 }
 
@@ -1706,55 +1781,42 @@ footer .footer-module .footer-copyright {
   -moz-border-radius: 5px;
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 0 0 1rem 0;
+  margin: .1rem 1rem 1rem 0;
   width: 100%;
   cursor: pointer;
 }
 .submit:hover, .btn:hover {
-  background: #e0615c;
   color: white;
-  -webkit-box-shadow: 0 0 5px 0 #a6a6a6;
-  -moz-box-shadow: 0 0 5px 0 #a6a6a6;
-  box-shadow: 0 0 5px 0 #a6a6a6;
-  margin: .1rem 0 .9rem 0;
+  -webkit-box-shadow: 0 0 0.25rem 0 #a6a6a6;
+  -moz-box-shadow: 0 0 0.25rem 0 #a6a6a6;
+  box-shadow: 0 0 0.25rem 0 #a6a6a6;
+  margin: 0 1rem 1.1rem 0;
 }
 .submit:active, .btn:active {
-  margin: 0 0 1rem !important;
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  margin: .1rem 1rem 1rem 0;
 }
 
 .btn-info {
   background: #4f84c4;
 }
-.btn-info:hover {
-  background: #6291cb;
-}
 
 .btn-action {
   background: #92b658;
-}
-.btn-action:hover {
-  background: #9ebe6a;
 }
 
 .btn-attention {
   background: #b86ba3;
 }
-.btn-attention:hover {
-  background: #c07cae;
-}
 
 .btn-hazard {
   background: #f6d155;
 }
-.btn-hazard:hover {
-  background: #f7d76e;
-}
 
 .btn-neutral {
   background: #a6a6a6;
-}
-.btn-neutral:hover {
-  background: #b3b3b3;
 }
 
 .btn-void {
@@ -1769,34 +1831,27 @@ footer .footer-module .footer-copyright {
 .submit, .btn-clean {
   background: white;
   color: #a6a6a6;
+  border: 1px solid #d9d9d9;
 }
 .submit:hover, .btn-clean:hover {
   color: #a6a6a6;
-  background: #d9d9d9;
-}
-
-.btn-group .btn {
-  margin-bottom: 1rem;
-}
-.btn-group .btn:last-child {
-  margin-bottom: 1rem;
+  background: #595959;
 }
 
 @media screen and (min-width: 768px) {
   .submit, .btn {
-    margin: 0 0 1rem 0;
-    width: max-content;
-  }
-  .submit:active, .btn:active {
-    margin: .1rem 0 .9rem 0 !important;
+    width: fit-content;
   }
 
   .btn-center {
     display: block;
-    margin: 0 auto 1rem;
+    margin: .1rem auto .5rem !important;
+  }
+  .btn-center:hover {
+    margin: 0 auto .6rem !important;
   }
   .btn-center:active {
-    margin: .1rem auto .9rem !important;
+    margin: .1rem auto .5rem !important;
   }
 
   .btn-group {
@@ -1819,22 +1874,31 @@ footer .footer-module .footer-copyright {
     -ms-flex-pack: flex-start;
   }
   .btn-group .btn {
-    margin: 0 .5rem 1rem .5rem;
+    margin: .1rem .5rem 1rem .5rem;
   }
   .btn-group .btn:first-child {
-    margin-left: 0;
+    margin: .1rem .5rem 1rem 0;
+  }
+  .btn-group .btn:first-child:hover {
+    margin: 0 .5rem 1.1rem 0;
   }
   .btn-group .btn:first-child:active {
-    margin: .1rem .5rem .9rem 0 !important;
+    margin: .1rem .5rem 1rem 0 !important;
   }
   .btn-group .btn:last-child {
-    margin-right: 0;
+    margin: .1rem 0 1rem .5rem;
+  }
+  .btn-group .btn:last-child:hover {
+    margin: 0 0 1.1rem .5rem;
   }
   .btn-group .btn:last-child:active {
-    margin: .1rem 0 .9rem .5rem !important;
+    margin: .1rem 0 1rem .5rem !important;
+  }
+  .btn-group .btn:hover {
+    margin: 0 .5rem 1.1rem .5rem;
   }
   .btn-group .btn:active {
-    margin: .1rem .5rem .9rem !important;
+    margin: .1rem .5rem 1rem .5rem;
   }
 }
 .icon {
@@ -1906,9 +1970,61 @@ footer .footer-module .footer-copyright {
   -moz-border-radius: 5px;
   border-radius: 5px;
   width: 100%;
-  padding: 1rem 1rem 0.01rem 1rem;
+  padding: 1rem;
   box-sizing: border-box;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.block p:last-child, .block a:last-child, .block ul:last-child, .block ol:last-child, .block dl:last-child, .block table:last-child, .block form:last-child {
+  margin-bottom: 0 !important;
+}
+
+.sidemenu {
+  background: #dc4c47;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: .75rem;
+  margin: 0 0 2rem;
+  box-sizing: border-box;
+}
+.sidemenu h2, .sidemenu h3, .sidemenu h4, .sidemenu h5, .sidemenu h6 {
+  color: white;
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+}
+.sidemenu p {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.sidemenu ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+.sidemenu ul li {
+  margin-bottom: .5rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.sidemenu ul li a {
+  color: white;
+  margin-bottom: 0;
+  padding: .25rem;
+}
+.sidemenu ul li:last-child {
+  margin-bottom: 0;
+}
+.sidemenu ul li:hover {
+  background: white;
+}
+.sidemenu ul li:hover a {
+  color: #dc4c47;
 }
 
 .form {
@@ -1924,7 +2040,7 @@ footer .footer-module .footer-copyright {
   flex-direction: column;
   width: 100%;
   padding: 0;
-  margin: 0;
+  margin: 0 0 2rem 0;
 }
 .form .fieldset {
   -webkit-display: -webkit-flex;
@@ -1955,8 +2071,8 @@ footer .footer-module .footer-copyright {
 .form .fieldset input {
   width: 100%;
   padding: .5rem .25rem;
-  margin-bottom: .5rem;
-  border: 2px solid #f2f2f2;
+  margin-bottom: 1rem;
+  border: 2px solid #595959;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1965,12 +2081,12 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset input:focus {
   outline: none;
-  border: 2px solid #595959;
+  border: 2px solid #f2f2f2;
 }
 .form .fieldset select {
   height: 2rem;
   margin-bottom: .5rem;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #595959;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1979,14 +2095,15 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset select:focus {
   outline: none;
-  border: 2px solid #595959;
+  border: 2px solid #f2f2f2;
 }
 .form .fieldset textarea {
   width: 100%;
   min-height: 5rem;
   padding: .5rem .25rem;
+  margin-bottom: 1rem;
   resize: none;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #595959;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1994,7 +2111,7 @@ footer .footer-module .footer-copyright {
 }
 .form .fieldset textarea:focus {
   outline: none;
-  border: 2px solid #595959;
+  border: 2px solid #f2f2f2;
 }
 .form .fieldset .input-group {
   -webkit-display: -webkit-flex;
@@ -2027,76 +2144,9 @@ footer .footer-module .footer-copyright {
   margin-right: 1rem;
 }
 
-input[type=submit] {
-  margin-top: .5rem;
-}
-
-.comment-form a {
-  font-size: .9rem;
-  margin-bottom: 0;
-}
-.comment-form .comment-form-comment,
-.comment-form .comment-form-author,
-.comment-form .comment-form-email,
-.comment-form .comment-form-url {
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-.comment-form .comment-form-comment label,
-.comment-form .comment-form-author label,
-.comment-form .comment-form-email label,
-.comment-form .comment-form-url label {
-  display: block;
-  width: 100%;
-  margin-bottom: .25rem;
-  font-weight: 500;
-}
-.comment-form .comment-form-comment textarea,
-.comment-form .comment-form-author textarea,
-.comment-form .comment-form-email textarea,
-.comment-form .comment-form-url textarea {
-  width: 100%;
-  min-height: 5rem;
-  padding: .5rem .25rem;
-  resize: none;
-  border: 2px solid #f2f2f2;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-.comment-form .comment-form-comment textarea:focus,
-.comment-form .comment-form-author textarea:focus,
-.comment-form .comment-form-email textarea:focus,
-.comment-form .comment-form-url textarea:focus {
-  outline: none;
-  border: 2px solid #595959;
-}
-.comment-form .comment-form-comment input,
-.comment-form .comment-form-author input,
-.comment-form .comment-form-email input,
-.comment-form .comment-form-url input {
-  width: 100%;
-  padding: .5rem .25rem;
-  margin-bottom: .5rem;
-  border: 2px solid #f2f2f2;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  background: transparent;
-  box-sizing: border-box;
-}
-.comment-form .comment-form-comment input:focus,
-.comment-form .comment-form-author input:focus,
-.comment-form .comment-form-email input:focus,
-.comment-form .comment-form-url input:focus {
-  outline: none;
-  border: 2px solid #595959;
-}
-
 .card-grid {
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-bottom: 0;
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -2193,7 +2243,7 @@ input[type=submit] {
 
 .summary-grid {
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   padding-bottom: 0;
   -webkit-display: -webkit-flex;
   -webkit-display: -webkit-box;
@@ -2256,7 +2306,7 @@ input[type=submit] {
   border-radius: 5px;
 }
 .summary-grid .summary .summary-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   display: block;
   position: absolute;
   top: 0;
@@ -2269,10 +2319,10 @@ input[type=submit] {
   background: #1a1a1a;
 }
 .summary-grid .summary .summary-tiny {
-  font-size: .85rem;
+  font-size: .9rem;
 }
 .summary-grid .feature .summary-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   padding: .5rem 1rem;
 }
 @media screen and (min-width: 768px) {
@@ -2304,7 +2354,7 @@ input[type=submit] {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
   -ms-flex-pack: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   border: 1px solid #d9d9d9;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2366,6 +2416,9 @@ input[type=submit] {
   list-style: none;
   width: 100%;
   margin-bottom: 0;
+}
+.comment-grid .comment-list .comment {
+  margin-bottom: 2rem;
 }
 .comment-grid .comment-list .comment ul, .comment-grid .comment-list .comment li {
   list-style: none;
@@ -2439,19 +2492,18 @@ input[type=submit] {
   -moz-box-shadow: 0 0 5px 0 #a6a6a6;
   box-shadow: 0 0 5px 0 #a6a6a6;
   box-sizing: border-box;
-  margin: 0 0 .15rem;
+  margin: 0 0 .25rem !important;
   width: max-content;
   cursor: pointer;
 }
 .comment-grid .comment-list .comment .comment-body .reply a:hover {
-  background: #e0615c;
-  color: white;
-}
-.comment-grid .comment-list .comment .comment-body .reply a:active {
   -webkit-box-shadow: 0 0 2px 0 #595959;
   -moz-box-shadow: 0 0 2px 0 #595959;
   box-shadow: 0 0 2px 0 #595959;
-  margin: .1rem 0 .9rem !important;
+  margin: .1 0 .15rem !important;
+}
+.comment-grid .comment-list .comment .comment-body .reply a:active {
+  margin: 0 0 .25rem !important;
 }
 @media screen and (min-width: 768px) {
   .comment-grid .comment-list .comment .comment-body .reply a {
@@ -2462,6 +2514,180 @@ input[type=submit] {
 
 .comment-form .logged-in-as {
   margin-bottom: 0;
+}
+
+footer .icon {
+  color: white;
+}
+
+.form-btn-override {
+  -webkit-display: -webkit-flex !important;
+  -webkit-display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: fit-content !important;
+  background: #1a1a1a !important;
+  border: none !important;
+  box-shadow: none;
+  margin: .1rem 0 .5rem 0 !important;
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.form-btn-override:hover {
+  background: #262626;
+  margin: 0 0 .6rem 0 !important;
+}
+
+.form-btn-override:active {
+  margin: .1rem 0 .5rem 0 !important;
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wp-caption-text {
+  font-size: .75rem;
+  line-height: 1rem;
+}
+
+input[type=submit], input.form-btn {
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+  display: inline-block;
+  background: #1a1a1a;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: .1rem 0 1rem;
+  width: max-content;
+  cursor: pointer;
+}
+input[type=submit]:hover, input.form-btn:hover {
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0 0 0.25rem 0 #a6a6a6;
+  -moz-box-shadow: 0 0 0.25rem 0 #a6a6a6;
+  box-shadow: 0 0 0.25rem 0 #a6a6a6;
+  margin: 0 0 1.1rem;
+}
+input[type=submit]:active, input.form-btn:active {
+  -webkit-box-shadow: 0 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 0 transparent;
+  box-shadow: 0 0 0 0 transparent;
+  margin: .1rem 0 1rem;
+}
+input[type=submit]:focus, input.form-btn:focus {
+  outline: none;
+}
+
+.single-field {
+  margin-bottom: .25rem !important;
+}
+
+.single-field-btn {
+  margin: .1rem auto 1rem !important;
+}
+.single-field-btn:hover {
+  margin: 0 auto 1.1rem !important;
+}
+.single-field-btn:active {
+  margin: .1rem auto 1rem !important;
+}
+
+.comment-form a {
+  font-size: .9rem;
+  margin-bottom: 0;
+}
+.comment-form .comment-form-comment,
+.comment-form .comment-form-author,
+.comment-form .comment-form-email,
+.comment-form .comment-form-url {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+.comment-form .comment-form-comment label,
+.comment-form .comment-form-author label,
+.comment-form .comment-form-email label,
+.comment-form .comment-form-url label {
+  display: block;
+  width: 100%;
+  margin-bottom: .25rem;
+  font-weight: 500;
+}
+.comment-form .comment-form-comment textarea,
+.comment-form .comment-form-author textarea,
+.comment-form .comment-form-email textarea,
+.comment-form .comment-form-url textarea {
+  width: 100%;
+  min-height: 5rem;
+  padding: .5rem .25rem;
+  resize: none;
+  border: 2px solid #595959;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.comment-form .comment-form-comment textarea:focus,
+.comment-form .comment-form-author textarea:focus,
+.comment-form .comment-form-email textarea:focus,
+.comment-form .comment-form-url textarea:focus {
+  outline: none;
+  border: 2px solid #f2f2f2;
+}
+.comment-form .comment-form-comment input,
+.comment-form .comment-form-author input,
+.comment-form .comment-form-email input,
+.comment-form .comment-form-url input {
+  width: 100%;
+  padding: .5rem .25rem;
+  margin-bottom: .5rem;
+  border: 2px solid #595959;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background: transparent;
+  box-sizing: border-box;
+}
+.comment-form .comment-form-comment input:focus,
+.comment-form .comment-form-author input:focus,
+.comment-form .comment-form-email input:focus,
+.comment-form .comment-form-url input:focus {
+  outline: none;
+  border: 2px solid #f2f2f2;
+}
+
+.bm-none {
+  margin-bottom: 0 !important;
+}
+
+.bm-half {
+  margin-bottom: .5rem !important;
+}
+
+.bm-one {
+  margin-bottom: 1rem !important;
 }
 
 .sample {

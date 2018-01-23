@@ -12,54 +12,76 @@
         <header>
             <nav>
                 <div class="nav-module">
-                    <div class="nav-hamburger hidden-desktop">
+                    <div class="nav-hamburger">
                         <div class="hamburger-outer">
                             <div class="hamburger-inner">
                             </div>
                         </div>
                     </div>
-                    <div class="nav-upper">
-                        <div id="logo"><a href="index.html"><img src="http://placehold.it/75x75/3E4140/ffffff?text=Logo" alt="Generic Logo" /></a></div>
-                        <ul class="nav-links hidden-mobile">
-                            <li class=""><a href="index.html">Home</a></li>
-                            <li class=""><a href="grid.html">Docs</a>
-                                <ul class="subnav-mobile hidden-desktop">
-                                    <li><a href="grid.html">Grid</a></li>
-                                    <li><a href="content.html">Content</a></li>
-                                    <li><a href="interface.html">Interface</a></li>
-                                    <li><a href="components.html">Components</a></li>
-                                    <li><a href="backgrounds.html">Backgrounds</a></li>
-                                </ul>
-                            </li>
-                            <li class=""><a href="#">Blog</a></li>
-                            <li><a href="https://www.paypal.me/chickenn00dle" target="_blank" class="attention">Donate</a></li>
-                        </ul>
-                        <ul class="nav-sns hidden-mobile">
-                            <li>
-                                <a href="https://twitter.com/ChickenN00dle" target="_blank">
-                                    <span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/chickenn00dle" target="_blank">
-                                    <span class="icon"><i class="fa fa-github github" aria-hidden="true"></i></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://codepen.io/chickenn00dle/" target="_blank">
-                                    <span class="icon"><i class="fa fa-codepen codepen" aria-hidden="true"></i></span>
-                                </a>
-                            </li>
-                        </ul>
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="http://placehold.it/75x75/3E4140/ffffff?text=Logo" alt="Generic Logo" />
+                        </a>
                     </div>
-                    <div class="nav-lower hidden-mobile">
-                        <ul class="nav-links">
-                            <li><a href="grid.html">Grid</a></li>
-                            <li><a href="content.html">Content</a></li>
-                            <li><a href="interface.html">Interface</a></li>
-                            <li><a href="components.html">Components</a></li>
-                            <li><a href="backgrounds.html">Backgrounds</a></li>
-                        </ul>
+                    <div class="nav-slider hidden-mobile" id="js-nav-slider">
+                        <div class="nav-upper">
+                            <ul class="nav-links" id="js-nav-upper">
+                                <li class="">
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li class="">
+                                    <a href="index.html">Docs</a>
+                                </li>
+                                <li class="">
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.paypal.me/chickenn00dle" target="_blank" class="attention">Donate</a>
+                                </li>
+                            </ul>
+                            <ul class="nav-sns">
+                                <li>
+                                    <a href="https://twitter.com/ChickenN00dle" target="_blank">
+                                        <span class="icon">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/chickenn00dle" target="_blank">
+                                        <span class="icon">
+                                            <i class="fa fa-github github" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://codepen.io/chickenn00dle/" target="_blank">
+                                        <span class="icon">
+                                            <i class="fa fa-codepen codepen" aria-hidden="true"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-lower" id="js-nav-lower">
+                            <ul class="nav-links">
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                                <li>
+                                    <a href="content.html">Content</a>
+                                </li>
+                                <li>
+                                    <a href="interface.html">Interface</a>
+                                </li>
+                                <li>
+                                    <a href="components.html">Components</a>
+                                </li>
+                                <li>
+                                    <a href="backgrounds.html">Backgrounds</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -128,6 +150,48 @@
 &lt;/div>
 &lt;div class="unit">
     &lt;span>Unit 4&lt;/span>
+&lt;/div></pre>
+                    </div>
+                </div>
+            </section>
+
+
+            <section>
+                <div class="module">
+                    <div class="unit">
+                        <h3>Nesting</h3>
+                        <p>Modules can be nested within other units in order to create more complex layouts.</p>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="unit">
+                        <div class="module">
+                            <div class="unit-6">
+                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum repudiandae corporis debitis dolorum hic minima, recusandae perspiciatis tempore minus voluptates ratione eligendi culpa nesciunt placeat nostrum accusamus voluptatem totam. Tempore.</p>
+                            </div>
+                            <div class="unit">
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cupiditate deserunt nihil voluptas, aperiam voluptatum quod modi vero. Fugiat nostrum tempore ab voluptatum placeat consequuntur quia vitae, commodi aperiam repellat?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="module">
+                    <div class="unit">
+                        <pre>&lt;div class="module">
+    &lt;div class="unit">
+        &lt;div class="module">
+            &lt;div class="unit-6">
+                &lt;p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum repudiandae corporis debitis dolorum hic
+                    minima, recusandae perspiciatis tempore minus voluptates ratione eligendi culpa nesciunt placeat nostrum
+                    accusamus voluptatem totam. Tempore.&lt;/p>
+            &lt;/div>
+            &lt;div class="unit">
+                &lt;p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente cupiditate deserunt nihil voluptas, aperiam
+                    voluptatum quod modi vero. Fugiat nostrum tempore ab voluptatum placeat consequuntur quia vitae, commodi
+                    aperiam repellat?&lt;/p>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
 &lt;/div></pre>
                     </div>
                 </div>
@@ -239,7 +303,6 @@
                         <ul class="list-icons">
                             <li><span class="list-icon"><i class="fa fa-heart" aria-hidden="true"></i></span><a href="#">Link 1</a></li>
                             <li><span class="list-icon"><i class="fa fa-heart" aria-hidden="true"></i></span><a href="#">Link 2</a></li>
-                            <li><span class="list-icon"><i class="fa fa-heart" aria-hidden="true"></i></span><a href="#">Link 3</a></li>
                         </ul>
                     </nav>
                     <nav class="footer-nav-col">

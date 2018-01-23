@@ -1,1 +1,165 @@
 // Add custom styles here
+
+footer .icon {
+  color: white;
+}
+
+.form-btn-override {
+  -webkit-display: -webkit-flex !important;
+  -webkit-display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: fit-content !important;
+  background: #1a1a1a !important;
+  border: none !important;
+  box-shadow: none;
+  margin: .1rem 0 .5rem 0 !important;
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.form-btn-override:hover {
+    background: #262626;
+    margin: 0 0 .6rem 0 !important;
+}
+
+.form-btn-override:active {
+  margin: .1rem 0 .5rem 0 !important;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+} 
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.wp-caption-text {
+    font-size: .75rem;
+    line-height: 1rem;
+}
+
+input[type=submit], input.form-btn {
+    font-weight: 500;
+    text-align: center;
+    color: $colorLinkInverse;
+    border: none;
+    padding: .5rem 1rem;
+    display: inline-block;
+    background: $void;
+    @include borderRadius(5px);
+    box-sizing: border-box;
+    margin: .1rem 0 1rem;
+    width: max-content;
+    cursor: pointer;
+
+    &:hover {
+        color: $colorLinkInverse;
+        border: none;
+        @include boxShadow(0, 0, .25rem, 0, $colorShadow);
+        margin: 0 0 1.1rem;
+    }
+
+    &:active {
+        @include boxShadow(0, 0, 0, 0, transparent);
+        margin: .1rem 0 1rem;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.single-field {
+    margin-bottom: .25rem !important;
+}
+
+.single-field-btn {
+    margin: .1rem auto 1rem !important;
+
+    &:hover {
+        margin: 0 auto 1.1rem !important;
+    }
+
+    &:active {
+        margin: .1rem auto 1rem !important;
+    }
+}
+
+.comment-form {
+    a {
+        font-size: .9rem;
+        margin-bottom: 0;
+    }
+
+    .comment-form-comment,
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url {
+        font-size: 1rem;
+        margin-bottom: 0;
+
+        label {
+            display: block;
+            width: 100%;
+            margin-bottom: .25rem;
+            font-weight: 500;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 5rem;
+            padding: .5rem .25rem;
+            resize: none;
+            border: 2px solid $colorBorderDark;
+            @include borderRadius(5px);
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $colorBorderInverse;
+                // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: .5rem .25rem;
+            margin-bottom: .5rem;
+            border: 2px solid $colorBorderDark;
+            @include borderRadius(5px);
+            background: transparent;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border: 2px solid $colorBorderInverse;
+                // @include boxShadow(0, 0, 1px, 0, $colorFormFocus);
+            }
+        }
+    }
+}
+
+.bm-none {
+  margin-bottom: 0 !important;
+}
+
+.bm-half {
+  margin-bottom: .5rem !important;
+}
+
+.bm-one {
+  margin-bottom: 1rem !important;
+}

@@ -2,7 +2,13 @@
     background: $colorBgBlock;
     @include borderRadius(5px);
     width: 100%;
-    padding: 1rem 1rem 0.01rem 1rem;
+    padding: 1rem;
     box-sizing: border-box;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+
+    p, a, ul, ol, dl, table, form {
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
 }

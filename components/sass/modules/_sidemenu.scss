@@ -1,0 +1,52 @@
+.sidemenu {
+    background: $colorBgBodyAlt;
+    @include borderRadius(5px);
+    padding: .75rem;
+    margin: 0 0 2rem;
+    box-sizing: border-box;
+
+    h2, h3, h4, h5, h6 {
+        color: $colorTextInverse;
+        margin-bottom: .5rem;
+        font-size: 1.25rem;
+    }
+
+    p {
+        color: $colorTextInverse;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0; 
+        margin-bottom: 0;
+
+        li {
+            margin-bottom: .5rem;
+            @include borderRadius(5px);
+            color: $colorTextInverse;
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+
+            a {
+                color: $colorLinkInverse;
+                margin-bottom: 0;
+                padding: .25rem;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                background: $colorBgBody;
+
+                a {
+                    color: $colorLink;
+                }
+            }
+        }
+    }
+}

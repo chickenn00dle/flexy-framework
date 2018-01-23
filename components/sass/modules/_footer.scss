@@ -16,7 +16,8 @@ footer {
             @include flexItem(1, 1, 100%);
             width: 100%;
             @include flexContainer(row, nowrap);
-            @include flexAxis(center, center);
+            @include flexAxis(center, flex-start);
+            margin-bottom: 2rem;
 
             h2, h3, h4, h5, h6 {
                 color: $colorLinkInverse;
@@ -27,7 +28,7 @@ footer {
 
                 li, li a {
                     color: $colorLinkInverse;
-                    font-size: .8rem;
+                    font-size: .9rem;
                 }
             }
         }
@@ -39,6 +40,10 @@ footer {
             width: 10rem;
             margin: 1rem 0;
             padding: 0;
+
+            .icon {
+                color: $colorTextInverse;
+            }
         }
 
         .footer-copyright {

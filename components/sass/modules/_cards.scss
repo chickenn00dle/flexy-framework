@@ -1,6 +1,6 @@
 .card-grid {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     padding-bottom: 0;
     @include flexContainer(row, wrap);
     @include flexAxis(center, center);

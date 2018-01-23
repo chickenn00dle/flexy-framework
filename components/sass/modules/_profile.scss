@@ -1,7 +1,7 @@
 .profile {
     @include flexContainer(row, nowrap);
     @include flexAxis(flex-start, center);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border: 1px solid $colorBorder;
     @include borderRadius(5px);
 
