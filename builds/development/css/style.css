@@ -857,6 +857,7 @@ body .shell section .module {
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
+  padding-top: 1rem;
 }
 body .shell section .module .unit, body .shell section .module .unit-1, body .shell section .module .unit-2, body .shell section .module .unit-3, body .shell section .module .unit-4, body .shell section .module .unit-5, body .shell section .module .unit-6, body .shell section .module .unit-7, body .shell section .module .unit-8, body .shell section .module .unit-9, body .shell section .module .unit-10 {
   -webkit-box-flex: 1 1 100%;
@@ -2580,8 +2581,13 @@ input[type=submit], input.form-btn {
   border-radius: 5px;
   box-sizing: border-box;
   margin: .1rem 0 1rem;
-  width: max-content;
+  width: 100;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  input[type=submit], input.form-btn {
+    width: max-content;
+  }
 }
 input[type=submit]:hover, input.form-btn:hover {
   color: white;

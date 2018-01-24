@@ -22,6 +22,7 @@ body {
                 @include flexContainer(row, wrap);
                 @include flexAxis(space-between, center);
                 @include flexItem(1, 1, 100%);
+                padding-top: 1rem;
 
                 .unit, .unit-1, .unit-2, .unit-3, .unit-4, .unit-5, .unit-6, .unit-7, .unit-8, .unit-9, .unit-10 {
                     @include flexItem(1, 1, 100%);

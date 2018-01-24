@@ -62,8 +62,12 @@ input[type=submit], input.form-btn {
     @include borderRadius(5px);
     box-sizing: border-box;
     margin: .1rem 0 1rem;
-    width: max-content;
+    width: 100;
     cursor: pointer;
+
+    @include mediaQuery($mobile-lg) {
+        width: max-content;
+    }
 
     &:hover {
         color: $colorLinkInverse;
