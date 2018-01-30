@@ -11,21 +11,42 @@
 }
 
 @mixin flexOnly() {
-    -webkit-display: -webkit-flex !important;
-     -webkit-display: -webkit-box !important;
+            display: -webkit-flex !important;
+             display: -webkit-box !important;
              display: -ms-flexbox !important;
+                display: -moz-box !important;
                     display: flex !important;
 }
 
 // Set a Flex container w/ wrap and direction.
 @mixin flexContainer($dir, $wrap) {
-         -webkit-display: -webkit-flex;
-          -webkit-display: -webkit-box;
+                 display: -webkit-flex;
+                  display: -webkit-box;
                   display: -ms-flexbox;
+                     display: -moz-box;
                          display: flex;
+                         
+    @if $wrap == 'wrap' {
+           -webkit-box-lines: multiple;
+              -moz-box-lines: multiple;
+    } @else {
+             -webkit-box-lines: single;
+                -moz-box-lines: single;
+    }
               -webkit-flex-wrap: $wrap;
                   -ms-flex-wrap: $wrap;
                       flex-wrap: $wrap;
+    @if $dir == 'row' {
+       -webkit-box-orient: inline-axis;
+         -webkit-box-direction: normal;
+          -moz-box-orient: inline-axis;
+            -moz-box-direction: normal;
+    } @else {
+        -webkit-box-orient: block-axis;
+        -webkit-box-direction: reverse;
+           -moz-box-orient: block-axis;
+           -moz-box-direction: reverse;
+    }
           -webkit-flex-direction: $dir;
               -ms-flex-direction: $dir;
                   flex-direction: $dir;
@@ -33,10 +54,39 @@
 
 // Optional: Set Flex container main and cross alignments
 @mixin flexAxis($main, $cross) {
-           -webkit-align-items: $cross;
-             -webkit-box-align: $cross;
-                -ms-flex-align: $cross;
-                   align-items: $cross;
+    @if $cross == 'flex-end' {
+        -webkit-box-align: end;
+           -moz-box-align: end;
+           -ms-flex-align: end;
+    } @else if $cross == 'flex-start' {
+        -webkit-box-align: start;
+           -moz-box-align: start;
+           -ms-flex-align: start;
+    } @else if $cross == 'space-between' {
+        -webkit-box-align: justify;
+           -moz-box-align: justify;
+           -ms-flex-align: justify;
+    } @else {
+        -webkit-box-align: $cross;
+           -moz-box-align: $cross;
+           -ms-flex-align: $cross;
+    }
+      -webkit-align-items: $cross;
+              align-items: $cross;
+
+    @if $main == 'flex-end' {
+        -webkit-box-pack: end;
+           -moz-box-pack: end;
+           -ms-flex-pack: end;
+    } @else if $main == 'flex-start' {
+        -webkit-box-pack: start;
+           -moz-box-pack: start;
+           -ms-flex-pack: start;
+    } @else {
+        -webkit-box-pack: $main;
+           -moz-box-pack: $main;
+           -ms-flex-pack: $main;
+    }
         -webkit-justify-content: $main;
                 justify-content: $main;
                   -ms-flex-pack: $main;
@@ -44,7 +94,17 @@
 
 // Optional: Set Flex container cross-line behavior
 @mixin flexAlignContent($cross){
-        -ms-flex-align-content: $cross;
+    @if $cross == 'space-around' {
+        -ms-flex-line-pcak: distribute;
+    } @else if $cross == 'space-between' {
+        -ms-flex-line-pcak: justify;
+    } @else if $cross == 'flex-end' {
+        -ms-flex-line-pcak: end;
+    } @else if $cross == 'flex-start' {
+        -ms-flex-line-pcak: start;
+    } @else {
+        -ms-flex-line-pcak: $cross;
+    }
          -webkit-align-content: $cross;
                  align-content: $cross;
 }
@@ -52,6 +112,7 @@
 // Set Flex item w/ flex properties (grow, shrink and basis)
 @mixin flexItem($grow, $shrink, $basis) {
 -webkit-box-flex: $grow $shrink $basis;
+   -moz-box-flex: $grow $shrink $basis;
     -webkit-flex: $grow $shrink $basis;
         -ms-flex: $grow $shrink $basis;
             flex: $grow $shrink $basis;
@@ -59,9 +120,11 @@
 
 // Optional: Set Flex item order
 @mixin flexOrder($order){
-    -ms-flex-order: $order;
-     -webkit-order: $order;
-             order: $order;
+  -webkit-box-ordinal-group: $order;
+     -moz-box-ordinal-group: $order;
+             -ms-flex-order: $order;
+              -webkit-order: $order;
+                      order: $order;
 }
 
 // Optional: Set individual flex item cross alignment

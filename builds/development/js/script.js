@@ -9,6 +9,7 @@ window.onload = function() {
 
     hbOuter.addEventListener('click', function() {
         if (hamburger.contains('active')) {
+            html.remove('lock');
             body.remove('lock');
             slider.remove('slide-in');
             hamburger.remove('active');
@@ -20,6 +21,7 @@ window.onload = function() {
             slider.remove('slide-out');
             slider.remove('hidden-mobile');
             hamburger.add('active');
+            html.add('lock');
             body.add('lock');
             slider.add('slide-in');
         }
