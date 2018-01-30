@@ -42,7 +42,7 @@ header {
                 position: fixed;
                 top: 0;
                 left: 0;
-                overflow: scroll;
+                overflow: hidden;
                 z-index: 1;
 
                 .nav-upper, .nav-lower {
@@ -52,9 +52,9 @@ header {
                     background: none;
 
                     .nav-sns {
-                        position: fixed;
-                        bottom: 0;
-                        padding: 0 0 1rem;
+                        position: absolute;
+                        bottom: 1rem;
+                        padding: 0 0 3rem;
                         margin: 0;
                         background: $colorBgHeader;
                         z-index: 2;

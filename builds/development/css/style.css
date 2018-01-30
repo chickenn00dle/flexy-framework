@@ -1338,7 +1338,7 @@ header nav .nav-module .nav-slider {
   position: fixed;
   top: 0;
   left: 0;
-  overflow: scroll;
+  overflow: hidden;
   z-index: 1;
 }
 header nav .nav-module .nav-slider .nav-upper, header nav .nav-module .nav-slider .nav-lower {
@@ -1374,9 +1374,9 @@ header nav .nav-module .nav-slider .nav-upper, header nav .nav-module .nav-slide
   background: none;
 }
 header nav .nav-module .nav-slider .nav-upper .nav-sns, header nav .nav-module .nav-slider .nav-lower .nav-sns {
-  position: fixed;
-  bottom: 0;
-  padding: 0 0 1rem;
+  position: absolute;
+  bottom: 1rem;
+  padding: 0 0 3rem;
   margin: 0;
   background: white;
   z-index: 2;
@@ -2043,8 +2043,10 @@ footer .footer-module .footer-copyright {
 }
 
 .lock {
-  height: 100%;
-  overflow: hidden;
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  position: fixed;
 }
 
 @media screen and (min-width: 768px) {
