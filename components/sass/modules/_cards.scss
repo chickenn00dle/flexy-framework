@@ -55,10 +55,14 @@
         .card-footer {
             .card-btn {
                 width: 100%;
-                margin-bottom: .25rem;
+                margin: .1rem 0 .25rem 0;
+
+                &:hover {
+                    margin: 0 0 .35rem 0;
+                }
 
                 &:active {
-                    margin: .1rem 0 .15rem 0 !important;
+                    margin: .1rem 0 .25rem 0;
                 }
             }
         }
