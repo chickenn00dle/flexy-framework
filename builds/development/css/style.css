@@ -3175,7 +3175,7 @@ input[type=submit]:focus, input.form-btn:focus {
 .comment-form .comment-form-url input {
   width: 100%;
   padding: .5rem .25rem;
-  margin-bottom: .5rem;
+  margin-bottom: 1rem;
   border: 2px solid #595959;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
