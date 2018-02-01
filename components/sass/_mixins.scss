@@ -11,45 +11,50 @@
 }
 
 @mixin flexOnly() {
-            display: -webkit-flex !important;
              display: -webkit-box !important;
-             display: -ms-flexbox !important;
                 display: -moz-box !important;
+             display: -ms-flexbox !important;
+            display: -webkit-flex !important;
                     display: flex !important;
 }
 
 // Set a Flex container w/ wrap and direction.
 @mixin flexContainer($dir, $wrap) {
-                 display: -webkit-flex;
-                  display: -webkit-box;
-                  display: -ms-flexbox;
-                     display: -moz-box;
-                         display: flex;
+             display: -webkit-box;
+                display: -moz-box;
+             display: -ms-flexbox;
+             display: -khtml-flex;
+            display: -webkit-flex;
+                    display: flex;
                          
     @if $wrap == 'wrap' {
            -webkit-box-lines: multiple;
               -moz-box-lines: multiple;
+                   -ms-flex-wrap: wrap;
     } @else {
              -webkit-box-lines: single;
                 -moz-box-lines: single;
+                   -ms-flex-wrap: none;
     }
+               -khtml-flex-wrap: $wrap;
               -webkit-flex-wrap: $wrap;
-                  -ms-flex-wrap: $wrap;
                       flex-wrap: $wrap;
+
     @if $dir == 'row' {
-       -webkit-box-orient: inline-axis;
-         -webkit-box-direction: normal;
-          -moz-box-orient: inline-axis;
-            -moz-box-direction: normal;
+       -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+          -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
     } @else {
-        -webkit-box-orient: block-axis;
-        -webkit-box-direction: reverse;
-           -moz-box-orient: block-axis;
-           -moz-box-direction: reverse;
+        -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+           -moz-box-orient: vertical;
+          -moz-box-direction: normal;
     }
-          -webkit-flex-direction: $dir;
-              -ms-flex-direction: $dir;
-                  flex-direction: $dir;
+            -ms-flex-direction: $dir;
+         -khtml-flex-direction: $dir;
+        -webkit-flex-direction: $dir;
+                flex-direction: $dir;
 }
 
 // Optional: Set Flex container main and cross alignments
@@ -62,15 +67,12 @@
         -webkit-box-align: start;
            -moz-box-align: start;
            -ms-flex-align: start;
-    } @else if $cross == 'space-between' {
-        -webkit-box-align: justify;
-           -moz-box-align: justify;
-           -ms-flex-align: justify;
     } @else {
         -webkit-box-align: $cross;
            -moz-box-align: $cross;
            -ms-flex-align: $cross;
     }
+       -kthml-align-items: $cross;
       -webkit-align-items: $cross;
               align-items: $cross;
 
@@ -82,37 +84,41 @@
         -webkit-box-pack: start;
            -moz-box-pack: start;
            -ms-flex-pack: start;
+    } @else if $main == 'space-between' or $main == 'space-around' {
+        -webkit-box-align: justify;
+           -moz-box-align: justify;
+           -ms-flex-align: justify;
     } @else {
         -webkit-box-pack: $main;
            -moz-box-pack: $main;
            -ms-flex-pack: $main;
     }
+         -khtml-justify-content: $main;
         -webkit-justify-content: $main;
                 justify-content: $main;
-                  -ms-flex-pack: $main;
 }
 
 // Optional: Set Flex container cross-line behavior
 @mixin flexAlignContent($cross){
     @if $cross == 'space-around' {
-        -ms-flex-line-pcak: distribute;
+        -ms-flex-line-pack: distribute;
     } @else if $cross == 'space-between' {
-        -ms-flex-line-pcak: justify;
+        -ms-flex-line-pack: justify;
     } @else if $cross == 'flex-end' {
-        -ms-flex-line-pcak: end;
+        -ms-flex-line-pack: end;
     } @else if $cross == 'flex-start' {
-        -ms-flex-line-pcak: start;
+        -ms-flex-line-pack: start;
     } @else {
-        -ms-flex-line-pcak: $cross;
+        -ms-flex-line-pack: $cross;
     }
+          -khtml-align-content: $cross;
          -webkit-align-content: $cross;
                  align-content: $cross;
 }
 
 // Set Flex item w/ flex properties (grow, shrink and basis)
 @mixin flexItem($grow, $shrink, $basis) {
--webkit-box-flex: $grow $shrink $basis;
-   -moz-box-flex: $grow $shrink $basis;
+     -khtml-flex: $grow $shrink $basis;
     -webkit-flex: $grow $shrink $basis;
         -ms-flex: $grow $shrink $basis;
             flex: $grow $shrink $basis;
@@ -123,15 +129,24 @@
   -webkit-box-ordinal-group: $order;
      -moz-box-ordinal-group: $order;
              -ms-flex-order: $order;
+               -khtml-order: $order;
               -webkit-order: $order;
                       order: $order;
 }
 
 // Optional: Set individual flex item cross alignment
 @mixin flexSelf($cross){
-    -ms-flex-align-self: $cross;
-     -webkit-align-self: $cross;
-             align-self: $cross;
+
+    @if $cross == 'flex-end' {
+          -ms-flex-item-align: end;
+    } @else if $cross == 'flex-start' {
+        -ms-flex-item-align: start;
+    } @else {
+        -ms-flex-item-align: $cross;
+    }
+          -khtml-align-self: $cross;
+         -webkit-align-self: $cross;
+                 align-self: $cross;
 }
 
 @mixin boxShadow($horizontal, $vertical, $blur, $spread, $color) {

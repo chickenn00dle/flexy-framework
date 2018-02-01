@@ -12,7 +12,7 @@
     }
 
     .card {
-        @include flexContainer(column, no-wrap);
+        @include flexContainer(column, nowrap);
         width: 100%;
         background: $white;
         margin-bottom: 1rem;
