@@ -63,8 +63,10 @@ body {
                 .module {
                     @include flexContainer(row, nowrap);
                     @include flexAxis(space-between, flex-start);
+                    @include flexItem(1, 1, auto);
                     max-width: $laptop;
                     width: 100%;
+                    height: auto;
 
 
                     .unit {

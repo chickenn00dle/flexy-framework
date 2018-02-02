@@ -69,7 +69,7 @@
     }
 }
 
-@include mediaQuery($mobile-lg) {
+@include mediaQuery($mobile-sm) {
 
     %btn {
         width: fit-content;

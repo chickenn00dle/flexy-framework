@@ -1038,8 +1038,13 @@ body .shell section.pre-footer {
     -khtml-justify-content: space-between;
     -webkit-justify-content: space-between;
     justify-content: space-between;
+    -khtml-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
     max-width: 1280px;
     width: 100%;
+    height: auto;
   }
   body .shell section .module .unit {
     -khtml-flex: 1 1 auto;
@@ -1998,11 +2003,6 @@ footer .footer-module {
   box-sizing: border-box;
 }
 footer .footer-module .footer-nav {
-  -khtml-flex: 1 1 100%;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  width: 100%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -2035,6 +2035,12 @@ footer .footer-module .footer-nav {
   -khtml-justify-content: center;
   -webkit-justify-content: center;
   justify-content: center;
+  -khtml-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
   margin-bottom: 2rem;
 }
 footer .footer-module .footer-nav h2, footer .footer-module .footer-nav h3, footer .footer-module .footer-nav h4, footer .footer-module .footer-nav h5, footer .footer-module .footer-nav h6 {
@@ -2197,7 +2203,7 @@ footer .footer-module .footer-copyright {
   background: #595959;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
   .submit, .btn {
     width: fit-content;
   }
@@ -2465,7 +2471,7 @@ footer .footer-module .footer-copyright {
 .form .fieldset input {
   width: 100%;
   padding: .5rem .25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border: 2px solid #595959;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2495,7 +2501,7 @@ footer .footer-module .footer-copyright {
   width: 100%;
   min-height: 5rem;
   padding: .5rem .25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   resize: none;
   border: 2px solid #595959;
   -webkit-border-radius: 5px;
@@ -2629,7 +2635,7 @@ footer .footer-module .footer-copyright {
   flex-direction: column;
   width: 100%;
   background: white;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding: .5rem;
   box-sizing: border-box;
   -webkit-border-radius: 5px;
@@ -3090,7 +3096,7 @@ input[type=submit], input.form-btn {
   width: 100;
   cursor: pointer;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 375px) {
   input[type=submit], input.form-btn {
     width: max-content;
     padding: .5rem 1rem;
@@ -3155,6 +3161,7 @@ input[type=submit]:focus, input.form-btn:focus {
   width: 100%;
   min-height: 5rem;
   padding: .5rem .25rem;
+  margin-bottom: 1.5rem;
   resize: none;
   border: 2px solid #595959;
   -webkit-border-radius: 5px;
@@ -3175,7 +3182,7 @@ input[type=submit]:focus, input.form-btn:focus {
 .comment-form .comment-form-url input {
   width: 100%;
   padding: .5rem .25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border: 2px solid #595959;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

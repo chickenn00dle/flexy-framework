@@ -27,7 +27,7 @@
         input {
             width: 100%;
             padding: .5rem .25rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             border: 2px solid $colorBorderDark;
             @include borderRadius(5px);
             background: transparent;
@@ -59,7 +59,7 @@
             width: 100%;
             min-height: 5rem;
             padding: .5rem .25rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             resize: none;
             border: 2px solid $colorBorderDark;
             @include borderRadius(5px);

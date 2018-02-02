@@ -15,7 +15,7 @@
         @include flexContainer(column, nowrap);
         width: 100%;
         background: $white;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
         padding: .5rem;
         box-sizing: border-box;
         @include borderRadius(5px);

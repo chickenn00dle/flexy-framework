@@ -13,10 +13,11 @@ footer {
         box-sizing: border-box;
 
         .footer-nav {
-            @include flexItem(1, 1, 100%);
-            width: 100%;
             @include flexContainer(row, nowrap);
             @include flexAxis(center, flex-start);
+            @include flexItem(1, 1, auto);
+            width: 100%;
+            height: auto;
             margin-bottom: 2rem;
 
             h2, h3, h4, h5, h6 {
