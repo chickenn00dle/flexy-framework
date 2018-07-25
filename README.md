@@ -15,10 +15,10 @@ You will need the latest versions of node/npm, compass and ruby installed before
 
 ### Installation
 
-Clone the project: https://github.com/chickenn00dle/canvas.git
+Clone the project: https://github.com/chickenn00dle/flexy_framework.git
 
 ```
-$ git clone https://github.com/chickenn00dle/canvas.git [project-name]
+$ git clone https://github.com/chickenn00dle/flexy_framework.git [project-name]
 ```
 
 cd into the project directory
